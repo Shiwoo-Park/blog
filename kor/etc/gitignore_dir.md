@@ -1,6 +1,6 @@
 # 헤깔리는 gitignore 의 directory 설정
 
-날짜: 2020-07-15
+> 날짜: 2020-07-15
 
 gitignore 에서 특정 directory 에 대한 ignore 처리를 하려고 보면...
 
