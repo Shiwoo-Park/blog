@@ -9,3 +9,4 @@
 ### 2020.08
 
 - [Django 에서 Group By 쿼리 작성하기](https://github.com/Shiwoo-Park/blog/blob/master/kor/python/django_groupby.md)
+- [자주쓰는 git commands](https://github.com/Shiwoo-Park/blog/blob/master/kor/etc/git_cmds.md)
