@@ -66,8 +66,8 @@ Remote 와 repo 정보 동기화 (삭제된 브랜치 포함) | `git fetch -p`
 현재 버전에서 NEW_BRANCH 라는 브랜치 명으로 branch out 하기(=새 브랜치 만들기) | `git checkout -b NEW_BRANCH`
 v1.0.3 이라는 tag 가 달린 코드버전으로 NEW_BRANCH 만들어서 갈아타기 | `git checkout v1.0.3 -b NEW_BRANCH`
 최근 1회의 커밋에 대한 강제 리셋 | `git reset --hard HEAD~1`
-브랜치 일괄삭제 전 확인 | ```git branch -r | grep "origin/RC\/5.3.3..*"|sed 's/origin\///'```
-브랜치 일괄삭제 | ```git branch -r |grep "origin/RC\/5.4.0..*"|sed 's/origin\///'|xargs git push origin --delete```
+브랜치 일괄삭제 전 확인 | `git branch -r | grep "origin/RC\/5.3.3..*"|sed 's/origin\///'`
+브랜치 일괄삭제 | `git branch -r \| grep "origin/RC\/5.4.0..*" \|sed 's/origin\///' \| xargs git push origin --delete`
 
 
 ---
