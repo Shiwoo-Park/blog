@@ -13,4 +13,4 @@
 
 ### 2020.11
 
-- [React.js 공부를 위한 배경지식](https://github.com/Shiwoo-Park/blog/blob/master/kor/python/react_backgrounds.md)
+- [React.js 공부를 위한 배경지식](https://github.com/Shiwoo-Park/blog/blob/master/kor/javascript/react_backgrounds.md)
