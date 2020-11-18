@@ -10,3 +10,7 @@
 
 - [Django 에서 Group By 쿼리 작성하기](https://github.com/Shiwoo-Park/blog/blob/master/kor/python/django_groupby.md)
 - [자주쓰는 git commands](https://github.com/Shiwoo-Park/blog/blob/master/kor/etc/git_cmds.md)
+
+### 2020.11
+
+- [React.js 공부를 위한 배경지식](https://github.com/Shiwoo-Park/blog/blob/master/kor/python/react_backgrounds.md)
