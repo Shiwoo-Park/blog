@@ -29,7 +29,7 @@
 이미지 레이어 보기 | `docker image inspect --format "{{ json .RootFS.Layers }}" {이미지명}`
 이미지 강제 삭제 (컨테이너가 존재해도) | `docker rmi -f {DOCKER_IMAGE}`
 도커 이미지를 복사 (repository 와 태그를 변경해준다) | `docker tag {복사할_도커_image_tag} {도커허브 Repo URL}:{tag}`
-태그 또느 repository 가 유효하지 않은(=<none>) 이미지들 삭제 | `docker rmi $(docker images | grep "^<none>" | awk "{print $3}")`
+태그 또느 repository 가 유효하지 않은(=<none>) 이미지들 삭제 | <code>docker rmi $(docker images &#124; grep "^<none>" &#124; awk "{print $3}")</code>
 
 ### Container 관련
 
@@ -37,7 +37,7 @@
 --- | ---
 컨테이너 목록 | `docker container ls`
 컨테이너 강제중지 | `docker rm -f {컨테이너 ID}`
-정지된 컨테이너 목록 | `docker ps -a | grep Exit`
+정지된 컨테이너 목록 | <code>docker ps -a &#124; grep Exit</code>
 정지된 컨테이너(들) 띄우기, 시작하기 | `docker start [OPTIONS] CONTAINER [CONTAINER...]`
 컨테이너 shell 접속 하기 | `docker exec -it {container ID} /bin/bash`
 모든 정지된 컨테이너 삭제 (Remove all stopped containers) | `docker rm $(docker ps -a -q)`
