@@ -53,3 +53,6 @@ Build a Docker image with the web server (in Dockerfile Dir) | `docker build -t 
 Rebuild the Docker image and tag it with its future registry name that includes gcr.io as the hostname and the project ID as a prefix | `docker build -t "gcr.io/${GCP_PROJECT}/py-web-server:v1" .`
 Push the image to gcr.io| `docker push gcr.io/${GCP_PROJECT}/py-web-server:v1`
 
+---
+
+[목록으로](https://github.com/Shiwoo-Park/blog/tree/master/kor)

@@ -8,3 +8,7 @@
 내용 | 명령어
 --- | ---
 현재 스크립트가 들어있는 폴더의 절대 경로 얻기 | `BASH_FILE_PATH="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"`
+
+---
+
+[목록으로](https://github.com/Shiwoo-Park/blog/tree/master/kor)
