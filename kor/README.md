@@ -2,7 +2,7 @@
 
 ### 2020.12
 - [유용한 쉘 스크립트 명령어](etc/useful_bash_cmds.md)
-- [자주쓰는 docker 명령어](javascript/docker_cmds.md)
+- [자주쓰는 docker 명령어](etc/docker_cmds.md)
 
 ### 2020.11
 
