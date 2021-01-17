@@ -54,10 +54,10 @@ credential 정보 삭제 (windows) | `git credential-manager uninstall`
 
 내용 | 명령어
 --- | ---
-Local Git 이 tracking 하는 remote repo URL 최초세팅 | git remote add REPO_URL
-Local Git 이 tracking 하는 remote repo URL  | `git remote set-url origin git@github.com:Shiwoo-Park/spider.git`
-Local Git 이 tracking 하는 remote 설정 조회 | git remote -v
-Local Git 의 코드를 원격 repo master 브랜치로 매핑 | git push --set-upstream origin master
+Local Git 이 tracking 하는 remote repo URL 최초세팅 | `git remote add REPO_URL`
+Local Git 이 tracking 하는 remote repo URL  | `git remote set-url origin REPO_URL`
+Local Git 이 tracking 하는 remote 설정 조회 | `git remote -v`
+Local Git 의 코드를 원격 repo master 브랜치로 매핑 | `git push --set-upstream origin master`
 Local Git - Global config 등록 | `git config --global user.email "woozin23@gmail.com"`
 Local Git - Global config 삭제 | `git config --unset --global user.email`
 Local Git - 현재 Repo config 등록 | `git config user.name "silva.podo"`
