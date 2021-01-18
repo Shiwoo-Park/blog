@@ -10,7 +10,9 @@
 ### 조건문 (=Conditional)
 
 #### 기본 구조
+
 ```shell script
+
 if [ 조건절 ]; then
     실행절
 elif [ 조건절 ]; then
