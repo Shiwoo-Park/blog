@@ -9,7 +9,7 @@
 
 ### 조건문 (=Conditional)
 
-#### Structure
+#### 기본 구조
 ```shell script
 if [ 조건절 ]; then
     실행절
@@ -20,7 +20,7 @@ else
 fi
 ```
 
-#### Diverse conditional expressions
+#### 다양한 조건절
 
 연산자 | 설명 (True인 경우)
 --- | ---
@@ -36,6 +36,7 @@ fi
 정수1 -lt 정수2 | 정수1이 정수2보다 작을 때
 
 #### Example
+
 ```shell script
 input=$1
 if [ $input -eq 10 ]; then
@@ -76,7 +77,7 @@ done
 
 ### 함수
 
-#### Structure
+#### 기본 구조
 ```shell script
 함수명()
 {
