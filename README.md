@@ -7,6 +7,7 @@ But not all of them are
 - [English Posts](eng)
 
 
-### Useful links
+### Links
 - [Explore at Github page](https://shiwoo-park.github.io/blog/)
+- [Github repository](https://github.com/Shiwoo-Park/blog)
 - [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
