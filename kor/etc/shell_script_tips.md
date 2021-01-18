@@ -1,5 +1,5 @@
 
-# Shell script basic + tips
+# Shell 기본 문법 + tips
 
 > 날짜: 2021-01-08
 
@@ -116,7 +116,6 @@ hey "silva" "go home"
 `set -e`
 
 스크립트에 이 명령어를 넣으면 이 라인 이후에 실행되는 명령어의 결과 exit code 가 0 이 아닌것이 하나라도 나오면 곧바로 제어 흐름을 중단처리 한다 (= 에러발생)
-
 
 
 ---

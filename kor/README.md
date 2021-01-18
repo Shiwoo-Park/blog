@@ -1,6 +1,7 @@
 # 실바의 블로그에 오신것을 환영합니다
 
 ### 2021.1
+- [쉘 스크립트 기본문법 + tip](etc/shell_script_tips.md)
 - [유용한 쉘 스크립트 명령어](etc/useful_bash_cmds.md)
 
 ### 2020.12
