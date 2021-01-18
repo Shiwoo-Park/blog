@@ -11,7 +11,7 @@
 
 #### 기본 구조
 
-```shell script
+```bash
 
 if [ 조건절 ]; then
     실행절
@@ -39,7 +39,7 @@ fi
 
 #### Example
 
-```shell script
+```bash
 input=$1
 if [ $input -eq 10 ]; then
     echo "equal !!!"
@@ -50,8 +50,7 @@ fi
 
 ### 반복문 (=Iteration)
 
-```shell script
-
+```bash
 # Multiple element iteration
 for NAME in "ME" "YOU" "THEM" "ALL"; do
     echo "Name is ${NAME}"
@@ -81,7 +80,7 @@ done
 
 #### 기본 구조
 
-```shell script
+```bash
 함수명()
 {
     함수내용
@@ -90,7 +89,7 @@ done
 
 #### Basic example
 
-```shell script
+```bash
 # declare
 hey(){
   echo "hey!!!!"
@@ -104,7 +103,7 @@ hey
 
 You can use `${ARG_NUMBER}` in the function
 
-```shell script
+```bash
 hey(){
   echo "hey $1 !!!! let's $2"
 }
