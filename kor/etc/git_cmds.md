@@ -21,6 +21,7 @@ Remote 로부터 최신 정보 불러오기 (현재 코드 상태 변경) | `git
 현재 브랜치 커밋 로그 보기 (최신순) | `git log`
 Remote 로 현재까지 커밋된 내용 저장 | `git push`
 TARGET_BRANCH 를 현재 브랜치로 merge | `git merge TARGET_BRANCH`
+현재 브랜치명 보기 | `git branch --show-current`
 
 ### Advanced - rebase
 
