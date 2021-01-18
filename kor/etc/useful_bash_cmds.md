@@ -1,4 +1,4 @@
-# 유용한 shell script tips
+# 유용한 shell script 명령어 모음
 
 > 날짜: 2021-01-08
 
