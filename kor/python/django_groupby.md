@@ -26,5 +26,5 @@ queryset = Test.objects.values('name').annotate(
 
 ---
 
-[목록으로](https://github.com/Shiwoo-Park/blog/tree/master/kor)
+[목록으로](https://shiwoo-park.github.io/blog/kor)
 

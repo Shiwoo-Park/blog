@@ -134,4 +134,4 @@ DEPTH 를 너무 높게 하면 서버에 무리를 줄 수 있으므로 주의�
 
 ---
 
-[목록으로](https://github.com/Shiwoo-Park/blog/tree/master/kor)
+[목록으로](https://shiwoo-park.github.io/blog/kor)

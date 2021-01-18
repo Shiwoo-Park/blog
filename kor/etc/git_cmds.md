@@ -79,4 +79,4 @@ v1.0.3 이라는 tag 가 달린 코드버전으로 NEW_BRANCH 만들어서 갈�
 
 ---
 
-[목록으로](/../../tree/master/kor)
+[목록으로](https://shiwoo-park.github.io/blog/kor)
