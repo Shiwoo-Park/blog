@@ -110,19 +110,21 @@ hey(){
 # call with param
 hey "silva" "go home"
 ```
-## 각종 꿀팁
 
-`BASH_FILE_PATH="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"`
 
-현재 스크립트가 들어있는 폴더의 절대 경로 얻기
+## 각종 shell script 꿀팁
 
-`set -e`
-
-스크립트에 이 명령어를 넣으면 이 라인 이후에 실행되는 명령어의 결과 exit code 가 0 이 아닌것이 하나라도 나오면 곧바로 제어 흐름을 중단처리 한다 (= 에러발생)
-
-`./my_batch.sh 2>&1 | tee -a output.log`
-
-스크립트를 실행했을때 stdout 과 stderr 를 콘솔에 표시함과 동시에 output.log 파일로도 저장할 수 있도록 해준다.
+1. 현재 스크립트가 들어있는 폴더의 절대 경로 얻기
+  - `BASH_FILE_PATH="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"`
+2. 명령어 실행 중 에러 발생시 에러 발생 종료 처리
+  - `set -e`
+  - 스크립트에 이 명령어를 넣으면 이 라인 이후에 실행되는 명령어의 결과 exit code 가 0 이 아닌것이 하나라도 나오면 곧바로 제어 흐름을 중단처리 한다 (= 에러발생)
+3.  stdout, stderr file append + 흘리기
+  - `./my_batch.sh 2>&1 | tee -a output.log`
+  - 스크립트를 실행했을때 stdout 과 stderr 를 콘솔에 표시함과 동시에 output.log 파일로도 저장할 수 있도록 해준다.
+4. grep 으로 특정 프로세스 찾아서 죽이기
+  - `kill $(ps aux | grep 'ssh-agent' | awk '{print $2}')`
+  - 위 예제에서는 ssh-agent 를 모조리 강제 종료 처리한다
 
 
 ---
