@@ -76,6 +76,13 @@ v1.0.3 이라는 tag 가 달린 코드버전으로 NEW_BRANCH 만들어서 갈�
 브랜치 일괄삭제 전 확인 | `git branch -r \| grep "origin/RC\/5.3.3..*" \| sed 's/origin\///'`
 브랜치 일괄삭제 | `git branch -r \| grep "origin/RC\/5.4.0..*" \| sed 's/origin\///' \| xargs git push origin --delete`
 
+- Tracking 하는 remote 브랜치가 삭제된 로컬 브랜치 클린업
+
+```bash
+git for-each-ref --format '%(refname:short) %(upstream:track)' |
+awk '$2 == "[gone]" {print $1}' |
+xargs -r git branch -D
+```
 
 ---
 
