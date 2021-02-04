@@ -81,7 +81,7 @@ v1.0.3 이라는 tag 가 달린 코드버전으로 NEW_BRANCH 만들어서 갈�
 ```bash
 git for-each-ref --format '%(refname:short) %(upstream:track)' |
 awk '$2 == "[gone]" {print $1}' |
-xargs -r git branch -D
+xargs git branch -D
 ```
 
 ---
