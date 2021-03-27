@@ -27,7 +27,7 @@
 이미지 레이어 보기 | `docker image inspect --format "{{ json .RootFS.Layers }}" {이미지명}`
 이미지 강제 삭제 (컨테이너가 존재해도) | `docker rmi -f {DOCKER_IMAGE}`
 도커 이미지를 복사 (repository 와 태그를 변경해준다) | `docker tag {복사할_도커_image_tag} {도커허브 Repo URL}:{tag}`
-태그 또느 repository 가 유효하지 않은(=<none>) 이미지들 삭제 | <code>docker rmi $(docker images &#124; grep "^<none>" &#124; awk "{print $3}")</code>
+태그 또는 repository 가 유효하지 않은 이미지들 삭제 | <code>docker rmi $(docker images &#124; grep "^" &#124; awk "{print $3}")</code>
 
 ### Container 관련
 
