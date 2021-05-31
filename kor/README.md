@@ -8,7 +8,7 @@
 - [쉘 스크립트 - 명령어 모음](etc/useful_bash_cmds.md)
 
 ### 2020.12
-- [내가 자주쓰는 기술스택: 유용한 웸문서 모음](python/study_links.md)
+- [내가 자주쓰는 기술스택: 유용한 웹문서 모음](python/study_links.md)
 - [Docker - 명령어 모음](etc/docker_cmds.md)
 
 ### 2020.11
