@@ -1,5 +1,8 @@
 # 실바의 블로그에 오신것을 환영합니다
 
+### 2021.8
+- [SSH 활용 tips](etc/ssh_tips.md)
+
 ### 2021.2
 - [Django + Pytest tips](python/django_pytest_tips.md)
 
