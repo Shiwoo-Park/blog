@@ -1,7 +1,11 @@
 # 실바의 블로그에 오신것을 환영합니다
 
+### 2021.9
+- [Linux 의 init 시스템: systemd 와 systemctl 간단 사용법](etc/systemd_ctl_basic.md)
+
 ### 2021.8
 - [SSH 활용 tips](etc/ssh_tips.md)
+- [pipenv 기능 및 명령어](etc/pipenv_cmds.md)
 
 ### 2021.2
 - [Django + Pytest tips](python/django_pytest_tips.md)
