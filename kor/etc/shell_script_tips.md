@@ -45,6 +45,18 @@ if [ $input -eq 10 ]; then
 else
     echo "not equal ..."
 fi
+
+if [ -z "$1" ]; then
+    echo "First argument is empty"
+fi
+
+if [ -n "$1" ]; then
+    echo "First argument exists"
+fi
+
+if [ $# -eq 0 ]; then
+    echo "No arguments supplied"
+fi
 ```
 
 ### 반복문 (=Iteration)

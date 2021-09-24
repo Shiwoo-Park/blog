@@ -65,6 +65,18 @@ Local Git - 현재 Repo config 등록 | `git config user.name "silva.podo"`
 Local Git - 현재 Repo config 삭제 | `git config --unset user.name`
 
 
+### Advanced - gitsubmodule
+
+내용 | 명령어
+--- | ---
+git submodule 추가 | `git submodule add -b {BRANCH} {REPO_URL} {TARGET_DIR}`
+submodule 상태 조회 | `git submodule status`
+최초 submodule 불러오기 지정된 SHA hash 에 따라 로드됨 | `git submodule update --init --recursive`
+submodule 을 remote main 브랜치의 HEAD 로 update | `git submodule update --recursive --remote`
+update submodule | `git pull --recurse-submodules`
+submodule 비활성화 | `git submodule deinit -f {SUBMODULE_NAME}`
+
+
 ### Advanced - etc
 
 내용 | 명령어
