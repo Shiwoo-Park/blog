@@ -31,6 +31,7 @@ pre-releases 를 포함한 lockfile 생성 | `pipenv lock --pre`
 패키지 의존성 그래프 확인 | `pipenv graph`
 설치된 패키지 의존성의 보안 이슈 점검 | `pipenv check`
 기존 `pip freeze` 실행 | `pipenv run pip freeze`
+기존 `requirements.txt` 로부터 패키지 정보 읽어와서 설치 | `pipenv install -r path/to/requirements.txt`
 
 
 ---
