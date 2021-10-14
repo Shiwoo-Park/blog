@@ -1,5 +1,8 @@
 # 실바의 블로그에 오신것을 환영합니다
 
+### 2021.10
+- [pytest 소개 및 기능](python/pytest_1_intro.md)
+
 ### 2021.9
 - [Linux 의 init 시스템: systemd 와 systemctl 간단 사용법](etc/systemd_ctl_basic.md)
 
