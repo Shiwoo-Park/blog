@@ -32,7 +32,7 @@ pytest 프레임 워크 내에서 사용되는 기본 용어들과 그 개념을
   - test function 의 argument 형식으로 접근이 가능
 - marker
   - 말그대로 각 test 마다 marking 을 하는데 쓰이는 기능
-  - test function 에 `@pytest.mark` 를 사용하여 다양한 meta 정보를 지정하 수 있고, 이는 각각 고유한 기능을 가지고 있다
+  - test function 에 `@pytest.mark` 를 사용하여 다양한 meta 정보를 지정할 수 있고, 이는 각각 고유한 기능을 가지고 있다
   - Custom marker 를 만들 수도 있다
 
 
