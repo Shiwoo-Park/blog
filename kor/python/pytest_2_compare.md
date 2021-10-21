@@ -1,4 +1,4 @@
-# pytest VS 다른 test 모듈
+# pytest VS 파이썬 unittest
 
 > 날짜: 2021-10-16
 
