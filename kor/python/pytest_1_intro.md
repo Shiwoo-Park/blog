@@ -31,20 +31,6 @@ pytest 프레임 워크 내에서 사용되는 기본 용어들과 그 개념을
   - 일관성있고 반복성이 뛰어난 결과를 얻도록 도와준다
   - test function 의 argument 형식으로 접근이 가능
 
-## 뽀너스: 유용한 pytest plug-in 7개
-
-[참고 자료](https://miguendes.me/7-pytest-plugins-you-must-definitely-use)
-
-- `pytest-cov` : 테스트 결과에 코드 커버리지 report 추가
-- `pytest-django` : `django.test.TestCase` 에서 제공되는 모든 fixture, assert 방식들을 제공
-  - django_db 커넥션 지원
-  - test client object 사용가능
-- `pytest-asyncio` : async program 을 테스트하기 좋은 플러그인. 기존 pytest 에 async 형식의 기능을 훌륭히 제공해준다
-- `pytest-randomly` : unit-test 를 무작위 순서로 실행해주는 기능 제공. unit-test 간 의존성 검증에 효과적
-- `pytest-clarity` : pytest 실패내역에 대한 출력 결과를 한차원 더 또렷하게 보여주는 기능 제공. 결고 가시성이 매우 뛰어남
-- `pytest-bdd` : `BDD(=Behavior-driven Development)` 는 `TDD(Test-driven Development)` 의 확장팩이다. 
-   어떠한 특정 도메인 또는 흐름(=story)에 따라 테스트를 연결지을 수 있는 기능 제공 (feat. [Gherkin format](https://www.guru99.com/gherkin-test-cucumber.html) )
-
 
 ---
 
