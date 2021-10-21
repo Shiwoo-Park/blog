@@ -30,6 +30,23 @@ pytest 프레임 워크 내에서 사용되는 기본 용어들과 그 개념을
   - fixture 는 그렇게 고정된 기반 데이터를 제공하여 신뢰성 높은 test 작성을 가능하게 하며,
   - 일관성있고 반복성이 뛰어난 결과를 얻도록 도와준다
   - test function 의 argument 형식으로 접근이 가능
+- marker
+  - 말그대로 각 test 마다 marking 을 하는데 쓰이는 기능
+  - test function 에 `@pytest.mark` 를 사용하여 다양한 meta 정보를 지정하 수 있고, 이는 각각 고유한 기능을 가지고 있다
+  - Custom marker 를 만들 수도 있다
+
+
+### 몇가지 marker 소개
+
+marker 에 대한 이해를 돕기 위해 built-in marker 중 자주 쓰이는 것들 일부를 소개한다.<br/>
+전체 built-in marker 목록은 [여기](https://docs.pytest.org/en/6.2.x/reference.html#marks-ref) 에서 볼 수 있음
+
+- usefixtures : fixture 를 직접적으로 테스트에서 참조하지 않지만 내부적으로 필요한 경우 사용
+- filterwarnings: test 시 발생하는 특정 warning 무시
+- skip: 해당 test 는 항상 skip 처리
+- skipif: 특정 condition 일때, 해당 test 는 항상 skip 처리
+- xfail: 특정 condition 일때, `expected failure` 결과를 출력
+- parameterize: 서로다른 input argument 로 동일한 test 를 여러번 실행할때 사용
 
 
 ---
