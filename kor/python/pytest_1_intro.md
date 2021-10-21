@@ -16,7 +16,7 @@ pytest 란 무엇일까? 일단 공식사이트 내용에 따르면 아래와 �
 - 파이썬 3.6+, Pypy 3 에 지원
 - 실패한 `assert statement` 에 대한 깔끔+명료한 결과 출력 (+ self.assertXXX 등의 함수 기억할 필요 X)
 - test 모듈 및 함수 자동 탐지
-- 작거나 매개변수화 된 장시간 살아있는 test 자원으 `모듈식(=Modular) fixture` 으로 관리
+- 작거나 매개변수화 된 장시간 살아있는 test 자원을 `모듈식(=Modular) fixture` 으로 관리
 - (trial 을 포함한) 모든 파이썬 unittest, [nose](https://nose.readthedocs.io/en/latest/) 로 작성된 test 실행 가능
 - 315개 이상의 풍부한 [plug-in](https://docs.pytest.org/en/latest/reference/plugin_list.html) 시스템 그리고 발달된 커뮤니티
 
