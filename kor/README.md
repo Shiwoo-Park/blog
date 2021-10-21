@@ -1,6 +1,7 @@
 # 실바의 블로그에 오신것을 환영합니다
 
 ### 2021.10
+- [pytest VS unittest](python/pytest_2_compare.md)
 - [pytest 소개 및 기능](python/pytest_1_intro.md)
 
 ### 2021.9
