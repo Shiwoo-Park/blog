@@ -39,7 +39,8 @@ pytest 프레임 워크 내에서 사용되는 기본 용어들과 그 개념을
 ### 몇가지 marker 소개
 
 marker 에 대한 이해를 돕기 위해 built-in marker 중 자주 쓰이는 것들 일부를 소개한다.<br/>
-전체 built-in marker 목록은 [여기](https://docs.pytest.org/en/6.2.x/reference.html#marks-ref) 에서 볼 수 있음
+전체 built-in marker 목록은 [여기](https://docs.pytest.org/en/6.2.x/reference.html#marks-ref) 에서 볼 수 있음<br/>
+`pytest --markers` 명령어를 이용해 현재 사용 가능한 marker 목록을 볼 수도 있다
 
 - usefixtures : fixture 를 직접적으로 테스트에서 참조하지 않지만 내부적으로 필요한 경우 사용
 - filterwarnings: test 시 발생하는 특정 warning 무시
