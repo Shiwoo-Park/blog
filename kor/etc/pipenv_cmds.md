@@ -25,8 +25,8 @@
 --- | --- | ---
 특정 패키지 설치 | `pipenv install <package>` | 
 특정 패키지 및 version 설치  | `pipenv install requests~=1.2` | == 보다 ~= 을 사용하여 호환되는 버전을 자동으로 찾도록 한다
-Production 용 패키지만 설치 | `pipenv install` |
-개발용 패키지를 포함한 전체 패키지 설치 | `pipenv install --dev` |
+Production 용 패키지만 설치 | `pipenv install` | Pipfile 의 packages 에 나열된 것들만 lock 파일 버전으로 설치
+개발용 패키지를 포함한 전체 패키지 설치 | `pipenv install --dev` | Pipfile 의 packages + dev-packages 에 나열것들을 lock 파일 버전으로 설치
 파이썬 3.7 로 새 프로젝트 시작 | `pipenv --python 3.7` | 
 프로젝트 가상환경 삭제 | `pipenv --rm` |
 pre-releases 를 포함한 lockfile 생성 | `pipenv lock --pre` |
