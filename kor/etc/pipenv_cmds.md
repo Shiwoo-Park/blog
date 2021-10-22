@@ -39,7 +39,7 @@ pre-releases 를 포함한 lockfile 생성 | `pipenv lock --pre` |
 ### 패키지간 의존성 충돌 발생 시
 
 - 문제가 되는 패키지만 단일 install 시도
-- 의존성 충돌을 발생시키는 패키지의 호환 버전을 확인하여 수동 설치
+- 의존성 충돌을 발생시키는 패키지의 호환 버전을 확인하여 수동 설치 (github repo로 들어가서 requirements.txt 또는 setup.py 확인)
 
 
 ---
