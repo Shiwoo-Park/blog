@@ -200,7 +200,7 @@ def test_charge_failed_invoice_pass(
 ```
 
 
-## Testing utils
+## 기타
 
 ### Mock Response for requests
 
@@ -252,6 +252,92 @@ class MockResponse:
 
     def json(self):
         return json.loads(self.text)
+```
+
+### unittest 를 class 로 묶어서 작성하기
+
+- unittest 들을 하나의 class 로 묶어서 처리
+- [fixture scoping](https://docs.pytest.org/en/6.2.x/fixture.html#fixture-scopes) 활용
+
+```python
+import pytest
+from django.contrib.messages.storage.fallback import FallbackStorage
+from pytest_django.fixtures import _django_db_fixture_helper
+from rest_framework import status
+
+from apps_etc.givevod.views import GiveVODCreateView, GiveVODUpdateView
+from core.models.content.t_extra_video_event import TExtraVideoEvent, TExtraVideoEventReward
+from core.models.user.t_single_product import TSingleProduct
+from core.utils import string_util, time_util
+
+
+@pytest.fixture(scope="module")
+def module_scoped_db(request, django_db_setup, django_db_blocker):
+    if "django_db_reset_sequences" in request.funcargnames:
+        request.getfixturevalue("django_db_reset_sequences")
+    if (
+            "transactional_db" in request.funcargnames
+            or "live_server" in request.funcargnames
+    ):
+        request.getfixturevalue("transactional_db")
+    else:
+        _django_db_fixture_helper(request, django_db_blocker, transactional=False)
+
+
+@pytest.fixture(scope="module")
+def event_data():
+    test_single = TSingleProduct.filtered_objects.only_movie_ppv().first()
+    data = {
+        'title': "[TEST] give vod",
+        'activation': 'N',
+        'start_dt': time_util.get_current_datetime_str(),
+        'end_dt': time_util.get_week_after_datetime_str(),
+        'series_id': test_single.series_id,
+        'single_id': test_single.product_id
+    }
+    return data
+
+
+@pytest.fixture(scope="module")
+def random_event_obj(module_scoped_db, event_data):
+    event = TExtraVideoEvent.objects.create(**event_data)
+    TExtraVideoEventReward.objects.create(
+        event=event, series_id=event_data['series_id'], single_id=event_data['single_id'])
+
+    yield event
+    event.delete()
+
+
+@pytest.mark.django_db
+class TestGiveVOD:
+    def test_url_list(self, client):
+        res = client.get("/give-vod/list/")
+        assert res.status_code == status.HTTP_200_OK
+
+    def test_url_create(self, client):
+        res = client.get("/give-vod/create/")
+        assert res.status_code == status.HTTP_200_OK
+
+    def test_url_update(self, client, random_event_obj):
+        res = client.get(f"/give-vod/{random_event_obj.uid}/update/")
+        assert res.status_code == status.HTTP_200_OK
+
+    def test_url_api(self, client, random_event_obj):
+        res = client.get(f"/give-vod/api/{random_event_obj.uid}/")
+        assert res.status_code == status.HTTP_200_OK
+    
+    def test_api_update(self, client, random_event_obj):
+        data = string_util.json_stringify({'activation': "Y"})
+        res = client.patch(f"/give-vod/api/{random_event_obj.uid}/", data, content_type="application/json")
+        assert res.status_code == status.HTTP_200_OK
+
+        res = client.get(f"/give-vod/api/{random_event_obj.uid}/")
+        assert res.status_code == status.HTTP_200_OK
+        assert res.data['activation'] == "Y"
+
+    def test_api_delete(self, client, random_event_obj):
+        res = client.delete(f"/give-vod/api/{random_event_obj.uid}/")
+        assert res.status_code == status.HTTP_204_NO_CONTENT
 ```
 
 ---
