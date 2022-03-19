@@ -1,5 +1,8 @@
 # 실바의 블로그에 오신것을 환영합니다
 
+### 2022.03
+- [DRF 활용, 최적화 Tip 모음](python/drf_tips.md)
+
 ### 2021.10
 - [pytest Django 예제 모음](python/pytest_3_django_examples.md)
 - [pytest VS unittest](python/pytest_2_compare.md)
