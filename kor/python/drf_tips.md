@@ -6,17 +6,17 @@ DRF 를 활용할때 알아두면 좋은 갖가지 팁을 모아보았습니다.
 거의 결론만 적었기때문에 상세한 원인이 궁금하신분은 관련내용을 구글링하여 직접 찾아보시기 바랍니다.
 
 
-### Serializer
+### [Serializer](https://www.django-rest-framework.org/api-guide/serializers/)
 
 - Serializer 클래스별 성능(처리속도) 비교: `ModelSerializer < ModelSerializer + ReadOnly < Serializer = Serializer + ReadOnly < 직접만든 custom serializer`
-- Serializer 사용 시, read_only_fields 로 최대한 writable field 수를 줄여라
+- Serializer 사용 시, `read_only_fields` 로 최대한 writable field 수를 줄여라
 - 성능이 문제되는 경우라면, ModelSerializer 보다 일반 Serializer 를 사용하라
 - 반드시 써야하는게 아니면 굳이 Serializer 를 사용할 필요는 없다 (By. DRF 제작자)
 - DRF 의 ModelSerializer - field validation 에서 lazy 함수를 사용하는것에 대한 패치가 완료된 Django, DRF 최신버전을 사용하라
-- 2개 이상의 Model 이 섞인(=JOIN operation 이 필요한) Nested Serializer 일경우, Serializer 의 seed data 로 넘기게 되는 queryset 에서 prefetch_related 또는 selected_related 함수를 사용하여 미리 join 된 데이터를 얻도록 처리한다 (안할경우 N+1 query problem 발생)
+- 2개 이상의 Model 이 섞인(=JOIN operation 이 필요한) Nested Serializer 일경우, Serializer 의 seed data 로 넘기게 되는 queryset 에서 `prefetch_related` 또는 `selected_related` 함수를 사용하여 미리 join 된 데이터를 얻도록 처리한다 (안할경우 N+1 query problem 발생)
 - 커스텀 데이터를 read only 로 추가해야하는경우 `SerializerMethodField` 를 활용
 
-### ViewSet
+### [ViewSet](https://www.django-rest-framework.org/api-guide/viewsets/)
 
 - Router 와 함께 활용하기에 URL 디자인을 RESTful 하게 가져갈 수 있는 이점이 있다.
 - 하지만 여러 endpoint 를 하나의 클래스에 담는 구조기때문에 코드 덩어리가 너무 커질 수 있다.
@@ -25,14 +25,21 @@ DRF 를 활용할때 알아두면 좋은 갖가지 팁을 모아보았습니다.
   - permission_classes, renderer_classes 등의 별도 지정 가능
 
 
-### GenericAPIView 하위클래스들
+### [Generic Views](https://www.django-rest-framework.org/api-guide/generic-views/)
 
 - 개인적으로 가장 선호하는 APIView class 로써, ViewSet 과는 달리 필요한 기능만을 모아 컴팩트 하게 기능을 제공할 수 있다
+- ListCreateAPIView, RetrieveUpdateDestroyAPIView 조합을 가장 선호함
 - URL 디자인을 직접해줘야 한다. (오히려 좋음)
+
+### [Exceptions](https://www.django-rest-framework.org/api-guide/exceptions/)
+
+- `APIException` 클래스를 상속받은 exception 클래스를 만들면 APIView 하위클래스 비즈니스로직 그 어느곳에서라도 raise 했을때 지정한 status_code 의 HTTP response 를 리턴할 수 있다.
+- custom_exception_handler 를 만들어서 django settings 에 붙여놓으면 커스터마이징 된 에러코드나 응답 포맷등을 만들어서 예쁘게 에러응답 관리가 
 
 ### ETC
 
 - JSON 응답 포맷을 커스터마이징 하고 싶다면 커스텀 `Renderer` 를 만들어서 전체 또는 부분적인 endpoint 에 적용할 수 있다. 
+- 라우터에서 URL 디자인 시, 맨 끝에 슬래시를 제거하고 싶으면 `router = DefaultRouter(trailing_slash=False)` 와 같이 라우터를 만들어 쓸 수 있다.
 
 ---
 
