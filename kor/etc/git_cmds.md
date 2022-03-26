@@ -50,6 +50,7 @@ credential 정보 영구저장 (mac, linux) | `git config credential.helper 'sto
 credential 정보 삭제 (mac, linux) | `git config --global --unset credential.helper`
 credential 정보 영구저장 (windows) | `git credential-manager install`
 credential 정보 삭제 (windows) | `git credential-manager uninstall`
+현재 폴더의 git repo credential 정보만 리셋 | `git config --local credential.helper ""`
 
 
 ### Advanced - config
