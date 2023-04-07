@@ -24,11 +24,15 @@ TARGET_BRANCH 를 현재 브랜치로 merge | `git merge TARGET_BRANCH`
 현재 브랜치명 보기 | `git branch --show-current`
 현재 태그 hash 보기 | `git rev-parse HEAD`
 
-### Advanced - rebase
+### Advanced - rebase, reset
 
 내용 | 명령어
 --- | ---
+마지막 커밋 이후 수정사항 전체 초기화 | `git reset --hard`
+최근 1회의 커밋에 대한 Hard 리셋 (=수정사항 날아감) | `git reset --hard HEAD~1`
+최근 1회의 커밋에 대한 강제 리셋  (=수정사항 "안" 날아감) | `git reset --soft HEAD~1`
 TARGET_BRANCH 를 현재 브랜치로 rebase | `git rebase TARGET_BRANCH`
+최근 4개 커밋을 재배치 | `git rebase -i HEAD~4`
 
 ### Advanced - tag
 
@@ -86,7 +90,6 @@ submodule 비활성화 | `git submodule deinit -f {SUBMODULE_NAME}`
 Remote 와 repo 정보 동기화 (삭제된 브랜치 포함) | `git fetch -p`
 현재 버전에서 NEW_BRANCH 라는 브랜치 명으로 branch out 하기(=새 브랜치 만들기) | `git checkout -b NEW_BRANCH`
 v1.0.3 이라는 tag 가 달린 코드버전으로 NEW_BRANCH 만들어서 갈아타기 | `git checkout v1.0.3 -b NEW_BRANCH`
-최근 1회의 커밋에 대한 강제 리셋 | `git reset --hard HEAD~1`
 Remote 브랜치 삭제 | `git push origin --delete TARGET_BRANCH`
 브랜치 일괄삭제 전 확인 | `git branch -r \| grep "origin/RC\/5.3.3..*" \| sed 's/origin\///'`
 브랜치 일괄삭제 | `git branch -r \| grep "origin/RC\/5.4.0..*" \| sed 's/origin\///' \| xargs git push origin --delete`
