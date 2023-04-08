@@ -1,5 +1,8 @@
 # 실바의 블로그에 오신것을 환영합니다
 
+### 2023.04
+- [Django ORM Tips](etc/django_orm_tips.md)
+
 ### 2022.03
 - [MySQL Tips](etc/mysql_tips.md)
 - [DRF 활용, 최적화 Tip 모음](python/drf_tips.md)
