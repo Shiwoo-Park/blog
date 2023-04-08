@@ -4,7 +4,7 @@
 
 ## ORM 성능 최적화 하기
 
-### select_related()와 prefetch_related() 메서드를 사용하여 join 을 통해 쿼리 성능 최적화하기
+예제코드용 모델
 
 ```python
 from django.db import models
@@ -15,7 +15,12 @@ class Author(models.Model):
 class Book(models.Model):
     title = models.CharField(max_length=100)
     author = models.ForeignKey(Author, on_delete=models.CASCADE)
+```
 
+### select_related()와 prefetch_related() 메서드를 사용하여 join 을 통해 쿼리 성능 최적화하기
+
+
+```python
 # Author와 관련된 Book을 가져올 때 select_related() 사용 예시
 author = Author.objects.get(id=1)
 books = Book.objects.filter(author=author).select_related('author')
