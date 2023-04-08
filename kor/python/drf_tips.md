@@ -1,20 +1,30 @@
-# DRF(Django REST Framewoark) 활용, 최적화 등의 Tip 모음
+# DRF(Django REST Framewoark) Tip 모음
 
 > 날짜: 2022-03-19
 
-DRF 를 활용할때 알아두면 좋은 갖가지 팁을 모아보았습니다.
-거의 결론만 적었기때문에 상세한 원인이 궁금하신분은 관련내용을 구글링하여 직접 찾아보시기 바랍니다.
+Django 로 API 개발 시, DRF 를 사용할때 알아두면 좋은 갖가지 팁을 모아보았습니다.
+거의 결론만 적었기때문에 상세한 이유가 궁금하신분은 관련내용을 구글링하여 직접 찾아보시기 바랍니다.
 
 
 ### [Serializer](https://www.django-rest-framework.org/api-guide/serializers/)
 
-- Serializer 클래스별 성능(처리속도) 비교: `ModelSerializer < ModelSerializer + ReadOnly < Serializer = Serializer + ReadOnly < 직접만든 custom serializer`
-- Serializer 사용 시, `read_only_fields` 로 최대한 writable field 수를 줄여라
-- 성능이 문제되는 경우라면, ModelSerializer 보다 일반 Serializer 를 사용하라
-- 반드시 써야하는게 아니면 굳이 Serializer 를 사용할 필요는 없다 (By. DRF 제작자)
-- DRF 의 ModelSerializer - field validation 에서 lazy 함수를 사용하는것에 대한 패치가 완료된 Django, DRF 최신버전을 사용하라
-- 2개 이상의 Model 이 섞인(=JOIN operation 이 필요한) Nested Serializer 일경우, Serializer 의 seed data 로 넘기게 되는 queryset 에서 `prefetch_related` 또는 `selected_related` 함수를 사용하여 미리 join 된 데이터를 얻도록 처리한다 (안할경우 N+1 query problem 발생)
-- 커스텀 데이터를 read only 로 추가해야하는경우 `SerializerMethodField` 를 활용
+- 성능 최적화
+  - Serializer 클래스별 성능(처리속도) 비교: `ModelSerializer < ModelSerializer + ReadOnly < Serializer = Serializer + ReadOnly < 직접만든 custom serializer`
+  - Serializer 사용 시, `read_only_fields` 로 최대한 writable field 수를 줄여라
+  - 성능이 문제되는 경우라면, ModelSerializer 보다 일반 Serializer 를 사용하라
+  - DRF 의 ModelSerializer - field validation 에서 lazy 함수를 사용하는것에 대한 패치가 완료된 Django, DRF 최신버전을 사용하라
+- 용도 단순화
+  - 기본적으로 데이터 검증, 가공, 입력->DB->응답 과정의 serialization 이라는 너무 많은 역할을 가지고 있다.
+  - 역할을 줄여서 명확한 목적 하나만을 위해 사용가능
+  - ex. 단순 입력값 검증용 request serializer
+- `Nested Serializer`
+  - 2개 이상의 Model 데이터가 섞인(=JOIN operation 이 필요한) 경우를 뜻함
+  - Serializer object 생성 시, seed data 로 넘기게 되는 queryset 을 `prefetch_related` 또는 `selected_related` 함수를 사용하여 미리 join 된 데이터를 얻도록 처리한다 (안할경우 N+1 query problem 발생)
+  - `setup_eager_loading` 에 대해 찾아보자.
+- 기타 Tip
+  - 커스텀 데이터를 read only 로 추가해야하는경우 `SerializerMethodField` 를 활용
+  - Model property 도 `source` 속성으로 지정할 수 있음
+
 
 ### [ViewSet](https://www.django-rest-framework.org/api-guide/viewsets/)
 
