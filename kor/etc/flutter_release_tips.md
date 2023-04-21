@@ -7,6 +7,7 @@
 
 - [Apple Developer](https://developer.apple.com/kr/) 쪽에서 Identifier 및 Certificate 등 발급을 받은뒤
   - 개발자 등록을 위해 돈이 든다 (1년에 약 13만원....ㄷㄷ)
+  - 앱 하나당 하나의 Bundle Identifier 가 사용되는데 앱에서 사용할 기능들을 체크함
 - Apple [App Store Connect](https://appstoreconnect.apple.com/) 를 통해서 앱을등록하고 출시 및 모니터링을 진행하게 됨.
 - 앱 릴리즈 후, 사용통계 정보등을 얻고 싶다면 [Firebase](https://firebase.google.com/) 를 활용
 - 앱 아이콘이나 launch image 등을 공짜로 만들고 싶다면 AI 이미지 생성기 등을 활용
@@ -21,7 +22,7 @@
   - 페이지 제공은 `Git Page, Notion Web Page` 등을 활용. (블로그도 된다고 함)
 - 기본적으로는 Flutter 와 Apple 에서 제공되는 공식문서들을 잘 읽어보고 따라하면 됨.
   - Minimum OS Version 세팅을 xcode 쪽 설정과 flutter 쪽 설정 동기화 해주는거 중요.
-- Transport 라는 앱으로 빌드한 앱 코드를 업로드 했었는데 Apple Cloud 를 통해서 코드를 올리는 방법도 있는듯 함. -> 이건 잘 
+- Transport 라는 앱으로 빌드한 앱 코드를 업로드 했었는데 Apple Cloud 를 통해서 코드를 올리는 방법도 있는듯 함. -> 이건 잘 모름ㅋ
 
 ## Android Google Play Store
 
