@@ -1,6 +1,7 @@
 # 실바의 블로그에 오신것을 환영합니다
 
 ### 2023.04
+- [Flutter App 출시 Tips](etc/flutter_release_tips.md)
 - [Django ORM Tips](python/django_orm_tips.md)
 
 ### 2022.03
