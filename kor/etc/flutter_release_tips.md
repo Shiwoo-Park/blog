@@ -7,7 +7,7 @@
 
 - [Apple Developer](https://developer.apple.com/kr/) 쪽에서 Identifier 및 Certificate 등 발급을 받은뒤
   - 개발자 등록을 위해 돈이 든다 (1년에 약 13만원....ㄷㄷ)
-  - 앱 하나당 하나의 Bundle Identifier 가 사용되는데 앱에서 사용할 기능들을 체크함
+  - 앱 하나당 하나의 Bundle Identifier 가 사용되는데 앱에서 사용할 기능들을 미리 지정함
 - Apple [App Store Connect](https://appstoreconnect.apple.com/) 를 통해서 앱을등록하고 출시 및 모니터링을 진행하게 됨.
 - 앱 릴리즈 후, 사용통계 정보등을 얻고 싶다면 [Firebase](https://firebase.google.com/) 를 활용
 - 앱 아이콘이나 launch image 등을 공짜로 만들고 싶다면 AI 이미지 생성기 등을 활용
