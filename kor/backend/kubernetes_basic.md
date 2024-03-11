@@ -16,6 +16,7 @@
   - node (=set of worker machine): 쿠버네티스가 설치된 물리머신, 최소 1개 이상의 worker 머신이 필요
 
 ## Workload
+
 - Pod
   - k8s
 
