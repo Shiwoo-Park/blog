@@ -2,6 +2,7 @@
 
 ### 2024.03
 
+- [Git hook 으로 커밋메시지 prefix 자동화하기](etc/git_hook_1.md)
 - [SSR, SPA, SSG, ISR 개념 잡기](frontend/ssr_spa_ssg_isr.md)
 - [파이썬 자동 코드포매터 black 적용하기](python/apply_black.md)
 
