@@ -2,6 +2,8 @@
 
 ### 2024.03
 
+- [JWT 토큰의 발급, 사용, 관리 방식 총정리](backend/jwt_token.md)
+- [PostgreSQL 사용 Tips](backend/postgres_tips.md)
 - [프로젝트의 미사용 pip 패키지 찾아내기](python/pip_cleanup.md)
 - [특정 pip 패키지의 다른 패키지 의존성 확인하기](python/pip_dependency.md)
 - [Git hook 으로 커밋메시지 prefix 자동화하기](etc/git_hook_1.md)
