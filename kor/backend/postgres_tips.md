@@ -36,7 +36,6 @@ WHERE
 -- table 삭제
 DROP TABLE my_table;
 
-
 -- DB 삭제
 DROP DATABASE IF EXISTS 데이터베이스명;
 ```
