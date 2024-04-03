@@ -26,19 +26,31 @@ chmod +x .git/hooks/prepare-commit-msg
 
 # 현재 브랜치 이름을 가져옵니다.
 BRANCH_NAME=$(git branch --show-current)
-# 브랜치 이름에서 티켓 코드를 추출합니다.
-TICKET_CODE=$(echo $BRANCH_NAME | grep -oE 'DEV-[0-9]+' || true)
+
+# 티켓 코드의 prefix 리스트를 정의합니다. (JIRA 프로젝트 코드)
+PREFIXES=("DEV" "BE")
+
+# 티켓 코드를 초기화합니다.
+TICKET_CODE=""
+
+# 각 prefix에 대해 루프를 돌며 티켓 코드를 찾습니다.
+for PREFIX in "${PREFIXES[@]}"; do
+  MATCH=$(echo $BRANCH_NAME | grep -oE "${PREFIX}-[0-9]+" || true)
+  if [ -n "$MATCH" ]; then
+    TICKET_CODE=$MATCH
+    break
+  fi
+done
 
 # 티켓 코드가 존재하고, 커밋 메시지가 이미 티켓 코드를 포함하고 있지 않다면, 커밋 메시지를 수정합니다.
 if [ -n "$TICKET_CODE" ] && ! grep -qE "^$TICKET_CODE" "$1"; then
-    # 커밋 메시지 파일의 내용을 임시 파일에 복사합니다.
-    cp "$1" "$1.tmp"
-    # 커밋 메시지 파일을 업데이트합니다.
-    echo "$TICKET_CODE $(cat "$1.tmp")" > "$1"
-    # 임시 파일을 제거합니다.
-    rm "$1.tmp"
+  # 커밋 메시지 파일의 내용을 임시 파일에 복사합니다.
+  cp "$1" "$1.tmp"
+  # 커밋 메시지 파일을 업데이트합니다.
+  echo "$TICKET_CODE $(cat "$1.tmp")" > "$1"
+  # 임시 파일을 제거합니다.
+  rm "$1.tmp"
 fi
-
 ```
 
 이 스크립트는 브랜치 이름을 기반으로 티켓 코드를 추출하고, 해당 코드가 커밋 메시지에 이미 포함되어 있지 않은 경우에만 커밋 메시지의 맨 앞에 티켓 코드를 추가합니다.
