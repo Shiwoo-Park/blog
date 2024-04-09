@@ -1,5 +1,10 @@
 # 실바의 블로그에 오신것을 환영합니다
 
+### 2024.04
+
+- [git rebase](etc/git_rebase.md)
+- [테크스펙- 기능적/비기능적 요구사항의 차이](etc/functional_requirement.md)
+
 ### 2024.03
 
 - [JWT 토큰의 발급, 사용, 관리 방식 총정리](backend/jwt_token.md)
