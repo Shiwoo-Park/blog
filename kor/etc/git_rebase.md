@@ -1,0 +1,46 @@
+# git rebase 
+
+> 날짜: 2024-04-09
+
+- rebase 는 말그대로 base 를 재설정 하는 작업이다.
+- 여기서 base 란 내가 작업하는 브랜치가 최초로 생성된 시점의 코드형상 (주로 develop 브랜치)을 말한다.
+- rebase 를 사용하는 이유는 내가 피쳐브랜치에서 작업하는 사항들이 다른 변경사항들의 침범 없이 깔끔하게 유지하기 위해서다.
+- rebase 를 하는 시점은 base 코드가 다른 작업자들에 의해 변경사항(=커밋)이 추가되었을때 특히, 내 코드와 conflict 를 일으킬때 진행한다.
+
+## develop -> feature 브랜치 rebase 하는법
+
+```shell
+# develop 최신화
+git checkout develop
+git fetch origin
+git pull origin develop
+
+# 피쳐로 돌아와서 rebase 시작
+git checkout feature-branch-name
+git rebase develop
+
+# conflict 발생 시, 직접 열어서 수정
+git status
+vi conflict_file
+
+# 수정이 끝나면 모든 파일에 대해 add 처리 
+git add .
+git rebase --continue
+
+# 변경사항 강제로 remote 반영
+git push origin feature-branch-name --force
+```
+
+## 기타 명령어
+
+```shell
+# rebase 취소하기
+git rebase --abort
+
+# conflict 내용 자세히 보기
+git diff
+```
+
+---
+
+[목록으로](https://shiwoo-park.github.io/blog/kor)
