@@ -29,6 +29,21 @@ Slack 앱에서는 이 ID 를 바로 알아내기 어려운 부분이 있다.
 
 위 그림과 같은 경우 그룹 ID 는 `S04T047L90D` 이다.
 
+## 설정값 예제
+
+```
+[배포 시작]
+`${JOB_NAME}` 배포를 시작합니다.
+- 브랜치: `${GIT_BRANCH}`
+- 로그확인: `${BUILD_URL}console`
+
+[배포 완료]
+@channel
+또는
+<!subteam^GROUP1_ID> <!subteam^GROUP2_ID>
+:white_check_mark: `${JOB_NAME}` 배포가 완료되었습니다.
+```
+
 ---
 
 [목록으로](https://shiwoo-park.github.io/blog/kor)
