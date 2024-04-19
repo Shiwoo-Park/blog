@@ -25,7 +25,7 @@ Slack 앱에서는 이 ID 를 바로 알아내기 어려운 부분이 있다.
 - 브라우저 슬랙에서 그룹멘션 텍스트 를 클릭하면 개발자도구-Elements 에서 아래와 같은 해당 요소 속성을 확인할 수 있다.
 - 이 요소 중 `data-user-group-id` 의 value 에 해당하는 것이 그룹 ID 이다.
 
-![slack_user_group_id](resources/slack_user_group_id.png)
+![slack_user_group_id](../../resources/slack_user_group_id.png)
 
 위 그림과 같은 경우 그룹 ID 는 `S04T047L90D` 이다.
 
