@@ -2,6 +2,7 @@
 
 ### 2024.04
 
+- [git squash](etc/git_squash.md)
 - [Slack 시스템 메시지에서 그룹 멘션하기](etc/slack_user_group_mention.md)
 - [git rebase](etc/git_rebase.md)
 - [테크스펙- 기능적/비기능적 요구사항의 차이](etc/functional_requirement.md)
