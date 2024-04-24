@@ -1,4 +1,4 @@
-# git squash
+# git squash (커밋 합치기)
 
 > 날짜: 2024-04-19
 
