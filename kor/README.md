@@ -2,6 +2,7 @@
 
 ### 2024.04
 
+- [나만의 개발환경 설정방법](etc/my_keymap.md)
 - [git squash](etc/git_squash.md)
 - [Slack 시스템 메시지에서 그룹 멘션하기](etc/slack_user_group_mention.md)
 - [git rebase](etc/git_rebase.md)
