@@ -24,7 +24,15 @@ Git에서 최근 3개의 커밋을 squash하는 과정은 interactive rebase를 
    - 모든 편집을 마친 후에는 변경사항을 저장하고 rebase를 완료합니다.
    - 이렇게 하면 지정된 커밋들이 하나로 합쳐진 상태로 로컬 레포지토리에 적용됩니다.
 
-커밋을 squash할 때는 항상 주의해서 진행하세요, 특히 공유 중인 브랜치에 대해서는 다른 개발자와 협의 후 진행하는 것이 좋습니다.
+   ```
+   # 변경사항 강제로 remote 반영 (force push)
+   git push origin --force
+   # Remote tracking branch 가 설정이 안되어있다면
+   git push origin feature-branch-name --force
+
+   # rebase 취소하기
+   git rebase --abort
+   ```
 
 ---
 

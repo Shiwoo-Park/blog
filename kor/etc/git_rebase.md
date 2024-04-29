@@ -29,6 +29,8 @@ git add .
 git rebase --continue
 
 # 변경사항 강제로 remote 반영 (force push)
+git push origin --force
+# Remote tracking branch 가 설정이 안되어있다면
 git push origin feature-branch-name --force
 ```
 
