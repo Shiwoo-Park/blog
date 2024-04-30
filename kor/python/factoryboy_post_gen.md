@@ -62,10 +62,10 @@ class UserGroupFactory(factory.django.DjangoModelFactory):
 ## build() 와 create() 의 차이
 
 ```shell
-# 메모리 상에서만 CouponGroup 객체를 생성 (데이터베이스에 저장 X)
+# 메모리 상에서만 UserGroup 객체를 생성 (데이터베이스에 저장 X)
 coupon_group = UserGroupFactory.build()
 
-# 데이터베이스에 CouponGroup 객체를 저장
+# 데이터베이스에 UserGroup 객체를 저장
 coupon_group = UserGroupFactory.create()
 ```
 
