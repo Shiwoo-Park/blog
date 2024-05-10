@@ -1,5 +1,7 @@
 # 실바의 블로그에 오신것을 환영합니다
 
+[즐겨찾기 바로가기](favorite.md)
+
 ### 2024.04
 
 - [factoryboy - @post_generation 사용법](python/factoryboy_post_gen.md)
