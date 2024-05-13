@@ -2,6 +2,10 @@
 
 [즐겨찾기 바로가기](favorite.md)
 
+### 2024.05
+
+- [루트 권한을 획득하는 명령어들의 차이점(sudo -s, -i, su)](backend/sudo_cmds.md)
+
 ### 2024.04
 
 - [factoryboy - @post_generation 사용법](python/factoryboy_post_gen.md)

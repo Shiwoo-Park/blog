@@ -52,6 +52,13 @@ WHERE
 -- 스키마 까지 명시할 필요가 있다면 조건 추가
     AND table_schema = 'your_schema_name';
 
+-- 테이블의 constraints 조회
+SELECT constraint_name, constraint_type
+FROM information_schema.table_constraints
+WHERE table_name = '테이블명' AND table_schema = '스키마명';
+
+
+
 -- 현재 실행중인 쿼리 조회
 SELECT pid, now() - pg_stat_activity.query_start AS duration, query, state
 FROM pg_stat_activity
