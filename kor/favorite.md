@@ -2,6 +2,7 @@
 
 ## Database
 - [PostgreSQL 사용 Tips](backend/postgres_tips.md)
+- [Redis tip 모음](backend/redis_tips.md)
 - [MySQL Tips](backend/mysql_tips.md)
 
 ## Git

@@ -4,6 +4,8 @@
 
 ### 2024.05
 
+- [Linux 에서 유저 전환하는 방법](backend/linux_user_change.md)
+- [Redis tip 모음](backend/redis_tips.md)
 - [루트 권한을 획득하는 명령어들의 차이점(sudo -s, -i, su)](backend/sudo_cmds.md)
 
 ### 2024.04
