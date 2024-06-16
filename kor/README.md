@@ -2,6 +2,10 @@
 
 [즐겨찾기 바로가기](favorite.md)
 
+### 2024.06
+
+- [Windows 에서 nano 설치하고 사용하기](etc/win_nano.md)
+
 ### 2024.05
 
 - [Linux 에서 유저 전환하는 방법](backend/linux_user_change.md)
