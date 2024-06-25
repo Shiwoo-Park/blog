@@ -1,7 +1,7 @@
 
 # Shell Script: favorite snippets - Advanced
 
-> 날짜: 2021-06-25
+> 날짜: 2024-06-25
 
 [목록으로](https://shiwoo-park.github.io/blog/kor)
 

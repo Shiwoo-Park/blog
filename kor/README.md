@@ -4,6 +4,7 @@
 
 ### 2024.06
 
+- [쉘 스크립트 - 꿀팁 모음](backend/shell_script_2.md)
 - [Windows 에서 nano 설치하고 사용하기](etc/win_nano.md)
 
 ### 2024.05
