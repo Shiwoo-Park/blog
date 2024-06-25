@@ -62,7 +62,7 @@
 
 ### 2021.1
 
-- [쉘 스크립트 - 기본 문법 & Tips](backend/shell_script_tips.md)
+- [쉘 스크립트 - 기본 문법](backend/shell_script_1.md)
 - [쉘 스크립트 - 명령어 모음](backend/useful_bash_cmds.md)
 
 ### 2020.12
