@@ -17,7 +17,8 @@
 ## Infra
 - [Docker - 명령어 모음](backend/docker_cmds.md)
 - [SSH 활용 tips](backend/ssh_tips.md)
-- [쉘 스크립트 - 기본 문법 & Tips](backend/shell_script_tips.md)
+- [쉘 스크립트 - 기본 문법](backend/shell_script_1.md)
+- [쉘 스크립트 - 꿀팁 모음](backend/shell_script_2.md)
 - [쉘 스크립트 - 명령어 모음](backend/useful_bash_cmds.md)
 - [Linux 의 init 시스템: systemd 와 systemctl 간단 사용법](backend/systemd_ctl_basic.md)
 
