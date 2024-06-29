@@ -3,6 +3,16 @@
 
 > 날짜: 2020-12-23
 
+### 즐겨찾기
+
+명령어 | 내용
+--- | ---
+특정 컨테이너 쉘 실행 | `docker exec -it CONTAINER /bin/bash`
+컨테이너에서 django shell_plus 실행 | `docker exec -it python manage.py shell_plus`
+도커 컴포즈 종료 및 관련 모든 이미지 및 볼륨 삭제 | `docker-compose down --rmi all -v`
+미사용 도커 리소스 정리 | `docker system prune -a`
+
+
 
 ### Basic
 
