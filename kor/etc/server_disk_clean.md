@@ -45,6 +45,18 @@ sudo journalctl --vacuum-time=7d
 
 # 500M 로 로그 크기 제한
 sudo journalctl --vacuum-size=500M
+
+# 데몬 재시작 (설정 리로드)
+sudo systemctl restart systemd-journald
+
+# 데몬 상태 확인
+sudo systemctl status systemd-journald
+
+# 변경된 설정의 적용 확인
+sudo journalctl --verify
+
+# 저널 사용량 확인
+journalctl --disk-usage
 ```
 
 `/etc/systemd/journald.conf` 로 자동관리 설정
