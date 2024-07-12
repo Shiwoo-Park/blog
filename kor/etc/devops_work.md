@@ -1,6 +1,23 @@
 # Devops work 
 
 
+## linux command - 디스크 정리
+
+```shell
+# 대용량 파일 및 디렉토리 찾기 (Top 20)
+sudo du -h / | sort -rh | head -n 20
+
+# 패키지 캐시 정리
+sudo yum clean all
+
+# 저널로그 삭제 (7일 이상된)
+sudo journalctl --vacuum-time=7d
+
+# 디스크 사용량 분석도구 설치 & 활용
+sudo yum install ncdu
+sudo ncdu /
+```
+
 ## nextjs
 
 ```shell
