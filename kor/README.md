@@ -2,8 +2,15 @@
 
 [즐겨찾기 바로가기](favorite.md)
 
+### 2024.07
+
+- [서버 디스크 정리](etc/server_disk_clean.md)
+- [js - ?? (nullish) 연산자](frontend/js_nullish_operator.md)
+
 ### 2024.06
 
+- [node 프로세스 관리 - pm2](frontend/react_use_form.md)
+- [node 프로세스 관리 - pm2](frontend/pm2_guide.md)
 - [쉘 스크립트 - 꿀팁 모음](backend/shell_script_2.md)
 - [Windows 에서 nano 설치하고 사용하기](etc/win_nano.md)
 
@@ -73,7 +80,7 @@
 
 ### 2020.11
 
-- [React.js - 입문을 위한 배경지식](javascript/react_backgrounds.md)
+- [React.js - 입문을 위한 배경지식](frontend/react_backgrounds.md)
 
 ### 2020.08
 
