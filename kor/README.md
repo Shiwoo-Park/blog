@@ -4,6 +4,9 @@
 
 ### 2024.07
 
+- [AWS - 배포환경 구분하기](aws/manage_env_var.md)
+- [AWS - Code Deploy 오류 해결: appspec.yml 을 찾을 수 없음](aws/code_deploy_error1.md)
+- [AWS - ECR 에 이미지 푸시](aws/aws_ecr_push.md)
 - [서버 디스크 정리](etc/server_disk_clean.md)
 - [js - ?? (nullish) 연산자](frontend/js_nullish_operator.md)
 
