@@ -55,7 +55,7 @@ async function getSecret(secretName) {
 }
 ```
 
-## CodeDeploy 환경 변수 사용:
+## CodeDeploy 환경 변수 사용
 - CodeDeploy 애플리케이션 설정에서 환경 변수를 정의합니다.
 - 애플리케이션에서 process.env를 통해 접근합니다.
 - 장점: CodeDeploy 콘솔에서 직접 관리 가능
@@ -64,7 +64,7 @@ async function getSecret(secretName) {
 const databaseUrl = process.env.DATABASE_URL;
 ```
 
-## 구성 파일 사용:
+## 구성 파일 사용
 - 각 환경에 대한 JSON 또는 YAML 구성 파일을 생성합니다.
 - CodeDeploy 스크립트에서 적절한 구성 파일을 선택합니다.
 - 애플리케이션에서 구성 파일을 로드합니다.
@@ -74,7 +74,7 @@ const fs = require('fs');
 const config = JSON.parse(fs.readFileSync(`config.${process.env.NODE_ENV}.json`));
 ```
 
-## AWS AppConfig 사용:
+## AWS AppConfig 사용
 
 - 동적 구성 관리를 위해 AppConfig를 사용합니다.
 - 애플리케이션 실행 중에도 구성을 업데이트할 수 있습니다.
