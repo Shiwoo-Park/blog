@@ -69,7 +69,6 @@ server {
 }
 ```
 
-
 ## git
 
 ```shell
@@ -78,4 +77,15 @@ awk '$2 == "[gone]" {print $1}' |
 xargs git branch -D
 
 git rebase -i HEAD~4
+```
+
+## AWS - Code Deploy
+
+```shell
+sudo service codedeploy-agent status
+
+sudo service codedeploy-agent start
+
+sudo -i
+vi /var/log/aws/codedeploy-agent/codedeploy-agent.log
 ```

@@ -43,6 +43,9 @@ sudo systemctl reload application.service
 # 재시작 + 설정 리로드
 sudo systemctl reload-or-restart application.service
 
+# enable 된 서비스 목록 조회
+systemctl list-unit-files --type=service --state=enabled
+
 # 서비스 Enable 하고 Disable 하기 (= 최초 구동시 자동실행 여부 결정)
 sudo systemctl enable application.service
 sudo systemctl disable application.service
