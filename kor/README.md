@@ -2,12 +2,17 @@
 
 [즐겨찾기 바로가기](favorite.md)
 
+### 2024.08
+
+- [AWS - EKS vs ECS](aws/eks_vs_ecs.md)
+- [AWS - RDS 관리 Tips](aws/rds_manage.md)
+
 ### 2024.07
 
 - [AWS - 배포환경 구분하기](aws/manage_env_var.md)
 - [AWS - Code Deploy 오류 해결: appspec.yml 을 찾을 수 없음](aws/code_deploy_error1.md)
 - [AWS - ECR 에 이미지 푸시](aws/aws_ecr_push.md)
-- [서버 디스크 정리](etc/server_disk_clean.md)
+- [서버 디스크 정리](devops/server_disk_clean.md)
 - [js - ?? (nullish) 연산자](frontend/js_nullish_operator.md)
 
 ### 2024.06
@@ -79,7 +84,7 @@
 ### 2020.12
 
 - [내가 자주쓰는 기술스택: 유용한 웹문서 모음](python/study_links.md)
-- [Docker - 명령어 모음](backend/docker_cmds.md)
+- [Docker - 명령어 모음](devops/docker_cmds.md)
 
 ### 2020.11
 
