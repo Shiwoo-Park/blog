@@ -89,3 +89,9 @@ sudo service codedeploy-agent start
 sudo -i
 vi /var/log/aws/codedeploy-agent/codedeploy-agent.log
 ```
+
+## my-service
+
+```shell
+sudo systemctl stop api-v2
+```
