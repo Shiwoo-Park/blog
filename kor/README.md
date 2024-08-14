@@ -4,6 +4,7 @@
 
 ### 2024.08
 
+- [AWS - ALB 여러 도메인 하나로 서비스 하기](aws/multiple_domain.md)
 - [AWS - EKS vs ECS](aws/eks_vs_ecs.md)
 - [AWS - RDS 관리 Tips](aws/rds_manage.md)
 

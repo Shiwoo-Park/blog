@@ -17,8 +17,16 @@ class Book(models.Model):
     author = models.ForeignKey(Author, on_delete=models.CASCADE)
 ```
 
-### select_related()와 prefetch_related() 메서드를 사용하여 join 을 통해 쿼리 성능 최적화하기
 
+### Read / Write DB 가 다를경우 복제지연에 대처하는 우리의 자세
+
+- write + read 가 공존하는 로직에서는 반드시 복제지연이 발생할것을 대비하자
+- write 가 수행된 데이터를 다시 select 하지말고 생성, 수정 후 리턴된 객체를 그냥 쓰자! (메모리에 있으니)
+- `transaction.atomic(using="write_db")` → 믿을게 못됨 (그 안에서도 read DB 참조)
+- `MyModel.objects.using("write_db")` 사용하기 (직접 참조하므로 DB router를 아예 참조하지 않음)
+
+
+### select_related()와 prefetch_related() 메서드를 사용하여 join 을 통해 쿼리 성능 최적화하기
 
 ```python
 # Author와 관련된 Book을 가져올 때 select_related() 사용 예시
