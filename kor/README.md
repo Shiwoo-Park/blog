@@ -33,9 +33,9 @@
 
 - [factoryboy - @post_generation 사용법](python/factoryboy_post_gen.md)
 - [나만의 개발환경 설정방법](etc/my_keymap.md)
-- [git squash](etc/git_squash.md)
+- [git squash](git/git_squash.md)
 - [Slack 시스템 메시지에서 그룹 멘션하기](etc/slack_user_group_mention.md)
-- [git rebase](etc/git_rebase.md)
+- [git rebase](git/git_rebase.md)
 - [테크스펙- 기능적/비기능적 요구사항의 차이](etc/functional_requirement.md)
 
 ### 2024.03
@@ -44,7 +44,7 @@
 - [PostgreSQL 사용 Tips](backend/postgres_tips.md)
 - [프로젝트의 미사용 pip 패키지 찾아내기](python/pip_cleanup.md)
 - [특정 pip 패키지의 다른 패키지 의존성 확인하기](python/pip_dependency.md)
-- [Git hook 으로 커밋메시지 prefix 자동화하기](etc/git_hook_1.md)
+- [Git hook 으로 커밋메시지 prefix 자동화하기](git/git_hook_1.md)
 - [SSR, SPA, SSG, ISR 개념 잡기](frontend/ssr_spa_ssg_isr.md)
 - [파이썬 자동 코드포매터 black 적용하기](python/apply_black.md)
 
@@ -94,10 +94,10 @@
 ### 2020.08
 
 - [Django - Group By 쿼리 작성하기](python/django_groupby.md)
-- [Git - 명령어 모음](etc/git_cmds.md)
+- [Git - 명령어 모음](git/git_cmds.md)
 
 ### 2020.07
 
-- [Git - 서버에 deploy key 활용가능하도록 등록하기](etc/git_deploy_key.md)
-- [Git - 헤깔리는 gitignore 의 directory 설정](etc/gitignore_dir.md)
+- [Git - 서버에 deploy key 활용가능하도록 등록하기](git/git_deploy_key.md)
+- [Git - 헤깔리는 gitignore 의 directory 설정](git/gitignore_dir.md)
 - [Django or DRF 의 View 에 Custom Decorator 를 달아보자](python/django_view_decorator.md)
