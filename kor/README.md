@@ -4,7 +4,8 @@
 
 ### 2024.08
 
-- [Gitlab -CI/CD pipeline 최적화 및 코드품질관리기능](git/gitlab_cicd_tips.md)
+- [AWS - Code Deploy 에서 ApplicationStop 오류 해결](aws/code_deploy_error2.md)
+- [Gitlab - CI/CD pipeline 최적화 및 코드품질관리기능](git/gitlab_cicd_tips.md)
 - [Gitlab - 각종 꿀팁 및 모범사례](git/gitlab.tips.md)
 - [AWS - ALB 여러 도메인 하나로 서비스 하기](aws/multiple_domain.md)
 - [AWS - EKS vs ECS](aws/eks_vs_ecs.md)
