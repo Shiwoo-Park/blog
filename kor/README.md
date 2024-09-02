@@ -2,6 +2,10 @@
 
 [즐겨찾기 바로가기](favorite.md)
 
+### 2024.09
+
+- [Linux 서버 상태진단](devops/linux_status.md)
+
 ### 2024.08
 
 - [AWS - Code Deploy 에서 ApplicationStop 오류 해결](aws/code_deploy_error2.md)
