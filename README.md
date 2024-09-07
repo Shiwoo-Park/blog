@@ -1,11 +1,11 @@
 # 실바의 블로그에 오신것을 환영합니다
 
-[즐겨찾기](favorite.md) | [블로그](https://shiwoo-park.github.io/blog/) | [Git repo](https://github.com/Shiwoo-Park/blog) 
+[블로그](https://shiwoo-park.github.io/blog/) | [Git-Repo](https://github.com/Shiwoo-Park/blog) | [즐겨찾기](favorite.md)
 
----
 
 ### 2024.09
 
+- [AWS - EC2 인스턴스 템플릿 교체](dev/aws/update_ec2_template.md)
 - [Linux 서버 상태진단](dev/devops/linux_status.md)
 
 ### 2024.08
