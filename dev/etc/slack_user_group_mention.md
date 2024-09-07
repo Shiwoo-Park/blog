@@ -46,6 +46,6 @@ Slack 앱에서는 이 ID 를 바로 알아내기 어려운 부분이 있다.
 
 ---
 
-[목록으로](https://shiwoo-park.github.io)
+[목록으로](https://shiwoo-park.github.io/blog)
 
 

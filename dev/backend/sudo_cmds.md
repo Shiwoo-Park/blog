@@ -2,7 +2,7 @@
 
 > 날짜: 2024-05-13
 
-[목록으로](https://shiwoo-park.github.io)
+[목록으로](https://shiwoo-park.github.io/blog)
 
 ---
 

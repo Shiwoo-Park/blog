@@ -115,4 +115,4 @@ serve -s build
 
 ---
 
-[목록으로](https://shiwoo-park.github.io)
+[목록으로](https://shiwoo-park.github.io/blog)

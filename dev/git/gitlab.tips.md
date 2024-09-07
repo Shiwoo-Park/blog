@@ -2,7 +2,7 @@
 
 > 날짜: 2024-08-15
 
-[목록으로](https://shiwoo-park.github.io)
+[목록으로](https://shiwoo-park.github.io/blog)
 
 ---
 
@@ -45,4 +45,4 @@
 
 ---
 
-[목록으로](https://shiwoo-park.github.io)
+[목록으로](https://shiwoo-park.github.io/blog)

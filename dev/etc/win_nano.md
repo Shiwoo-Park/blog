@@ -2,7 +2,7 @@
 
 > 날짜: 2024-06-16
 
-[목록으로](https://shiwoo-park.github.io)
+[목록으로](https://shiwoo-park.github.io/blog)
 
 ---
 
@@ -48,4 +48,4 @@ Windows에서 터미널에서 간단히 사용할 수 있는 텍스트 편집기
 
 ---
 
-[목록으로](https://shiwoo-park.github.io)
+[목록으로](https://shiwoo-park.github.io/blog)

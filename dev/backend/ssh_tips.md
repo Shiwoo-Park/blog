@@ -45,4 +45,4 @@ Host rainbow
 (주의) config 파일의 `권한(chmod)은 반드시 400` 이어야 함
 
 
-[목록으로](https://shiwoo-park.github.io)
+[목록으로](https://shiwoo-park.github.io/blog)

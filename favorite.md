@@ -1,6 +1,6 @@
 # 실바의 즐겨찾기
 
-[목록으로](https://shiwoo-park.github.io)
+[목록으로](https://shiwoo-park.github.io/blog)
 
 ---
 ## Dev - Basic

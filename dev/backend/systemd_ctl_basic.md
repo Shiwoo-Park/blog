@@ -105,4 +105,4 @@ systemctl list-unit-files  # 모든 Unit File 보기
 
 ---
 
-[목록으로](https://shiwoo-park.github.io)
+[목록으로](https://shiwoo-park.github.io/blog)

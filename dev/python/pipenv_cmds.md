@@ -44,4 +44,4 @@ pre-releases 를 포함한 lockfile 생성 | `pipenv lock --pre` |
 
 ---
 
-[목록으로](https://shiwoo-park.github.io)
+[목록으로](https://shiwoo-park.github.io/blog)

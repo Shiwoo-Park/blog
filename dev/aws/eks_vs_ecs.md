@@ -2,7 +2,7 @@
 
 > 날짜: 2024-08-07
 
-[목록으로](https://shiwoo-park.github.io)
+[목록으로](https://shiwoo-park.github.io/blog)
 
 ---
 
@@ -120,4 +120,4 @@ AWS의 관리형 서비스인 **Amazon Elastic Kubernetes Service (EKS)**와 **A
 
 ---
 
-[목록으로](https://shiwoo-park.github.io)
+[목록으로](https://shiwoo-park.github.io/blog)

@@ -2,7 +2,7 @@
 
 > 날짜: 2020-12-23
 
-[목록으로](https://shiwoo-park.github.io)
+[목록으로](https://shiwoo-park.github.io/blog)
 
 ---
 
@@ -78,4 +78,4 @@ Push the image to gcr.io| `docker push gcr.io/${GCP_PROJECT}/py-web-server:v1`
 
 ---
 
-[목록으로](https://shiwoo-park.github.io)
+[목록으로](https://shiwoo-park.github.io/blog)

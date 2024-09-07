@@ -2,7 +2,7 @@
 
 > 날짜: 2024-04-30
 
-[목록으로](https://shiwoo-park.github.io)
+[목록으로](https://shiwoo-park.github.io/blog)
 
 ---
 
@@ -88,4 +88,4 @@ coupon_group = UserGroupFactory.create()
 
 ---
 
-[목록으로](https://shiwoo-park.github.io)
+[목록으로](https://shiwoo-park.github.io/blog)

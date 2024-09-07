@@ -2,7 +2,7 @@
 
 > 날짜: 2024-06-06
 
-[목록으로](https://shiwoo-park.github.io)
+[목록으로](https://shiwoo-park.github.io/blog)
 
 ---
 
@@ -110,4 +110,4 @@ pm2 delete myapp-web  # 애플리케이션 삭제
 
 ---
 
-[목록으로](https://shiwoo-park.github.io)
+[목록으로](https://shiwoo-park.github.io/blog)
