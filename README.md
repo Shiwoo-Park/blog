@@ -5,6 +5,7 @@
 
 ### 2024.09
 
+- [Python 3.7 -> 3.12 버전업을 통해 얻을 수 있는것들](dev/python/version_up_7_to_12.md)
 - [AWS - EC2 인스턴스 템플릿 교체](dev/aws/update_ec2_template.md)
 - [Linux 서버 상태진단](dev/devops/linux_status.md)
 
