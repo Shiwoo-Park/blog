@@ -1,10 +1,6 @@
 # 실바의 블로그에 오신것을 환영합니다
 
-### 주요 링크
-- [즐겨찾기](favorite.md)
-- [블로그](https://shiwoo-park.github.io/blog/)
-- [Git repo](https://github.com/Shiwoo-Park/blog)
-- [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+[즐겨찾기](favorite.md) | [블로그](https://shiwoo-park.github.io/blog/) | [Git repo](https://github.com/Shiwoo-Park/blog) 
 
 ---
 
@@ -114,3 +110,7 @@
 - [Git - 서버에 deploy key 활용가능하도록 등록하기](dev/git/git_deploy_key.md)
 - [Git - 헤깔리는 gitignore 의 directory 설정](dev/git/gitignore_dir.md)
 - [Django or DRF 의 View 에 Custom Decorator 를 달아보자](dev/python/django_view_decorator.md)
+
+### 기타 참고링크
+
+- [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
