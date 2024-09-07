@@ -3,18 +3,18 @@
 [목록으로](https://shiwoo-park.github.io/blog/kor)
 
 ---
+## Dev - Basic
 
-## Git
-- [git squash](etc/git_squash.md)
-- [git rebase](etc/git_rebase.md)
 - [Git - 명령어 모음](etc/git_cmds.md)
 
 ## Database
+
 - [PostgreSQL 사용 Tips](backend/postgres_tips.md)
 - [Redis tip 모음](backend/redis_tips.md)
 - [MySQL Tips](backend/mysql_tips.md)
 
-## Infra
+## DevOps
+
 - [Docker - 명령어 모음](backend/docker_cmds.md)
 - [SSH 활용 tips](backend/ssh_tips.md)
 - [쉘 스크립트 - 기본 문법](backend/shell_script_1.md)
