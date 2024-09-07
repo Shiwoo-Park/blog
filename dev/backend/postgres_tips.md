@@ -2,7 +2,7 @@
 
 > 날짜: 2024-03-20
 
-[목록으로](https://shiwoo-park.github.io/blog/kor)
+[목록으로](https://shiwoo-park.github.io)
 
 ---
 
@@ -129,4 +129,4 @@ DROP DATABASE IF EXISTS 데이터베이스명;
 
 ---
 
-[목록으로](https://shiwoo-park.github.io/blog/kor)
+[목록으로](https://shiwoo-park.github.io)

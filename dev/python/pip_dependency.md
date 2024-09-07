@@ -46,4 +46,4 @@ pipdeptree -r -p requests
 
 ---
 
-[목록으로](https://shiwoo-park.github.io/blog/kor)
+[목록으로](https://shiwoo-park.github.io)

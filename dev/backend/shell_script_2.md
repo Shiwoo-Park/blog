@@ -3,7 +3,7 @@
 
 > 날짜: 2024-06-25
 
-[목록으로](https://shiwoo-park.github.io/blog/kor)
+[목록으로](https://shiwoo-park.github.io)
 
 ---
 
@@ -54,4 +54,4 @@ done
 
 ---
 
-[목록으로](https://shiwoo-park.github.io/blog/kor)
+[목록으로](https://shiwoo-park.github.io)

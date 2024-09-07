@@ -2,7 +2,7 @@
 
 > 날짜: 2024-05-14
 
-[목록으로](https://shiwoo-park.github.io/blog/kor)
+[목록으로](https://shiwoo-park.github.io)
 
 ---
 
@@ -61,4 +61,4 @@ sudo -u root whoami
 
 ---
 
-[목록으로](https://shiwoo-park.github.io/blog/kor)
+[목록으로](https://shiwoo-park.github.io)

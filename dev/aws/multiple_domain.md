@@ -2,7 +2,7 @@
 
 > 날짜: 2024-08-12
 
-[목록으로](https://shiwoo-park.github.io/blog/kor)
+[목록으로](https://shiwoo-park.github.io)
 
 ---
 
@@ -59,4 +59,4 @@ AWS Route 53에서 각 도메인에 대해 A 레코드와 CNAME 레코드를 설
 
 ---
 
-[목록으로](https://shiwoo-park.github.io/blog/kor)
+[목록으로](https://shiwoo-park.github.io)

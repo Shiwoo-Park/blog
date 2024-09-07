@@ -98,4 +98,4 @@ def require_http_methods(request_method_list):   # --- 1번
 
 ---
 
-[목록으로](https://shiwoo-park.github.io/blog/kor)
+[목록으로](https://shiwoo-park.github.io)

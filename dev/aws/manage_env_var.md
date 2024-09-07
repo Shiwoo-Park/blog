@@ -2,7 +2,7 @@
 
 > 날짜: 2024-07-29
 
-[목록으로](https://shiwoo-park.github.io/blog/kor)
+[목록으로](https://shiwoo-park.github.io)
 
 ---
 
@@ -101,4 +101,4 @@ async function getConfiguration(applicationId, environmentId, configurationProfi
 
 ---
 
-[목록으로](https://shiwoo-park.github.io/blog/kor)
+[목록으로](https://shiwoo-park.github.io)

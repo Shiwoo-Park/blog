@@ -140,4 +140,4 @@ pytest 는 아래 3가지 형식으로 원하는 테스트만을 실행 할 수 
 
 ---
 
-[목록으로](https://shiwoo-park.github.io/blog/kor)
+[목록으로](https://shiwoo-park.github.io)

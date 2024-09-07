@@ -36,4 +36,4 @@ Git에서 최근 3개의 커밋을 squash하는 과정은 interactive rebase를 
 
 ---
 
-[목록으로](https://shiwoo-park.github.io/blog/kor)
+[목록으로](https://shiwoo-park.github.io)

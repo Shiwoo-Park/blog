@@ -2,7 +2,7 @@
 
 > 날짜: 2021-01-08
 
-[목록으로](https://shiwoo-park.github.io/blog/kor)
+[목록으로](https://shiwoo-park.github.io)
 
 ---
 
@@ -128,4 +128,4 @@ hey "silva" "go home"
 
 ---
 
-[목록으로](https://shiwoo-park.github.io/blog/kor)
+[목록으로](https://shiwoo-park.github.io)

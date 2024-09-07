@@ -56,4 +56,4 @@ macOS에서 `vi` (혹은 보통 `vim`으로도 알려져 있습니다)를 사용
 
 ---
 
-[목록으로](https://shiwoo-park.github.io/blog/kor)
+[목록으로](https://shiwoo-park.github.io)
