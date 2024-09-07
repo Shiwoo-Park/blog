@@ -121,7 +121,7 @@ const AuthProvider = ({ children, session, accessToken, refreshToken }) => {
 
   return (
     <AuthContext.Provider
-      value={{
+      value={
         accessToken: _accessToken,
         refreshToken: _refreshToken,
         session: {
@@ -129,7 +129,7 @@ const AuthProvider = ({ children, session, accessToken, refreshToken }) => {
           setUser: setUser,
           pages: pages,
         },
-      }}
+      }
     >
       {children}
     </AuthContext.Provider>
