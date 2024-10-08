@@ -3,7 +3,7 @@
 [블로그](https://shiwoo-park.github.io/blog/) | [Git-Repo](https://github.com/Shiwoo-Park/blog) | [즐겨찾기](favorite.md)
 
 
-### 2024.09
+### 2024.10
 
 - [Jenkins를 사용하여 AWS ECS Fargate 에 배포하기 (ECR, CodeDeploy, HTTPS, 로드 밸런서)](dev/aws/jenkins_ecs_codedeploy.md)
 
