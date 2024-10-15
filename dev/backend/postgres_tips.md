@@ -16,7 +16,7 @@
 - 데이터베이스간 정보조회
   - A DB로 접속하여 B DB 테이블 정보를 쿼리로 얻어오는 것은 불가능함.
 
-## 터미널 명령어
+## shell client 명령어
 
 ```shell
 # postgres 서버 접속
@@ -56,21 +56,31 @@ WHERE
 SELECT constraint_name, constraint_type
 FROM information_schema.table_constraints
 WHERE table_name = '테이블명' AND table_schema = '스키마명';
+```
 
+## 실행중인 프로세스 강제종료
 
-
--- 현재 실행중인 쿼리 조회
+```sql
+-- 실행 중인 쿼리 조회
 SELECT pid, now() - pg_stat_activity.query_start AS duration, query, state
 FROM pg_stat_activity
 WHERE state = 'active';
 
--- 실행중인 쿼리 강제 kill (by query)
+-- 실행 중인 쿼리 강제 종료 (by pid)
+SELECT pg_terminate_backend(123);
+
+-- 다중 pid 강제 종료
 SELECT pg_terminate_backend(pid)
 FROM pg_stat_activity
-WHERE query = 'your_query_here' AND state = 'active';
+WHERE pid IN (123, 456);
 
--- 실행중인 쿼리 강제 kill (by pid)
-SELECT pg_terminate_backend('your_pid_here');
+-- 실행 시간이 1분을 초과한 쿼리 강제 종료
+SELECT pg_terminate_backend(pid) 
+FROM pg_stat_activity 
+WHERE 
+state = 'active' AND 
+now() - query_start > '1 minutes'::interval AND
+usename != 'important_user';
 
 ```
 
