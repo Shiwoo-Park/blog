@@ -27,6 +27,9 @@ psql -h HOST -p PORT -U USER -d DB_NAME
 ## 자주 쓰는 Select 쿼리
 
 ```sql
+-- COLLATE 기본설정값 조회
+SHOW lc_collate;
+
 -- 현재유저(나)의 권한 조회
 SELECT * FROM pg_roles WHERE rolname = current_user;
 
@@ -137,6 +140,12 @@ DROP TABLE my_table;
 DROP DATABASE IF EXISTS 데이터베이스명;
 ```
 
+## 기타 유용한 DDL
+
+```sql
+-- 특정 테이블 필드의 한글 문자열 정렬 적용이 필요할때 COLLATE 변경
+ALTER TABLE products ALTER COLUMN manufacturer SET DATA TYPE character varying(100) COLLATE "C";
+```
 ---
 
 [목록으로](https://shiwoo-park.github.io/blog)
