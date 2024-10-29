@@ -1,4 +1,4 @@
-# PostgreSQL 에서 COLLATE
+# PostgreSQL 의 COLLATE 에 관하여
 
 > 날짜: 2024-10-29
 

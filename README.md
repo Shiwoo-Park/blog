@@ -5,6 +5,7 @@
 
 ### 2024.10
 
+- [PostgreSQL 의 COLLATE 에 관하여](dev/backend/postgres_collate.md)
 - [Jenkins를 사용하여 AWS ECS Fargate 에 배포하기 (ECR, CodeDeploy, HTTPS, 로드 밸런서)](dev/aws/jenkins_ecs_codedeploy.md)
 
 ### 2024.09

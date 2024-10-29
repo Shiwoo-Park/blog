@@ -18,6 +18,12 @@ sudo yum clean all
 # 저널로그 삭제 (7일 이상된)
 sudo journalctl --vacuum-time=7d
 
+# === 도커 ===
+# 1달간 미사용 이미지 삭제
+docker image prune -a -f --filter "until=720h"
+# 1달간 미사용 컨테이터 삭제
+docker container prune -f  --filter "until=720h"
+
 # 디스크 사용량 분석도구 설치 & 활용
 sudo yum install ncdu
 sudo ncdu /
