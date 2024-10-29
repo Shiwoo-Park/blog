@@ -143,7 +143,7 @@ DROP DATABASE IF EXISTS 데이터베이스명;
 ## 기타 유용한 DDL
 
 ```sql
--- 특정 테이블 필드의 한글 문자열 정렬 적용이 필요할때 COLLATE 변경
+-- 특정 필드의 한글 정렬 적용이 필요할때 C COLLATE (ascii 기반 정렬) 지정 
 ALTER TABLE products ALTER COLUMN manufacturer SET DATA TYPE character varying(100) COLLATE "C";
 ```
 ---
