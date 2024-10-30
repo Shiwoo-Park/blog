@@ -5,12 +5,14 @@
 
 ### 2024.10
 
+- [당신이 몰랐던 파이썬 이야기들](dev/python/hidden_story.md)
+- [파이썬 연산자: `2 is 2` 와 `2 == 2`의 차이점](dev/python/is_vs_equal.md)
 - [PostgreSQL 의 COLLATE 에 관하여](dev/backend/postgres_collate.md)
 - [Jenkins를 사용하여 AWS ECS Fargate 에 배포하기 (ECR, CodeDeploy, HTTPS, 로드 밸런서)](dev/aws/jenkins_ecs_codedeploy.md)
 
 ### 2024.09
 
-- [Python 3.7 -> 3.12 버전업을 통해 얻을 수 있는것들](dev/python/version_up_7_to_12.md)
+- [Python `3.7 -> 3.12 버전업` 을 통해 얻을 수 있는것들](dev/python/version_up_7_to_12.md)
 - [AWS - EC2 인스턴스 템플릿 교체](dev/aws/update_ec2_template.md)
 - [Linux 서버 상태진단](dev/devops/linux_status.md)
 
@@ -33,7 +35,7 @@
 
 ### 2024.06
 
-- [React hook - useForm() 간단 사용법](dev/frontend/react_use_form.md)
+- [React hook - `useForm()` 간단 사용법](dev/frontend/react_use_form.md)
 - [node 프로세스 관리 - pm2](dev/frontend/pm2_guide.md)
 - [쉘 스크립트 - 꿀팁 모음](dev/devops/shell_script_2.md)
 - [Windows 에서 nano 설치하고 사용하기](dev/etc/win_nano.md)
