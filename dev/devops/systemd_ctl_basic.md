@@ -43,6 +43,9 @@ sudo systemctl reload application.service
 # 재시작 + 설정 리로드
 sudo systemctl reload-or-restart application.service
 
+# systemd 서비스로 관리중인 celery 프로세스 확인
+systemctl list-units | grep celery
+
 # enable 된 서비스 목록 조회
 systemctl list-unit-files --type=service --state=enabled
 
@@ -85,9 +88,12 @@ sudo rm /etc/systemd/system/nginx.service.d
 
 # 편집한 설정파일 반영
 sudo systemctl daemon-reload
+
+# failed 서비스 갱신
+systemctl reset-failed
 ```
 
-## System 상태 점검
+## Systemd 데몬 상태 점검
 
 모든 서비스를 대상으로 상태를 고루 점검하고 싶을때 사용하는 명령어. Unit 목록을 조회한다
 
@@ -101,6 +107,17 @@ systemctl list-units --all --state=inactive  # Inactive 한 것들만 보기
 systemctl list-units --type=service  # Service 만 보기
 
 systemctl list-unit-files  # 모든 Unit File 보기
+```
+
+## 서비스 로그 확인
+
+```shell
+# 특정 서비스의 실시간 로그 조회
+sudo journalctl -u my.service -f
+
+# 특정 시간대 로그 조회
+sudo journalctl -u celery.service --since "2024-11-01 10:00:00" --until "2024-11-01 12:00:00"
+
 ```
 
 ---
