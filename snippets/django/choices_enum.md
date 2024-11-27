@@ -11,7 +11,7 @@
 ```python
 import logging
 from enum import Enum
-from typing import List, Tuple, Dict
+from typing import List, Tuple, Dict, Optional
 
 logger = logging.getLogger(__name__)
 
@@ -29,21 +29,22 @@ class ChoicesEnum(Enum):
       ex) Destination.choices(exclude=[Destination.DT00, Destination.DT01])
 
     1. 기본 사용법
-    >>> class Link(ChoicesEnum):
-    >>>     APP_STORE_LINK = ('LK01', 'Apple Link')
-    >>>     PLAY_STORE_LINK = ('LK02', 'Banana Link')
-    >>> print(Link.APP_STORE_LINK.code)  # "LK01"
-    >>> print(Link.APP_STORE_LINK.text)  # "Apple Link"
-    >>> print(Link.choices())  # [("LK01", "Apple Link"), ("LK02", "Banana Link")]
+    class Link(ChoicesEnum):
+        APP_STORE_LINK = ('LK01', 'Apple Link')
+        PLAY_STORE_LINK = ('LK02', 'Banana Link')
+    print(Link.APP_STORE_LINK.code)  # "LK01"
+    print(Link.APP_STORE_LINK.text)  # "Apple Link"
+    print(Link.choices())  # [("LK01", "Apple Link"), ("LK02", "Banana Link")]
 
     2. 확장된 사용법 (override __init__)
-    >>> class Link(ChoicesEnum):
-    >>>     APP_STORE_LINK = ('LK01', 'Apple Link', 'https://link1.com')
-    >>>     PLAY_STORE_LINK = ('LK02', 'Banana Link', 'https://link2.com')
-    >>>     def __init__(self, *args, **kwargs):
-    >>>         super().__init__(*args, **kwargs)
-    >>>         self.url = args[2]
-    >>> print(Link.APP_STORE_LINK.url)  # "https://link1.com"
+    class Link(ChoicesEnum):
+        APP_STORE_LINK = ('LK01', 'Apple Link', 'https://link1.com')
+        PLAY_STORE_LINK = ('LK02', 'Banana Link', 'https://link2.com')
+        def __init__(self, *args, **kwargs):
+            super().__init__(*args, **kwargs)
+            self.url = args[2]
+
+    print(Link.APP_STORE_LINK.url)  # "https://link1.com"
     """
 
     @classmethod
@@ -93,7 +94,7 @@ class ChoicesEnum(Enum):
         <Return example>
         {"TEXT_01": "CODE_01", "TEXT_02": "CODE_02", ...}
         """
-        return { member.text:member.code for member in cls.members(**kwargs)}
+        return {member.text: member.code for member in cls.members(**kwargs)}
 
     @classmethod
     def as_dict_list(cls, **kwargs) -> List[Dict]:
@@ -123,7 +124,7 @@ class ChoicesEnum(Enum):
         return [member.text for member in cls.members(**kwargs)]
 
     @classmethod
-    def get_text(cls, code, default="UNDEFINED"):
+    def get_text(cls, code, default=None) -> Optional[str]:
         try:
             return cls.get_member(code).text
         except AttributeError:
@@ -147,6 +148,9 @@ class ChoicesEnum(Enum):
             raise AttributeError(self.get_attribute_error_message())
         self.code = args[0]
         self.text = args[1]
+
+    def __str__(self):
+        return f"{self.text}({self.code})"
 ```
 
 ## 용법1: Django Model 에서 사용하기

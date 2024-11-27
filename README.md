@@ -1,7 +1,10 @@
 # 실바의 블로그에 오신것을 환영합니다
 
-[블로그](https://shiwoo-park.github.io/blog/) | [Git-Repo](https://github.com/Shiwoo-Park/blog) | [즐겨찾기](favorite.md)
+[블로그](https://shiwoo-park.github.io/blog/) | [Git-Repo](https://github.com/Shiwoo-Park/blog) | [즐겨찾기](favorite.md) | [Code Snippets](https://github.com/Shiwoo-Park/blog/tree/master/snippets)
 
+### 2024.11
+
+- [Celery 운용 Tips](dev/python/celery_tips.md)
 
 ### 2024.10
 
