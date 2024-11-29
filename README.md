@@ -4,6 +4,7 @@
 
 ### 2024.11
 
+- [Celery 워커 구동 명령어 옵션 살펴보기](dev/python/celery_commands.md)
 - [Celery 운용 Tips](dev/python/celery_tips.md)
 
 ### 2024.10
