@@ -4,6 +4,7 @@
 
 ### 2024.11
 
+- [파이썬 - Descriptor 알아보기](dev/python/descriptor.md)
 - [Celery 워커 구동 명령어 옵션 살펴보기](dev/python/celery_commands.md)
 - [Celery 운용 Tips](dev/python/celery_tips.md)
 
