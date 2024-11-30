@@ -2,6 +2,10 @@
 
 > 날짜: 2020-08-04
 
+[목록으로](https://shiwoo-park.github.io/blog)
+
+---
+
 장고에서 아래의 쿼리를 group by 로 만들고 싶다고 가정하자
 
 ```sql
