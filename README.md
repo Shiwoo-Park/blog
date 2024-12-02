@@ -4,6 +4,7 @@
 
 ### 2024.11
 
+- [파이썬 - 함수 오버로딩과 singledispatch 데코레이터](dev/python/overload_singledispatch.md)
 - [파이썬 - Property](dev/python/property.md)
 - [파이썬 - 클래스 속성 vs 인스턴스 속성](dev/python/class_instance_attr.md)
 - [파이썬 - Descriptor 알아보기](dev/python/descriptor.md)
