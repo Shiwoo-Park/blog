@@ -1,4 +1,4 @@
-# 파이썬 - Dunder(double underscore) method (__foo__)
+# 파이썬 - Dunder(double underscore) method (`__foo__`)
 
 > 날짜: 2024-12-02
 
