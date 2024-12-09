@@ -4,6 +4,8 @@
 
 ### 2024.12
 
+- [파이썬 - Generator 와 yield](dev/python/generator_yield.md)
+- [파이썬 - Dataclass](dev/python/dataclass.md)
 - [파이썬 - Dunder(double underscore) method](dev/python/dunder_method.md)
 - [파이썬 - 함수 오버로딩과 singledispatch 데코레이터](dev/python/overload_singledispatch.md)
 

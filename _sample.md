@@ -1,6 +1,6 @@
 # 제목
 
-> 날짜: 2024-12-06
+> 날짜: 2024-12-10
 
 [목록으로](https://shiwoo-park.github.io/blog)
 
