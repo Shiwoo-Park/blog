@@ -200,6 +200,10 @@ print(f"List size: {sys.getsizeof(large_list)} bytes")
 # Generator
 large_gen = (x for x in range(10**6))
 print(f"Generator size: {sys.getsizeof(large_gen)} bytes")
+
+# 출력
+# List size: 8697464 bytes
+# Generator size: 120 bytes
 ```
 
 ---
@@ -209,10 +213,6 @@ print(f"Generator size: {sys.getsizeof(large_gen)} bytes")
 - `yield`는 실행 상태를 유지하며 값을 반환.
 - 고급 기능: `send()`, `yield from`, 무한 시퀀스 생성.
 - 적절한 사용 사례: 파일 처리, 데이터 스트리밍, 네트워크 스트리밍 등.
-
-### 전문가 수준에서의 질문
-1. `yield from`과 일반 루프의 성능 차이를 측정하려면 어떤 기준이 적합할까요?  
-2. `asyncio`와 Generator의 결합을 활용한 고성능 네트워크 작업을 어떻게 설계할 수 있을까요?
 
 ---
 
