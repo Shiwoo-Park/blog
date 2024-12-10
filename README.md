@@ -4,6 +4,8 @@
 
 ### 2024.12
 
+- [Docker 환경에서 `ENTRYPOINT`와 `CMD`의 차이점](dev/devops/docker_entrypoint_vs_cmd.md)
+- [Docker: ARG,ENV, RUN, CMD 를 사용한 서비스 다중환경 지원](dev/devops/docker_multi_env_setup.md)
 - [파이썬 - Generator 와 yield](dev/python/generator_yield.md)
 - [파이썬 - Dataclass](dev/python/dataclass.md)
 - [파이썬 - Dunder(double underscore) method](dev/python/dunder_method.md)
