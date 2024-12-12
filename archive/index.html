@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Silva blog</title>
+  <link rel="icon" type="image/x-icon" href="favicon.png">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    #content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+    }
+    a {
+      color: blue;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="content">Loading...</div>
+
+  <!-- marked.js 라이브러리 추가 -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script>
+    // Markdown 파일을 불러오고 변환하여 표시하는 함수
+    async function loadMarkdown(file) {
+      try {
+        const response = await fetch(file);
+        const text = await response.text();
+        const content = document.getElementById('content');
+        content.innerHTML = marked.parse(text);
+      } catch (error) {
+        console.error('Error loading markdown:', error);
+        document.getElementById('content').innerText = 'Error loading content.';
+      }
+    }
+
+    // 페이지 로드 시 README.md 파일 불러오기
+    window.onload = function() {
+      loadMarkdown('README.md');
+    };
+
+    // 링크 클릭 시 처리
+    document.addEventListener('click', function(event) {
+      if (event.target.tagName === 'A') {
+        const href = event.target.getAttribute('href');
+
+        // 상대 경로인 경우 Markdown 로드, 절대 경로는 기본 동작 유지
+        if (href && !href.startsWith('http://') && !href.startsWith('https://')) {
+          event.preventDefault(); // 기본 링크 동작 막기
+          loadMarkdown(href); // Markdown 파일 로드
+        }
+      }
+    });
+  </script>
+</body>
+</html>
