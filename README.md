@@ -2,6 +2,11 @@
 
 [블로그](https://shiwoo-park.github.io/blog/) | [Git-Repo](https://github.com/Shiwoo-Park/blog) | [즐겨찾기](favorite.md) | [Code Snippets](https://github.com/Shiwoo-Park/blog/tree/master/snippets)
 
+### 준비중
+
+- [ECS-EC2 에서 도커 stop 시, 그 안에 celery warm shutdown 처리](dev/devops/ecs_celery_warm_exit.md)
+- [AWS 사용시 각종 꿀팁](dev/devops/aws_tips.md)
+
 ### 2024.12
 
 - [Terraform 기본지식](dev/devops/terraform.md)
