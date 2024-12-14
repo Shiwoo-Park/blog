@@ -5,10 +5,10 @@
 ### 준비중
 
 - [ECS-EC2 에서 도커 stop 시, 그 안에 celery warm shutdown 처리](dev/devops/ecs_celery_warm_exit.md)
-- [AWS 사용시 각종 꿀팁](dev/devops/aws_tips.md)
 
 ### 2024.12
 
+- [DevOps 업무 - 나만의 꿀팁](dev/devops/my_tips.md)
 - [Terraform 기본지식](dev/devops/terraform.md)
 - [Docker 환경에서 `ENTRYPOINT`와 `CMD`의 차이점](dev/devops/docker_entrypoint_vs_cmd.md)
 - [Docker: ARG,ENV, RUN, CMD 를 사용한 서비스 다중환경 지원](dev/devops/docker_multi_env_setup.md)
