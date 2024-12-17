@@ -79,6 +79,26 @@ xargs git branch -D
 git rebase -i HEAD~4
 ```
 
+## terraform
+
+```shell
+terraform init
+terraform plan
+terraform apply
+terraform refresh
+terraform show
+
+terraform state rm aws_instance.ecs_instance  # 연결 해제 (AWS 콘솔에서 수동 삭제)
+terraform import aws_instance.ecs_instance i-0c1e69863aa1bc0f1  # 임의 연결
+
+# 특정 리소스만 제거
+terraform destroy \
+  -target=aws_instance.ecs_instance \
+  -target=aws_ecs_service.ecs_service \
+  -target=aws_ecs_task_definition.ecs_task
+
+```
+
 ## AWS - Code Deploy
 
 ```shell

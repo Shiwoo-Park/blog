@@ -8,6 +8,7 @@
 
 ### 2024.12
 
+- [AWS - EC2 인스턴스 유형별 용도](dev/aws/ec2_instance_type.md)
 - [DevOps 업무 - 나만의 꿀팁](dev/devops/my_tips.md)
 - [Terraform 기본지식](dev/devops/terraform.md)
 - [Docker 환경에서 `ENTRYPOINT`와 `CMD`의 차이점](dev/devops/docker_entrypoint_vs_cmd.md)
