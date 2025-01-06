@@ -30,7 +30,7 @@
 
 - [당신이 몰랐던 파이썬 이야기들](dev/python/hidden_story.md)
 - [파이썬 연산자: `2 is 2` 와 `2 == 2`의 차이점](dev/python/is_vs_equal.md)
-- [PostgreSQL 의 COLLATE 에 관하여](dev/backend/postgres_collate.md)
+- [PostgreSQL - 문자열 필드 COLLATE 와 정렬](dev/backend/postgres_collate.md)
 - [Jenkins를 사용하여 AWS ECS Fargate 에 배포하기 (ECR, CodeDeploy, HTTPS, 로드 밸런서)](dev/aws/jenkins_ecs_codedeploy.md)
 
 ### 2024.09

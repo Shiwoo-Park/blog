@@ -1,4 +1,4 @@
-# PostgreSQL 의 COLLATE 에 관하여
+# PostgreSQL - 문자열 필드 COLLATE 와 정렬
 
 > 날짜: 2024-10-29
 
@@ -45,10 +45,24 @@ PostgreSQL에서 `COLLATE`는 **문자열의 정렬 및 비교 방식**을 정�
 한글 문자열을 저장하는 컬럼에 `COLLATE "ko_KR.utf8"`을 적용한 후, 쿼리 시에 그 기준으로 정렬이 이루어지도록 할 수 있습니다.
 
 ```sql
+-- 특정 collation 으로 정렬하여 select
 SELECT name FROM example ORDER BY name COLLATE "ko_KR.utf8";
+
+-- 한글 정렬 (ansii 키값 기준으로 정렬)
+ALTER TABLE my_inventories ALTER COLUMN "name" SET DATA TYPE character varying(100) COLLATE "C";
 ```
 
-이처럼 `COLLATE`는 다국어 지원이 필요할 때마다 적절하게 설정하여 데이터 정렬을 제어하는 데 매우 유용한 옵션입니다.
+### 6. 한글 문자열 필드 정렬 `COLLATE "C"`
+
+```sql
+-- 한글 정렬 (ansii 키값 기준으로 정렬)
+ALTER TABLE my_inventories ALTER COLUMN "name" SET DATA TYPE character varying(100) COLLATE "C";
+```
+
+- COLLATE "C"는 문자열 비교 및 정렬 기준을 POSIX 기본 정렬 순서로 설정합니다.
+- 이 설정은 특수 문자나 한글을 포함한 다국어에 대해 특별한 정렬을 하지 않고, 단순히 ASCII 코드 값 순서대로 비교합니다.
+- 따라서 한글이나 특수 문자가 포함된 문자열은 예상치 못한 순서로 정렬될 수 있으며, 주로 성능을 위해 사용하는 경우가 많습니다.
+- 이 설정으로 인해 다국어가 아닌 문자열에서는 빠른 비교와 정렬이 가능하지만, 한글이나 특수 문자를 포함한 경우 정렬이 어색할 수 있습니다.
 
 
 ---
