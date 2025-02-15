@@ -1,5 +1,11 @@
 # 파이썬으로 로깅 잘하기
 
+> 날짜: 2025-02-15
+
+[목록으로](https://shiwoo-park.github.io/blog)
+
+---
+
 ## 1. 파이썬 로깅 기초
 
 ### 1.1 로깅 시스템 컴포넌트
@@ -222,6 +228,11 @@ urllib3_logger.error("이 메시지는 무시됨 (CRITICAL 수준 미만)")  # �
 urllib3_logger.critical("이 메시지는 무시됨 (CRITICAL이지만 handlers 없음)")  # 출력되지 않음
 
 ```
+
+---
+
+[목록으로](https://shiwoo-park.github.io/blog)
+
 
 
 

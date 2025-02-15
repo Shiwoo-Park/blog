@@ -6,6 +6,12 @@
 
 - [ECS-EC2 에서 도커 stop 시, 그 안에 celery warm shutdown 처리](dev/devops/ecs_celery_warm_exit.md)
 
+### 2025.02
+
+- [Sentry - 에러 모니터링](dev/devops/sentry.md)
+- [파이썬으로 로깅 Best Practice](dev/python/logging_best_practice.md)
+- [파이썬으로 로깅 잘하기](dev/python/logging.md)
+
 ### 2024.12
 
 - [AWS - EC2 인스턴스 유형별 용도](dev/aws/ec2_instance_type.md)
