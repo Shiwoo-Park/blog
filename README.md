@@ -8,6 +8,7 @@
 
 ### 2025.02
 
+- [분산 로깅에 대하여](dev/devops/distributed_logging.md)
 - [Sentry - 에러 모니터링](dev/devops/sentry.md)
 - [파이썬으로 로깅 Best Practice](dev/python/logging_best_practice.md)
 - [파이썬으로 로깅 잘하기](dev/python/logging.md)
