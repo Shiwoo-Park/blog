@@ -21,7 +21,7 @@
 
 ### 2.2 해결 방법: 중앙 집중형 로깅 시스템
 - 모든 서비스에서 발생한 로그를 **중앙 로그 서버**로 보내고, **한 곳에서 검색/분석 가능하도록 관리**
-- **Trace ID(추적 ID)**를 활용하여 **하나의 요청(Request)**이 여러 서비스에 걸쳐 어떻게 실행되는지 추적
+- 특히 MSA 와 같이 하나의 요청이 완전히 처리되기까지 다양한 서비스들을 방문하며 프로세싱이 이루어 지는경우, Trace ID(추적 ID)를 활용하여 하나의 요청(Request)이 여러 서비스에 걸쳐 어떻게 실행되는지 추적
 
 ---
 
@@ -29,9 +29,8 @@
 
 ### **대표적인 분산 로깅 시스템**
 
-```
-Application → Log Aggregator → Storage & Search → Monitoring & Alerting
-```
+`Application → Log Aggregator → Storage & Search → Monitoring & Alerting`
+
 | 구성 요소 | 역할 |
 |----------|------|
 | **Application (Django, Flask, Node.js 등)** | 로그 생성 및 전송 |
