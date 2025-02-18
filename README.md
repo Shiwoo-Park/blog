@@ -8,6 +8,8 @@
 
 ### 2025.02
 
+- [데이터 쏠림현상 Data skew](dev/storage/data_skew.md)
+- [Postgres - GIN index](dev/devops/postgres_gin_index.md)
 - [분산 로깅에 대하여](dev/devops/distributed_logging.md)
 - [Sentry - 에러 모니터링](dev/devops/sentry.md)
 - [파이썬으로 로깅 Best Practice](dev/python/logging_best_practice.md)
@@ -37,7 +39,7 @@
 
 - [당신이 몰랐던 파이썬 이야기들](dev/python/hidden_story.md)
 - [파이썬 연산자: `2 is 2` 와 `2 == 2`의 차이점](dev/python/is_vs_equal.md)
-- [PostgreSQL - 문자열 필드 COLLATE 와 정렬](dev/backend/postgres_collate.md)
+- [PostgreSQL - 문자열 필드 COLLATE 와 정렬](dev/storage//postgres_collate.md)
 - [Jenkins를 사용하여 AWS ECS Fargate 에 배포하기 (ECR, CodeDeploy, HTTPS, 로드 밸런서)](dev/aws/jenkins_ecs_codedeploy.md)
 
 ### 2024.09
@@ -73,7 +75,7 @@
 ### 2024.05
 
 - [Linux 에서 유저 전환하는 방법](dev/devops/linux_user_change.md)
-- [Redis tip 모음](dev/backend/redis_tips.md)
+- [Redis tip 모음](dev/storage/redis_tips.md)
 - [루트 권한을 획득하는 명령어들의 차이점(sudo -s, -i, su)](dev/devops/sudo_cmds.md)
 
 ### 2024.04
@@ -88,7 +90,7 @@
 ### 2024.03
 
 - [JWT 토큰의 발급, 사용, 관리 방식 총정리](dev/backend/jwt_token.md)
-- [PostgreSQL 사용 Tips](dev/backend/postgres_tips.md)
+- [PostgreSQL 사용 Tips](dev/storage/postgres_tips.md)
 - [프로젝트의 미사용 pip 패키지 찾아내기](dev/python/pip_cleanup.md)
 - [특정 pip 패키지의 다른 패키지 의존성 확인하기](dev/python/pip_dependency.md)
 - [Git hook 으로 커밋메시지 prefix 자동화하기](dev/git/git_hook_1.md)
@@ -102,7 +104,7 @@
 
 ### 2022.03
 
-- [MySQL Tips](dev/backend/mysql_tips.md)
+- [MySQL Tips](dev/storage/mysql_tips.md)
 - [DRF 활용, 최적화 Tip 모음](dev/python/drf_tips.md)
 
 ### 2021.10
