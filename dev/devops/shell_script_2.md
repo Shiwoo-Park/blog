@@ -26,6 +26,13 @@
 - `read -p "최근 몇 개의 커밋을 리셋 하시겠습니까? " N`
 - `git reset --soft HEAD~$N`
 
+### scp 를 이용하여 A 서버로부터 파일 받아와서 B 서버로 보내기
+
+```shell
+scp -i /home/ssm-user/.aws/my-aws-key.pem ec2-user@10.50.222.22:/home/ec2-user/gitlab_backups/* .
+scp -i /home/ssm-user/.aws/my-aws-key.pem /home/ssm-user/gitlab-backups/* ec2-user@10.50.333.3:/home/ec2-user/gitlab_backups
+```
+
 ### 특정 포트 사용하는 프로세스 죽이기
 
 ```shell

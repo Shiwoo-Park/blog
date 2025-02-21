@@ -9,9 +9,9 @@
 
 ## Database
 
-- [PostgreSQL 사용 Tips](dev/backend/postgres_tips.md)
-- [Redis tip 모음](dev/backend/redis_tips.md)
-- [MySQL Tips](dev/backend/mysql_tips.md)
+- [PostgreSQL 사용 Tips](dev/storage/postgres_tips.md)
+- [Redis tip 모음](dev/storage/redis_tips.md)
+- [MySQL Tips](dev/storage/mysql_tips.md)
 
 ## DevOps
 
