@@ -1,36 +1,5 @@
-
-### 2. 리소스/부하/성능/비즈니스 지표
-#### 개요
-- 애플리케이션 운영 및 최적화를 위한 주요 지표들
-
-#### 리소스 지표
-- CPU 사용률
-- 메모리 사용량
-- 디스크 I/O
-- 네트워크 대역폭
-
-#### 부하 지표
-- 요청 수 (QPS: Queries Per Second)
-- 응답 시간
-- 트랜잭션 속도
-- 동시 접속자 수
-
-#### 성능 지표
-- 레이턴시 (Latency)
-- TPS (Transactions Per Second)
-- 오류율 (Error Rate)
-- 처리량 (Throughput)
-
-#### 비즈니스 지표
-- 유저 리텐션 (User Retention)
-- 전환율 (Conversion Rate)
-- 고객 만족도 (CSAT, NPS)
-- LTV (Lifetime Value)
-
----
-
-
 ### 4. 분산 애플리케이션 트레이싱
+
 #### 개요
 - 분산 시스템 환경에서 요청의 흐름을 추적하는 기법
 - MSA(Microservices Architecture)에서 필수적인 디버깅 도구
