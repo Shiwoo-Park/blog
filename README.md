@@ -8,6 +8,9 @@
 
 ### 2025.02
 
+- [서비스 모니터링 도구 -Prometheus](dev/devops/prometheus.md)
+- [서비스 모니터링 지표에 대하여](dev/devops/monitoring_values.md)
+- [pull, push 아키텍쳐](dev/backend/push_pull.md)
 - [데이터 쏠림현상 Data skew](dev/storage/data_skew.md)
 - [Postgres - GIN index](dev/devops/postgres_gin_index.md)
 - [분산 로깅에 대하여](dev/devops/distributed_logging.md)
