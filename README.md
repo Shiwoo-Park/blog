@@ -8,6 +8,8 @@
 
 ### 2025.02
 
+- [분산 트레이싱 도구 Jaeger (feat. OpenTelemetry)](dev/devops/jaeger.md)
+- [MSA 환경에서의 버그 트래킹](dev/devops/msa_bug_tracking.md)
 - [서비스 모니터링 도구 -Prometheus](dev/devops/prometheus.md)
 - [서비스 모니터링 지표에 대하여](dev/devops/monitoring_values.md)
 - [pull, push 아키텍쳐](dev/backend/push_pull.md)
