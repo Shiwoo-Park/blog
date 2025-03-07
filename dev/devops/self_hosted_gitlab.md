@@ -1,4 +1,4 @@
-# Self-hosted Gitlab 관리
+d# Self-hosted Gitlab 관리
 
 > 날짜: 2025-03-07
 
@@ -6,14 +6,37 @@
 
 ---
 
+## 상태점검
+
+- 로그조회
+  - `sudo gitlab-ctl tail`
+  - 주요 로그파일 경로: `/var/log/gitlab/`
+- 서비스 상태 조회
+  - `sudo gitlab-ctl status`
+  - `sudo gitlab-rake gitlab:check SANITIZE=true`
+
 ## 버전업
 
-- 시작전 반드시 백업할것 
-- 버전관리방식의 버전이 `{major}.{minor}.{hotfix}` 라고 했을때
+- 버전업 작업 시작전 반드시 데이터를 백업할것
+- 단계적으로 버전을 올려야 함. 한번에 확 건너뛰기 불가.
+  - 버전관리방식의 버전이 `{major}.{minor}.{hotfix}` 라고 했을때
   - hotfix 버전은 맘대로 업데이트 가능하지만
-  - minor 또는 major 버전을 올릴때는 동일 이전 버전에서 최신 hotfix 버전이어야 함
-  - (ex) 17.7.1  -> 17.8.1 불가 / 17.7.1 -> 17.7.6 -> 17.8.1 불가 (17.7.6 은 17.7.x 기준 최고 버전)
-- Gitlab 버전업 
+  - 일반적인경우 minor 또는 major 버전을 올릴때는 동일 이전 버전에서 최신 hotfix 버전이어야 함
+    - (ex) 17.7.1  -> 17.8.1 불가 / 17.7.1 -> 17.7.6 -> 17.8.1 불가 (17.7.6 은 17.7.x 기준 최고 버전)
+
+## Gitlab Runner 설정
+
+- 서버에 gitlab-runner 를 별도 설치해야 함.
+- 러너를 구동하는 서버는 반드시 gitlab 서비스가 구동중인 서버와 같은 필요가 없음
+- executor 로 docker 를 사용하고 싶으면
+  - 서버에 docker 를 미리 설치해야함
+  - Docker를 사용하는 경우 Linux의 gitlab-runner 유저가 docker 그룹에 속해야 정상 실행 가능
+    ```bash
+    sudo usermod -aG docker gitlab-runner
+    sudo systemctl restart gitlab-runner
+    ```
+- runner 를 등록하고 구동할때 `sudo` 또는 `gitlab-runner` 유저를 사용해야함.
+
 
 ## 백업 및 복구
 
