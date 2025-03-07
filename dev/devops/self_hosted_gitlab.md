@@ -15,6 +15,7 @@
   - `sudo gitlab-ctl status`
   - `sudo gitlab-rake gitlab:check SANITIZE=true`
 
+
 ## 버전업
 
 - 버전업 작업 시작전 반드시 데이터를 백업할것
@@ -26,18 +27,19 @@
     - `17.7.1 -> 17.7.6 -> 17.8.1` -> 가능
     - `17.7.6` 은 `17.7.x` 기준 최고 버전
 
+
 ## Gitlab Runner 설정
 
 - 서버에 gitlab-runner 를 별도 설치해야 함.
 - 러너를 구동하는 서버는 반드시 gitlab 서비스가 구동중인 서버와 같은 필요가 없음
-- executor 로 docker 를 사용하고 싶으면
+- Runner 를 등록하고 구동할때 `sudo` 또는 `gitlab-runner` 유저를 사용해야함.
+- Runner 등록 시, executor 로 docker 를 사용하고 싶으면
   - 서버에 docker 를 미리 설치해야함
   - Docker를 사용하는 경우 Linux의 gitlab-runner 유저가 docker 그룹에 속해야 정상 실행 가능
     ```bash
     sudo usermod -aG docker gitlab-runner
     sudo systemctl restart gitlab-runner
     ```
-- runner 를 등록하고 구동할때 `sudo` 또는 `gitlab-runner` 유저를 사용해야함.
 
 
 ## 백업 및 복구
