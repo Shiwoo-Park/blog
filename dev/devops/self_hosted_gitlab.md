@@ -1,4 +1,4 @@
-d# Self-hosted Gitlab 관리
+# Self-hosted Gitlab 관리
 
 > 날짜: 2025-03-07
 

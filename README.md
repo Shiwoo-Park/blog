@@ -6,6 +6,10 @@
 
 - [ECS-EC2 에서 도커 stop 시, 그 안에 celery warm shutdown 처리](dev/devops/ecs_celery_warm_exit.md)
 
+### 2025.03
+
+- [Self-hosted Gitlab 관리](dev/devops/self_hosted_gitlab.md)
+
 ### 2025.02
 
 - [분산 트레이싱 도구 Jaeger (feat. OpenTelemetry)](dev/devops/jaeger.md)
