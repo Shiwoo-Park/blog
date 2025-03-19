@@ -107,7 +107,9 @@ def get_products():
 - queryset 사용할때 모델의 related model object를 참조하는 코드가 암묵적으로 존재하면 `N+1 query problem` 이 발생한다는 점을 늘 인지할 것.
 - 생성날짜 필드에 `auto_now_add=True` 대신 `default=timezone.now` 사용하기.
   - 이유: 가끔 임의로 created_at 을 직접 지정하고 싶어도 ORM 의 auto_now_add 옵션이 그 값을 무시해버림
-
+- 쿼리셋 related field 에 임의로 queryset 을 연결시키기: related_field 에서 `set()` 을 활용
+  - 잘못된 예시: `setattr(self.instance, "rewards", self.get_reward_qs(mission))`
+  - 올바른 예시: `self.instance.rewards.set(self.get_reward_qs(mission))`
 
 ---
 
