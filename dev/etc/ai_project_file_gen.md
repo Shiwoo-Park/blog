@@ -11,59 +11,63 @@
 ````shell
 #!/bin/bash
 
-# 특정 폴더 하위 특정 파일들을 읽어들여서 하나의 결과 md 파일로 출력해주는 스크립트
-# - 실행 경로: $PROJECT_HOME
-# - 읽어들여야 하는 tsx 파일들의 폴더 리스트 입력
-# - 결과 파일: $PROJECT_HOME/docs/prompt_engineering/cms_components.md
-
-# 입력 경로와 출력 파일 정의
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_HOME="$(dirname "$SCRIPT_DIR")"
+OUTPUT_FILE="$PROJECT_HOME/docs/prompt_engineering/cms_base_codes.md"
 
-# ✅ 입력 디렉토리 배열로 정의
-INPUT_DIRS=(
-  "$PROJECT_HOME/src/components/common"
-  "$PROJECT_HOME/src/components/ui"
-  "$PROJECT_HOME/src/components/v2"
+# === [ChatGPT 에 집어넣고 싶은 기본코드 파일 path 를 입력] ===
+FILES=(
+    "src/app/globals.ts"
+    "src/hooks/useAuth.tsx"
+    "src/services/api/ApiController.ts"
+    "src/services/aws/AwsService.ts"
+    "src/enums/base.tsx"
+    "src/app/layout.tsx"
+    "src/lib/paramUtil.ts"
+    "src/lib/strUtil.ts"
+    "src/lib/typeUtil.ts"
 )
 
-OUTPUT_FILE="$PROJECT_HOME/docs/prompt_engineering/cms_components.md"
-
-# 출력 디렉토리가 없다면 생성
-mkdir -p "$(dirname "$OUTPUT_FILE")"
-
-# 출력 파일 초기화
-> "$OUTPUT_FILE"
-
-# 파일 합치기 함수
-merge_files() {
-  local input_dir=$1
-
-  for tsx_file in "$input_dir"/*.tsx; do
-    # 파일 경로를 프로젝트 루트 기준으로 상대경로로 표시
-    relative_path="${tsx_file#$PROJECT_HOME/}"
-
-    echo "## $relative_path" >> "$OUTPUT_FILE"
-    echo "" >> "$OUTPUT_FILE"
-    echo '```tsx' >> "$OUTPUT_FILE"
-    cat "$tsx_file" >> "$OUTPUT_FILE"
-    echo '```' >> "$OUTPUT_FILE"
-    echo -e "\n\n" >> "$OUTPUT_FILE"
-  done
+get_highlight_lang() {
+  local ext="${1##*.}"
+  case "$ext" in
+    js)   echo "javascript" ;;
+    ts)   echo "typescript" ;;
+    jsx)  echo "jsx" ;;
+    tsx)  echo "tsx" ;;
+    py)   echo "python" ;;
+    sh)   echo "bash" ;;
+    json) echo "json" ;;
+    css)  echo "css" ;;
+    scss) echo "scss" ;;
+    html) echo "html" ;;
+    yml|yaml) echo "yaml" ;;
+    md)   echo "markdown" ;;
+    *)    echo "" ;;
+  esac
 }
 
-# ✅ 배열 순회하며 각 폴더 처리
-for dir in "${INPUT_DIRS[@]}"; do
-  merge_files "$dir"
+# =====================
+
+# 파일 생성 시작
+echo "# Base Codes" > "$OUTPUT_FILE"
+
+for FILE in "${FILES[@]}"
+do
+    FULL_PATH="$PROJECT_HOME/$FILE"
+    if [ -f "$FULL_PATH" ]; then
+        echo "" >> "$OUTPUT_FILE"
+        echo "## PROJECT_HOME/$FILE" >> "$OUTPUT_FILE"
+        LANG=$(get_highlight_lang "$FILE")
+        echo "\`\`\`${LANG}" >> "$OUTPUT_FILE"
+        cat "$FULL_PATH" >> "$OUTPUT_FILE"
+        echo '```' >> "$OUTPUT_FILE"
+    else
+        echo "[경고] 파일이 존재하지 않아서 스킵합니다: $FILE"
+    fi
 done
 
-echo "✅ AI 프로젝트 파일 등록용 [components.md] 파일이 생성 되었습니다:\n- 리소스 폴더 리스트:"
-for dir in "${INPUT_DIRS[@]}"; do
-  echo "  - $dir"
-done
-echo "- 결과 파일:\n  - $OUTPUT_FILE"
-
-
+echo "✅ AI 프로젝트 파일 등록용 [base_code.md] 파일이 생성되었습니다: $OUTPUT_FILE"
 ````
 
 ## 특정파일 직접 지정하여 하나의 md 파일로 생성
