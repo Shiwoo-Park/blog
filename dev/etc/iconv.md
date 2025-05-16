@@ -69,7 +69,7 @@ korean.txt: text/plain; charset=iso-8859-1
 
 ## 샘플 사용법 예시
 
-```shell
+```bash
 # 1. CP949 (EUC-KR) → UTF-8로 변환 (한글 깨짐 방지)
 iconv -f cp949 -t utf-8 input.txt > output.txt
 
