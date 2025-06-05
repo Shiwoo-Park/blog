@@ -9,7 +9,7 @@
 
 ### 2025.06
 
-- [sqlalchemy v2 + sqlmodel 기반 모델 및 CRUD 쿼리작성 기본 가이드](dev/python/sqlalchemy_basic.md.md)
+- [sqlalchemy v2 + sqlmodel 기반 모델 및 CRUD 쿼리작성 기본 가이드](dev/python/sqlalchemy_basic.md)
 
 ### 2025.05
 
