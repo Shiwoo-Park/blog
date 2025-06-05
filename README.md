@@ -5,10 +5,15 @@
 ### 준비중
 
 - [ECS-EC2 에서 도커 stop 시, 그 안에 celery warm shutdown 처리](dev/devops/ecs_celery_warm_exit.md)
+- FastAPI 에서 APScheduler 로 Batch 작업 처리하기 (+ Redis Lock 기반 동시성 제어)
+
+### 2025.06
+
+- [sqlalchemy v2 + sqlmodel 기반 모델 및 CRUD 쿼리작성 기본 가이드](dev/python/sqlalchemy_basic.md.md)
 
 ### 2025.05
 
-- [Pydantic의 BaseModel 사용법](dev/python/pydantic_base_model.md)
+- [Pydantic의 BaseModel 파헤치기](dev/python/pydantic_base_model.md)
 
 ### 2025.03
 
@@ -113,12 +118,12 @@
 ### 2023.04
 
 - [Flutter App 출시 Tips](dev/etc/flutter_release_tips.md)
-- [Django ORM Tips](dev/python/django_orm_tips.md)
+- [Django ORM Tips](dev/django/django_orm_tips.md)
 
 ### 2022.03
 
 - [MySQL Tips](dev/storage/mysql_tips.md)
-- [DRF 활용, 최적화 Tip 모음](dev/python/drf_tips.md)
+- [DRF 활용, 최적화 Tip 모음](dev/django/drf_tips.md)
 
 ### 2021.10
 
@@ -137,7 +142,7 @@
 
 ### 2021.2
 
-- [Django + Pytest tips](dev/python/django_pytest_tips.md)
+- [Django + Pytest tips](dev/django/django_pytest_tips.md)
 
 ### 2021.1
 
@@ -155,14 +160,14 @@
 
 ### 2020.08
 
-- [Django - Group By 쿼리 작성하기](dev/python/django_groupby.md)
+- [Django - Group By 쿼리 작성하기](dev/django/django_groupby.md)
 - [Git - 명령어 모음](dev/git/git_cmds.md)
 
 ### 2020.07
 
 - [Git - 서버에 deploy key 활용가능하도록 등록하기](dev/git/git_deploy_key.md)
 - [Git - 헤깔리는 gitignore 의 directory 설정](dev/git/gitignore_dir.md)
-- [Django or DRF 의 View 에 Custom Decorator 를 달아보자](dev/python/django_view_decorator.md)
+- [Django or DRF 의 View 에 Custom Decorator 를 달아보자](dev/django/django_view_decorator.md)
 
 ### 기타 참고링크
 
