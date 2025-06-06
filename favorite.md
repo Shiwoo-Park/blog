@@ -3,14 +3,16 @@
 [목록으로](https://shiwoo-park.github.io/blog)
 
 ---
-## Dev - Basic
+## 현재 업무 관련
 
+- [sqlalchemy v2 + sqlmodel 기반 모델 및 CRUD 쿼리작성 기본 가이드](dev/python/sqlalchemy_basic.md)
+- [Pydantic의 BaseModel 파헤치기](dev/python/pydantic_base_model.md)
+- [PostgreSQL 사용 Tips](dev/storage/postgres_tips.md)
+- [Redis tip 모음](dev/storage/redis_tips.md)
 - [Git - 명령어 모음](dev/git/git_cmds.md)
 
 ## Database
 
-- [PostgreSQL 사용 Tips](dev/storage/postgres_tips.md)
-- [Redis tip 모음](dev/storage/redis_tips.md)
 - [MySQL Tips](dev/storage/mysql_tips.md)
 
 ## DevOps
