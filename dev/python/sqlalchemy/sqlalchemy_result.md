@@ -57,7 +57,6 @@ rows = result.unique().all()
 
 이때 `.unique()`는 `(name, age)` **튜플 전체가 동일한 경우**만 중복으로 간주해서 제거해.
 
----
 
 ### 예시
 
@@ -80,7 +79,6 @@ rows = result.unique().all()
 
 즉, **(name, age)** 전체 조합이 같아야 중복으로 판단돼.
 
----
 
 ### ✅ `.scalars()`와 `.unique()` 같이 쓰면?
 

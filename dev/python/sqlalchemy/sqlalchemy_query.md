@@ -10,7 +10,6 @@
 - **SQLAlchemy 2.x 기준의 SQL 표현 객체**로, 타입은 `sqlalchemy.sql.selectable.Select`이고, 
 - SQLModel과 SQLAlchemy에서 핵심적으로 다루는 객체야.
 
----
 
 ## ✅ 객체 타입
 
@@ -23,7 +22,6 @@ type(stmt)  # sqlalchemy.sql.selectable.Select
 * `select()` 함수는 `Select` 객체를 반환하고,
 * 이 객체는 이후 `.where()`, `.order_by()` 등으로 **쿼리 조합 가능**
 
----
 
 ## ✅ 주요 체이닝 메서드
 
@@ -40,7 +38,6 @@ type(stmt)  # sqlalchemy.sql.selectable.Select
 | `.having(...)`    | 그룹핑 조건 필터링 (`HAVING`)                                   |
 | `.options(...)`   | eager-loading 등 ORM 옵션 설정 (`load_only`, `selectinload`) |
 
----
 
 ## ✅ 활용 팁
 
@@ -56,7 +53,6 @@ if age:
 
 → 조건적으로 필터를 추가할 수 있어 실용적
 
----
 
 ### 2. SQL 보기 (`print(stmt)`)
 
@@ -70,7 +66,6 @@ print(stmt)  # 출력: SELECT user.name, user.age FROM user ...
 print(stmt.compile(compile_kwargs={"literal_binds": True}))
 ```
 
----
 
 ### 3. `distinct()` or `group_by()`와 함께 쓰기
 
@@ -82,7 +77,6 @@ stmt = select(User.name).distinct()
 stmt = select(User.name, func.count()).group_by(User.name)
 ```
 
----
 
 ### 4. `select_from()`으로 기준 테이블 명시
 
@@ -92,7 +86,6 @@ stmt = select(User.name, UserGroup.name).select_from(
 )
 ```
 
----
 
 ## ✅ 주의사항
 

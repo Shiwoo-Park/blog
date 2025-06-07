@@ -4,6 +4,7 @@
 
 [목록으로](https://shiwoo-park.github.io/blog)
 
+---
 
 ydantic은 Python 데이터 유효성 검증 및 직렬화/역직렬화를 도와주는 라이브러리야.
 
@@ -137,6 +138,6 @@ class User(BaseModel):
     }
 ```
 
-
+---
 
 [목록으로](https://shiwoo-park.github.io/blog)

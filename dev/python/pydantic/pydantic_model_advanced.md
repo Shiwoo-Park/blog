@@ -16,7 +16,6 @@
 | `@field_serializer`               | 직렬화 커스터마이징 (응답용)      | 출력 시 (dict/json) |
 | `@computed_field`                 | 계산 필드 (저장 안됨)         | 응답 시 계산          |
 
----
 
 ## 1. `@field_validator`
 
@@ -99,7 +98,6 @@ class User(SQLModel):
         return self.email.split("@")[1]
 ```
 
----
 
 ### 📌 참고 정리
 

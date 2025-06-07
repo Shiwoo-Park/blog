@@ -11,7 +11,6 @@
 * **SQLAlchemy 2.x**는 `async/await` 지원, **Declarative ORM**과 **Core SQL**를 명확히 분리
 * **SQLModel**은 **Pydantic 2 + SQLAlchemy 2 ORM** 기반의 상위 추상화로 FastAPI에 적합
 
----
 
 ## 🧱 모델 정의 예시 (Pydantic v2 + SQLModel 기준)
 
@@ -116,7 +115,6 @@ async with async_session() as session:
     await session.commit()
 ```
 
----
 
 ### 2. Select
 
@@ -145,7 +143,6 @@ result = await session.exec(stmt)
 users = result.all()
 ```
 
----
 
 ### 3. Update
 
@@ -157,7 +154,6 @@ user.email = "new@example.com"
 await session.commit()
 ```
 
----
 
 ### 4. Delete
 
@@ -169,7 +165,6 @@ await session.delete(user)
 await session.commit()
 ```
 
----
 
 ### 5. 정렬, 필터, 페이징
 
@@ -210,7 +205,6 @@ rows = result.all()
 * SQLAlchemy 2.x는 **statement-first 방식** (`select(User)`)이 기본
 * `session.exec()`은 **SQLModel 전용** (SQLAlchemy는 `session.execute()`)
 
----
 
 ---
 
