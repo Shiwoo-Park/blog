@@ -10,11 +10,15 @@
 
 ### 2025.06
 
-- [sqlalchemy v2 + sqlmodel 기반 모델 및 CRUD 쿼리작성 기본 가이드](dev/python/sqlalchemy_basic.md)
+- [SQLAlchemy 2.x + sqlmodel 기반 모델 및 CRUD 쿼리 작성 가이드](dev/python/sqlalchemy_basic.md)
+- [SQLAlchemy 2.x 의 쿼리결과(Result) 객체 파헤치기](dev/python/sqlalchemy_result.md)
+- [SQLAlchemy 2.x 의 쿼리(Select) 객체 알아보기](dev/python/sqlalchemy_query.md)
+- [Pydantic 2 모델 필드: 유효성 검사 + 전처리 + 후처리](dev/python/pydantic_model_advanced.md)
+- [Pydantic 2 기반 풀스펙 모델 코드 (FastAPI + SQLModel + SQLAlchemy 2)](dev/python/pydantic_model_full_spec.md)
 
 ### 2025.05
 
-- [Pydantic의 BaseModel 파헤치기](dev/python/pydantic_base_model.md)
+- [Pydantic의 BaseModel 파헤치기](dev/python/pydantic_model_basic.md)
 
 ### 2025.03
 
