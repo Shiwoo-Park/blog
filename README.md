@@ -6,10 +6,10 @@
 
 - [ECS-EC2 에서 도커 stop 시, 그 안에 celery warm shutdown 처리](dev/devops/ecs_celery_warm_exit.md)
 - FastAPI 에서 APScheduler 로 Batch 작업 처리하기 (+ Redis Lock 기반 동시성 제어)
-- 간단하면서도 안전한 인증 토큰 만들기 (HMAC, ID, SECRET, TIMESTAMP 기반)
 
 ### 2025.06
 
+- [간단하면서도 안전한 인증 토큰 만들기 (Python, HMAC, ID/SECRET 기반)](dev/python/simple_auth_hmac.md)
 - [SQLAlchemy 2.x + sqlmodel 기반 모델 및 CRUD 쿼리 작성 가이드](dev/python/sqlalchemy/sqlalchemy_basic.md)
 - [SQLAlchemy 2.x 의 쿼리결과(Result) 객체 파헤치기](dev/python/sqlalchemy/sqlalchemy_result.md)
 - [SQLAlchemy 2.x 의 쿼리(Select) 객체 알아보기](dev/python/sqlalchemy/sqlalchemy_query.md)
@@ -132,9 +132,9 @@
 
 ### 2021.10
 
-- [pytest Django 예제 모음](dev/python/pytest/pytest_3_django_examples.md)
-- [pytest VS unittest](dev/python/pytest/pytest_2_compare.md)
-- [pytest 소개 및 기능](dev/python/pytest/pytest_1_intro.md)
+- [pytest Django 예제 모음](dev/python/unittest/pytest_3_django_examples.md)
+- [pytest VS unittest](dev/python/unittest/pytest_2_compare.md)
+- [pytest 소개 및 기능](dev/python/unittest/pytest_1_intro.md)
 
 ### 2021.9
 
