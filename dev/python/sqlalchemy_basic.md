@@ -1,4 +1,4 @@
-# sqlalchemy v2 + sqlmodel 기반 모델 및 CRUD 작성 기본 가이드
+# SQLAlchemy 2.x + sqlmodel 기반 모델 및 CRUD 쿼리 작성 가이드
 
 > 날짜: 2025-06-06
 
@@ -15,7 +15,7 @@
 
 ## 🧱 모델 정의 예시 (Pydantic v2 + SQLModel 기준)
 
-## 1:N 관계
+### 1:N 관계
 
 ```python
 from sqlmodel import SQLModel, Field, Relationship
@@ -75,7 +75,7 @@ class User(SQLModel, table=True):
         return round(v, 2)
 ```
 
-## N:N 관계
+### N:N 관계
 
 ```python
 class PostTagLink(SQLModel, table=True):
@@ -104,35 +104,6 @@ class Tag(SQLModel, table=True):
     posts: List["Post"] = Relationship(back_populates="tags", link_model=PostTagLink)
 ```
 
----
-
-## ⚙️ Async DB 세션 구성
-
-```python
-from sqlalchemy.ext.asyncio import create_async_engine, AsyncSession
-from sqlalchemy.orm import sessionmaker
-
-DATABASE_URL = "postgresql+asyncpg://user:pass@host/dbname"
-
-engine = create_async_engine(DATABASE_URL, echo=True)
-async_session = sessionmaker(engine, class_=AsyncSession, expire_on_commit=False)
-```
-
----
-
-## 🔁 Dependency (FastAPI 기준)
-
-```python
-from fastapi import Depends
-from contextlib import asynccontextmanager
-
-@asynccontextmanager
-async def get_session():
-    async with async_session() as session:
-        yield session
-```
-
----
 
 ## 🛠️ 기본 쿼리 예시 (AsyncSession 사용)
 
@@ -150,10 +121,23 @@ async with async_session() as session:
 ### 2. Select
 
 ```python
-# 단일 row
+# 단일 row (모든 필드)
 stmt = select(User).where(User.name == "홍길동")
+
+# 특정필드만 선택: 리턴타입=튜플
+# - User 객체가 아니라 (id, name) 튜플이 반환됨
+stmt = select(User.id, User.name).where(User.name == "홍길동")
+result = await session.exec(stmt)
+rows = result.all()  # [(1, "홍길동")] 형태의 튜플 리스트
+
+
+# 특정필드만 선택: 리턴타입=유저객체
+stmt = select(User).options(load_only(User.id, User.name))
+
+
 result = await session.exec(stmt)
 user = result.first()
+
 
 # 전체 row
 stmt = select(User)
@@ -195,7 +179,31 @@ result = await session.exec(stmt)
 users = result.all()
 ```
 
----
+### 6. 1:N join
+
+```python
+from sqlmodel import select, col
+
+# 1 테이블에서 N 테이블 join
+stmt = (
+    select(UserGroup, User)
+    .join(User, User.group_id == UserGroup.id)
+    .where(User.age >= 30)a
+    .order_by(User.name)
+)
+result = await session.exec(stmt)
+rows = result.all()
+
+# N 테이블에서 1 테이블 join
+stmt = (
+    select(User, UserGroup)
+    .join(UserGroup, User.group_id == UserGroup.id)
+    .where(UserGroup.name == "VIP")
+    .order_by(User.birth_date.desc())
+)
+result = await session.exec(stmt)
+rows = result.all()
+```
 
 ## 📌 참고
 
