@@ -10,15 +10,15 @@
 
 ### 2025.06
 
-- [SQLAlchemy 2.x + sqlmodel 기반 모델 및 CRUD 쿼리 작성 가이드](dev/python/sqlalchemy_basic.md)
-- [SQLAlchemy 2.x 의 쿼리결과(Result) 객체 파헤치기](dev/python/sqlalchemy_result.md)
-- [SQLAlchemy 2.x 의 쿼리(Select) 객체 알아보기](dev/python/sqlalchemy_query.md)
-- [Pydantic 2 모델 필드: 유효성 검사 + 전처리 + 후처리](dev/python/pydantic_model_advanced.md)
-- [Pydantic 2 기반 풀스펙 모델 코드 (FastAPI + SQLModel + SQLAlchemy 2)](dev/python/pydantic_model_full_spec.md)
+- [SQLAlchemy 2.x + sqlmodel 기반 모델 및 CRUD 쿼리 작성 가이드](dev/python/sqlalchemy/sqlalchemy_basic.md)
+- [SQLAlchemy 2.x 의 쿼리결과(Result) 객체 파헤치기](dev/python/sqlalchemy/sqlalchemy_result.md)
+- [SQLAlchemy 2.x 의 쿼리(Select) 객체 알아보기](dev/python/sqlalchemy/sqlalchemy_query.md)
+- [Pydantic 2 모델 필드: 유효성 검사 + 전처리 + 후처리](dev/python/pydantic/pydantic_model_advanced.md)
+- [Pydantic 2 기반 풀스펙 모델 코드 (FastAPI + SQLModel + SQLAlchemy 2)](dev/python/pydantic/pydantic_model_full_spec.md)
 
 ### 2025.05
 
-- [Pydantic의 BaseModel 파헤치기](dev/python/pydantic_model_basic.md)
+- [Pydantic 2 의 BaseModel 파헤치기](dev/python/pydantic/pydantic_model_basic.md)
 
 ### 2025.03
 
@@ -123,18 +123,18 @@
 ### 2023.04
 
 - [Flutter App 출시 Tips](dev/etc/flutter_release_tips.md)
-- [Django ORM Tips](dev/django/django_orm_tips.md)
+- [Django ORM Tips](dev/python/django/django_orm_tips.md)
 
 ### 2022.03
 
 - [MySQL Tips](dev/storage/mysql_tips.md)
-- [DRF 활용, 최적화 Tip 모음](dev/django/drf_tips.md)
+- [DRF 활용, 최적화 Tip 모음](dev/python/django/drf_tips.md)
 
 ### 2021.10
 
-- [pytest Django 예제 모음](dev/python/pytest_3_django_examples.md)
-- [pytest VS unittest](dev/python/pytest_2_compare.md)
-- [pytest 소개 및 기능](dev/python/pytest_1_intro.md)
+- [pytest Django 예제 모음](dev/python/pytest/pytest_3_django_examples.md)
+- [pytest VS unittest](dev/python/pytest/pytest_2_compare.md)
+- [pytest 소개 및 기능](dev/python/pytest/pytest_1_intro.md)
 
 ### 2021.9
 
@@ -147,7 +147,7 @@
 
 ### 2021.2
 
-- [Django + Pytest tips](dev/django/django_pytest_tips.md)
+- [Django + Pytest tips](dev/python/django/django_pytest_tips.md)
 
 ### 2021.1
 
@@ -165,14 +165,14 @@
 
 ### 2020.08
 
-- [Django - Group By 쿼리 작성하기](dev/django/django_groupby.md)
+- [Django - Group By 쿼리 작성하기](dev/python/django/django_groupby.md)
 - [Git - 명령어 모음](dev/git/git_cmds.md)
 
 ### 2020.07
 
 - [Git - 서버에 deploy key 활용가능하도록 등록하기](dev/git/git_deploy_key.md)
 - [Git - 헤깔리는 gitignore 의 directory 설정](dev/git/gitignore_dir.md)
-- [Django or DRF 의 View 에 Custom Decorator 를 달아보자](dev/django/django_view_decorator.md)
+- [Django or DRF 의 View 에 Custom Decorator 를 달아보자](dev/python/django/django_view_decorator.md)
 
 ### 기타 참고링크
 
