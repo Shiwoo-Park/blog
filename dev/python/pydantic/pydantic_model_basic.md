@@ -4,7 +4,6 @@
 
 [목록으로](https://shiwoo-park.github.io/blog)
 
----
 
 ydantic은 Python 데이터 유효성 검증 및 직렬화/역직렬화를 도와주는 라이브러리야.
 
@@ -27,7 +26,6 @@ class User(BaseModel):
 - `.model_dump()` → dict 반환
 - `.model_validate(data)` → dict → 모델 변환 (역직렬화)
 
----
 
 # ✅ 2. 타입 유효성 검사 + 변환
 
@@ -45,7 +43,6 @@ Product(name="Item", price="1000", is_available="true")
 
 > Pydantic v2는 엄격하게 `strict=True` 설정하면 자동 변환 막을 수 있음
 
----
 
 # ✅ 3. 기본값, Optional 필드
 
@@ -58,7 +55,6 @@ class Item(BaseModel):
     price: float = 0.0
 ```
 
----
 
 # ✅ 4. 중첩 모델
 
@@ -72,7 +68,6 @@ class Customer(BaseModel):
     address: Address
 ```
 
----
 
 # ✅ 5. 리스트, 유니언
 
@@ -84,7 +79,6 @@ class Data(BaseModel):
     result: Union[int, str]
 ```
 
----
 
 # ✅ 6. 필드 메타 정보: `Field`
 
@@ -96,7 +90,6 @@ class User(BaseModel):
     age: int = Field(default=0, ge=0, le=120)
 ```
 
----
 
 # ✅ 7. 필드 alias 및 변환
 
@@ -111,7 +104,6 @@ class User(BaseModel):
 User.model_validate({"fullName": "홍길동"})
 ```
 
----
 
 # ✅ 8. 모델 설정 옵션 (Pydantic v2: `model_config`)
 
@@ -124,6 +116,7 @@ User.model_validate({"fullName": "홍길동"})
 | `extra`                 | 모델 정의에 없는 필드 허용 여부 (`"forbid"`, `"allow"`, `"ignore"`) |
 | `frozen`                | 모델을 불변 (immutable) 객체로                                      |
 | `json_schema_extra`     | Swagger/OpenAPI 문서용 커스텀 설명 추가                             |
+
 
 ### 예시:
 
@@ -145,6 +138,5 @@ class User(BaseModel):
 ```
 
 
----
 
 [목록으로](https://shiwoo-park.github.io/blog)
