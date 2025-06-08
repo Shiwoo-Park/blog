@@ -20,15 +20,16 @@ type(stmt)  # sqlalchemy.sql.selectable.Select
 
 ## ✅ `select(...)` 의 주요 체이닝 메서드
 
-| 메서드               | 설명                                           | 예제 코드                                                             |
+| 메서드               | 설명                                           | 예제 코드                                                        |
 | ----------------- | -------------------------------------------- | ----------------------------------------------------------------- |
-| `.where(...)`     | 필터 조건 추가 (`AND`, `==`, `in_()` 등)            | `select(User).where(User.age > 20)`                               |
+| `.where(...)`     | 필터 조건 추가 (`AND`, `==`, `in_()` 등)            | `select(User).where(User.age > 20)`                            |
+| `.select_from(...)` |	쿼리의 기준이 되는 FROM 테이블(또는 서브쿼리) 지정 |	`select(User).select_from(Order).join(User)`                   |
 | `.order_by(...)`  | 정렬 기준 지정                                     | `select(User).order_by(User.created_at.desc())`                   |
 | `.limit(...)`     | limit 절 지정                                   | `select(User).limit(10)`                                          |
 | `.offset(...)`    | offset 절 지정                                  | `select(User).offset(20)`                                         |
 | `.distinct()`     | `DISTINCT` 적용                                | `select(User.name).distinct()`                                    |
-| `.join(...)`      | 조인 (첫 번째 테이블 기준)                             | `select(Order).join(User)`                                        |
-| `.join_from(...)` | 조인 방향 커스터마이징 (기준 테이블 명시)                     | `select(User).join_from(Order, User)`                             |
+| `.join(...)`      | 조인 (첫 번째 테이블 기준)                             | `select(Order).join(User)`                                    |
+| `.join_from(...)` | 조인 방향 커스터마이징 (기준 테이블 명시)                     | `select(User).join_from(Order, User)`                     |
 | `.outerjoin(...)` | LEFT OUTER JOIN 등                            | `select(User).outerjoin(Order)`                                   |
 | `.group_by(...)`  | 그룹핑 지정 (`GROUP BY`)                          | `select(User.city, func.count()).group_by(User.city)`             |
 | `.having(...)`    | 그룹핑 후 조건 필터링 (`HAVING`)                      | `select(User.city).group_by(User.city).having(func.count() > 10)` |
@@ -55,7 +56,7 @@ type(stmt)  # sqlalchemy.sql.selectable.Select
 
 
 
-## ✅ 자주 쓰이는 종류별 `join` 요약표표
+## ✅ 자주 쓰이는 종류별 `join` 요약표
 
 | 구문                          | SQL 관점                  | 기준 테이블 | 조인 방식        | 결과     |
 | --------------------------- | -------------------------- | ------ | ------------ | ------ |
