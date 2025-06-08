@@ -9,7 +9,7 @@
 
 ### 2025.06
 
-- [Django ORM VS SQLAlchemy 극명한 쿼리 작성 체계의 차이점 분석](dev/python/sqlalchemy/sqlalchemy_vs_django_orm.md)
+- [Django ORM VS SQLAlchemy 무엇이 다를까?](dev/python/sqlalchemy/sqlalchemy_vs_django_orm.md)
 - [자체제작 - DRF 기반 CSV 다운로드 모듈 (Django + DRF + Celery)](dev/python/mywork/drf_csv_downloader.md)
 - [자체제작 - 동시성 제어를 위한 컨텍스트 매니저 (Django + Redis)](dev/python/mywork/concurrency_safe_context_manager.md)
 - [간단하면서도 안전한 인증 토큰 만들기 (Python, HMAC, ID/SECRET 기반)](dev/python/simple_auth_hmac.md)

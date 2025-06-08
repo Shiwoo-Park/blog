@@ -10,7 +10,7 @@
 
 ## SQLAlchemy 2
 
-- [Django ORM VS SQLAlchemy 극명한 쿼리 작성 체계의 차이점 분석](dev/python/sqlalchemy/sqlalchemy_vs_django_orm.md)
+- [Django ORM VS SQLAlchemy 무엇이 다를까?](dev/python/sqlalchemy/sqlalchemy_vs_django_orm.md)
 - [SQLAlchemy 2.x + sqlmodel 기반 모델 및 CRUD 쿼리 작성 가이드](dev/python/sqlalchemy/sqlalchemy_basic.md)
 - [SQLAlchemy 2.x 의 쿼리결과(Result) 객체 파헤치기](dev/python/sqlalchemy/sqlalchemy_result.md)
 - [SQLAlchemy 2.x 의 쿼리(Select) 객체 알아보기](dev/python/sqlalchemy/sqlalchemy_query.md)
