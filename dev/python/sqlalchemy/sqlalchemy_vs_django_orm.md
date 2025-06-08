@@ -23,8 +23,8 @@ Python 생태계에서 ORM(Object-Relational Mapping) 라이브러리로 대표�
 
 ## 1. N\:N 관계는 항상 직접 join 해야 한다
 
-**Django:** `tags__name="X"` 자동으로 중간 테이블 처리
-**SQLAlchemy:** `post_tag_table` 같은 **association table**을 **직접 join** 해야 함
+- **Django:** `tags__name="X"` 자동으로 중간 테이블 처리
+- **SQLAlchemy:** `post_tag_table` 같은 **association table**을 **직접 join** 해야 함
 
 ✅ 실전 예시:
 
@@ -43,8 +43,8 @@ stmt = (
 
 ## 2. 관계 조회는 `.join()`이 아니라 `.options()`
 
-**Django:** `select_related("author")` 한 줄
-**SQLAlchemy:** `.join()`은 SQL JOIN이고, `.options(selectinload(...))`로 **관계 데이터 로딩**
+- **Django:** `select_related("author")` 한 줄
+- **SQLAlchemy:** `.join()`은 SQL JOIN이고, `.options(selectinload(...))`로 **관계 데이터 로딩**
 
 ✅ 실전 예시:
 
@@ -57,8 +57,8 @@ select(Post).options(selectinload(Post.author))
 
 ## 3. 필터 조건은 항상 **join()을 먼저 선언**하고 나서 써야 한다
 
-**Django:** `posts.filter(tags__name="X")` OK
-**SQLAlchemy:** `where(Tag.name == "X")` 전에 반드시 `join(Tag)` 명시해야 함
+- **Django:** `posts.filter(tags__name="X")` OK
+- **SQLAlchemy:** `where(Tag.name == "X")` 전에 반드시 `join(Tag)` 명시해야 함
 
 ✅ 잘못된 예:
 
@@ -82,13 +82,14 @@ select(Post).options(selectinload(Post.tags)).where(Tag.name == "파이썬")  # 
 ```
 
 📌 `options()`는 **쿼리 조건에 영향을 주지 않음**
+
 → 실제 조인은 `join()`으로, 데이터 로딩은 `options()`로 따로 써야 함
 
 
 ## 5. `select()` 기반 체이닝이 많아질수록 **코드가 수직으로 길어진다**
 
-**Django:** ORM 필터/정렬이 수평적으로 읽힘
-**SQLAlchemy:** 체이닝 조합이 많아지면 아래처럼 꽤 복잡해짐
+- **Django:** ORM 필터/정렬이 수평적으로 읽힘
+- **SQLAlchemy:** 체이닝 조합이 많아지면 아래처럼 꽤 복잡해짐
 
 ✅ 예시:
 
