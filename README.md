@@ -9,8 +9,8 @@
 
 ### 2025.06
 
-- [Django + DRF + Celery 에서 사용가능한 대용량 CSV 다운로드 모듈 – `CSVDownloader` 소개](dev/python/mywork/drf_csv_downloader.md)
-- [Django에서 Redis로 동시성 제어하기: `concurrency_safe()` 컨텍스트 매니저 소개](dev/python/mywork/concurrency_safe_context_manager.md)
+- [자체제작 - DRF 기반 CSV 다운로드 모듈 (Django + DRF + Celery)](dev/python/mywork/drf_csv_downloader.md)
+- [자체제작 - 동시성 제어를 위한 컨텍스트 매니저 (Django + Redis)](dev/python/mywork/concurrency_safe_context_manager.md)
 - [간단하면서도 안전한 인증 토큰 만들기 (Python, HMAC, ID/SECRET 기반)](dev/python/simple_auth_hmac.md)
 - [SQLAlchemy 2.x + sqlmodel 기반 모델 및 CRUD 쿼리 작성 가이드](dev/python/sqlalchemy/sqlalchemy_basic.md)
 - [SQLAlchemy 2.x 의 쿼리결과(Result) 객체 파헤치기](dev/python/sqlalchemy/sqlalchemy_result.md)
