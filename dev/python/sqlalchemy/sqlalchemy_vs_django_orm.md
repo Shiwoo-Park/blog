@@ -169,8 +169,8 @@ Post.objects.select_related("user") \
 stmt = (
     select(Post)
     .join(Post.user)
-    .join(post_tag_table, post_tag_table.c.post_id == Post.id)
-    .join(Tag, Tag.id == post_tag_table.c.tag_id)
+    .join(PostTagLink, PostTagLink.c.post_id == Post.id)
+    .join(Tag, Tag.id == PostTagLink.c.tag_id)
     .where(
         and_(
             Post.title.ilike("%FastAPI%"),
