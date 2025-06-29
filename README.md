@@ -9,6 +9,8 @@
 
 ### 2025.06
 
+- [PostgreSQL 사용자가 꼭 알아야 할 핵심 개념](dev/storage/postgres_tips.md)
+- [PostgreSQL 구조](dev/storage/postgres_architecture.md)
 - [Django ORM VS SQLAlchemy 무엇이 다를까?](dev/python/sqlalchemy/sqlalchemy_vs_django_orm.md)
 - [자체제작 - DRF 기반 CSV 다운로드 모듈 (Django + DRF + Celery)](dev/python/mywork/drf_csv_downloader.md)
 - [자체제작 - 동시성 제어를 위한 컨텍스트 매니저 (Django + Redis)](dev/python/mywork/concurrency_safe_context_manager.md)
@@ -116,7 +118,7 @@
 ### 2024.03
 
 - [JWT 토큰의 발급, 사용, 관리 방식 총정리](dev/backend/jwt_token.md)
-- [PostgreSQL 사용 Tips](dev/storage/postgres_tips.md)
+- [PostgreSQL 유용한 쿼리 모음](dev/storage/postgres_query.md)
 - [프로젝트의 미사용 pip 패키지 찾아내기](dev/python/pip_cleanup.md)
 - [특정 pip 패키지의 다른 패키지 의존성 확인하기](dev/python/pip_dependency.md)
 - [Git hook 으로 커밋메시지 prefix 자동화하기](dev/git/git_hook_1.md)
