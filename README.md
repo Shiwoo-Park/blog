@@ -7,6 +7,10 @@
 - [ECS-EC2 에서 도커 stop 시, 그 안에 celery warm shutdown 처리](dev/devops/ecs_celery_warm_exit.md)
 - FastAPI 에서 APScheduler 로 Batch 작업 처리하기 (+ Redis Lock 기반 동시성 제어)
 
+### 2025.07
+
+- [Redis 연결 상태 통계 분석 명령어](dev/devops/redis_check.md)
+
 ### 2025.06
 
 - [PostgreSQL 사용자가 꼭 알아야 할 핵심 개념](dev/storage/postgres_tips.md)
