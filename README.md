@@ -9,6 +9,7 @@
 
 ### 2025.07
 
+- [Redis Timeout 으로 인한 서비스 전체 장애 대응 로그](dev/history/redis_mget.md)
 - [Redis 연결 상태 통계 분석 명령어](dev/devops/redis_check.md)
 
 ### 2025.06
