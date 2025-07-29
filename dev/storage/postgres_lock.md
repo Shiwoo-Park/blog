@@ -106,16 +106,17 @@ SELECT * FROM users WHERE id = 1;  -- 가능
 
 ### 락 호환성 매트릭스
 
-| 요청 락 | ACCESS SHARE | ROW SHARE | ROW EXCLUSIVE | SHARE | SHARE ROW EXCLUSIVE | SHARE UPDATE EXCLUSIVE | EXCLUSIVE | ACCESS EXCLUSIVE |
-|---------|-------------|-----------|---------------|-------|-------------------|----------------------|-----------|------------------|
-| ACCESS SHARE | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✗ |
-| ROW SHARE | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✗ | ✗ |
-| ROW EXCLUSIVE | ✓ | ✓ | ✓ | ✗ | ✗ | ✗ | ✗ | ✗ |
-| SHARE | ✓ | ✓ | ✗ | ✓ | ✗ | ✗ | ✗ | ✗ |
-| SHARE ROW EXCLUSIVE | ✓ | ✓ | ✗ | ✗ | ✗ | ✗ | ✗ | ✗ |
-| SHARE UPDATE EXCLUSIVE | ✓ | ✓ | ✗ | ✗ | ✗ | ✗ | ✗ | ✗ |
-| EXCLUSIVE | ✗ | ✗ | ✗ | ✗ | ✗ | ✗ | ✗ | ✗ |
-| ACCESS EXCLUSIVE | ✗ | ✗ | ✗ | ✗ | ✗ | ✗ | ✗ | ✗ |
+| 요청 락 ↓ \ 기존 락 →            | ACCESS SHARE | ROW SHARE | ROW EXCLUSIVE | SHARE | SHARE ROW EXCLUSIVE | SHARE UPDATE EXCLUSIVE | EXCLUSIVE | ACCESS EXCLUSIVE |
+| -------------------------- | ------------ | --------- | ------------- | ----- | ------------------- | ---------------------- | --------- | ---------------- |
+| **ACCESS SHARE**           | O            | O         | O             | O     | O                   | O                      | O         | X                |
+| **ROW SHARE**              | O            | O         | O             | O     | O                   | O                      | X         | X                |
+| **ROW EXCLUSIVE**          | O            | O         | O             | X     | X                   | X                      | X         | X                |
+| **SHARE**                  | O            | O         | X             | O     | X                   | X                      | X         | X                |
+| **SHARE ROW EXCLUSIVE**    | O            | O         | X             | X     | X                   | X                      | X         | X                |
+| **SHARE UPDATE EXCLUSIVE** | O            | O         | X             | X     | X                   | X                      | X         | X                |
+| **EXCLUSIVE**              | X            | X         | X             | X     | X                   | X                      | X         | X                |
+| **ACCESS EXCLUSIVE**       | X            | X         | X             | X     | X                   | X                      | X         | X                |
+
 
 ## 행 레벨 락 (Row-Level Locks)
 
