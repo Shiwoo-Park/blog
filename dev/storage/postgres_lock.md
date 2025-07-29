@@ -64,7 +64,7 @@ TRUNCATE TABLE users;
 |---------|-----------|--------|------|
 | **ACCESS SHARE** | SELECT | 높음 | 기본 읽기 작업, 가장 호환성이 높음 |
 | **ROW SHARE** | SELECT FOR UPDATE | 높음 | 행 수정을 위한 락, 다른 읽기와 호환 |
-| **ROW EXCLUSIVE** | INSERT, UPDATE, DELETE | 중간 | 데이터 수정 작업, 다른 수정과 호환되지 않음 |
+| **ROW EXCLUSIVE** | INSERT, UPDATE, DELETE | 낮음 | 데이터 수정 작업, 다른 수정과 호환되지 않음 |
 | **SHARE** | CREATE INDEX | 낮음 | 인덱스 생성, 다른 SHARE와 호환 |
 | **SHARE ROW EXCLUSIVE** | VACUUM FULL, REINDEX | 낮음 | 테이블 재구성, 다른 작업과 호환되지 않음 |
 | **SHARE UPDATE EXCLUSIVE** | CREATE INDEX CONCURRENTLY | 낮음 | 동시 인덱스 생성, 다른 업데이트와 호환되지 않음 |
@@ -72,6 +72,9 @@ TRUNCATE TABLE users;
 | **ACCESS EXCLUSIVE** | DROP, TRUNCATE | 없음 | 테이블 삭제/재생성, 완전 배타적 |
 
 ### SHARE ROW EXCLUSIVE vs SHARE UPDATE EXCLUSIVE 비교
+
+- `SHARE ROW EXCLUSIVE` 는 해당 테이블에 대해 자기 자신과도 충돌하며 다른 작업도 차단 
+- `SHARE UPDATE EXCLUSIVE` 는 공유 업데이트 용 유지되며 읽기·쓰기 허용, 일부 DDL/VACUUM 작업만 차단
 
 #### SHARE ROW EXCLUSIVE 락 예시
 ```sql
@@ -111,7 +114,7 @@ SELECT * FROM users WHERE id = 1;  -- 가능
 | SHARE | ✓ | ✓ | ✗ | ✓ | ✗ | ✗ | ✗ | ✗ |
 | SHARE ROW EXCLUSIVE | ✓ | ✓ | ✗ | ✗ | ✗ | ✗ | ✗ | ✗ |
 | SHARE UPDATE EXCLUSIVE | ✓ | ✓ | ✗ | ✗ | ✗ | ✗ | ✗ | ✗ |
-| EXCLUSIVE | ✓ | ✗ | ✗ | ✗ | ✗ | ✗ | ✗ | ✗ |
+| EXCLUSIVE | ✗ | ✗ | ✗ | ✗ | ✗ | ✗ | ✗ | ✗ |
 | ACCESS EXCLUSIVE | ✗ | ✗ | ✗ | ✗ | ✗ | ✗ | ✗ | ✗ |
 
 ## 행 레벨 락 (Row-Level Locks)
@@ -136,153 +139,46 @@ SELECT * FROM users WHERE id = 1 FOR KEY SHARE;
 
 ### MVCC와 락 정보 저장 방식
 
-PostgreSQL은 **페이지 내부의 튜플 헤더**에 락 정보를 저장합니다:
+PostgreSQL은 **MVCC (Multi-Version Concurrency Control)** 방식을 사용하여 데이터의 일관성과 동시성을 보장합니다. 각 행(튜플)은 다음과 같은 시스템 컬럼을 통해 트랜잭션 상태를 추적합니다:
+
+| 필드     | 설명                   |
+| ------ | -------------------- |
+| `xmin` | 튜플을 생성한 트랜잭션 ID      |
+| `xmax` | 튜플을 삭제하거나 잠근 트랜잭션 ID |
+
+> `xmax`는 **DELETE/UPDATE** 또는 행 락(`FOR UPDATE`, `FOR SHARE` 등) 이 걸렸을 때 사용됩니다.
+
+락은 새로운 튜플을 생성하지 않고, 기존 튜플의 `xmax` 필드에 **락을 획득한 트랜잭션 ID**를 기록하는 방식으로 관리됩니다. 실제 데이터 변경이 없는 단순 락(`FOR UPDATE`)만으로는 튜플 복사(copy-on-write)는 발생하지 않습니다.
+
+| 판단 요소               | 설명                                                   |
+| ------------------- | ---------------------------------------------------- |
+| `xmax` 있음           | "무언가에 의해 잠깐 변경/잠금됐음"을 의미하지만 **그 자체로는 유효성 판단 불가**     |
+| `xmax` + 트랜잭션 상태 확인 | 이 트랜잭션이 커밋됐다면: 삭제 or 락 확정<br>롤백됐다면: 락 무효 (튜플 여전히 유효) |
+| → MVCC 처리           | PostgreSQL은 이 판단을 통해 클라이언트에 보여줄 튜플을 결정함 (가시성 판단)     |
 
 ```sql
--- 튜플 헤더 정보 확인 (내부 시스템 뷰)
-SELECT 
-    ctid,           -- 물리적 튜플 위치
-    xmin,           -- 생성 트랜잭션 ID
-    xmax,           -- 삭제 트랜잭션 ID (락 정보 포함)
-    cmin,           -- 커맨드 ID
-    cmax            -- 커맨드 ID
-FROM users WHERE id = 1;
+-- 현재 튜플의 트랜잭션 정보 확인 예시
+SELECT ctid, xmin, xmax
+FROM users
+WHERE id = 1;
 ```
 
-**xmin/xmax 활용 방식:**
+### 특징 요약
 
-1. **xmin (생성 트랜잭션 ID)**
-   - 튜플을 생성한 트랜잭션의 ID
-   - 해당 트랜잭션이 커밋되면 튜플이 유효해짐
+* **락은 튜플의 `xmax` 필드로 표현된다.**
+* **`FOR UPDATE`, `FOR SHARE` 등은 `xmax` 에 트랜잭션 ID를 기록하여 잠금만 표시합니다.**
+* **튜플 복사는 오직 `UPDATE`나 `DELETE` 같은 데이터 변경 작업 시 발생한다.**
+* **동시 락이 허용되는 경우(`FOR SHARE`, `FOR KEY SHARE`)는 여러 트랜잭션이 동일 튜플에 호환 락을 잡을 수 있다.**
+* **락 해제는 트랜잭션 종료 시 자동 처리되며, 별도 튜플 버전 생성은 없다.**
 
-2. **xmax (삭제/락 트랜잭션 ID)**
-   - 튜플을 삭제하거나 락을 획득한 트랜잭션의 ID
-   - 락 정보도 이 필드에 저장됨
+### 페이지 저장의 장점
 
-### 락 정보가 튜플에 저장되는 방식
+MVCC 정보(`xmin`, `xmax`)와 락 정보는 모두 **디스크의 튜플 헤더에 직접 저장**되므로 다음과 같은 이점이 있습니다:
 
-```sql
--- 락이 걸린 튜플 확인
-SELECT 
-    ctid,
-    xmin,
-    xmax,
-    CASE 
-        WHEN xmax > 0 THEN '락 또는 삭제됨'
-        ELSE '정상'
-    END as status
-FROM users WHERE id = 1;
+* 서버 재시작 이후에도 락/트랜잭션 정보 일관성 유지
+* 메모리 의존도 없이 튜플 상태 복원 가능
+* 트랜잭션 충돌이나 정합성 검사 시 빠른 판단 가능
 
--- 특정 트랜잭션이 락을 가진 튜플들
-SELECT 
-    ctid,
-    xmin,
-    xmax
-FROM users 
-WHERE xmax = current_setting('xact_id')::integer;
-```
-
-**락 정보 저장 메커니즘:**
-
-1. **FOR UPDATE 락**: 원본 튜플의 xmax에 트랜잭션 ID 설정 → 새로운 튜플 버전 생성
-2. **FOR SHARE 락**: 원본 튜플의 xmax에 트랜잭션 ID 설정 → 새로운 튜플 버전 생성
-3. **락 해제**: 락을 가진 튜플 버전의 xmax를 0으로 설정
-4. **삭제**: 원본 튜플의 xmax에 삭제 트랜잭션 ID 설정
-
-**동시 락 시 튜플 버전 생성:**
-- **원본 튜플**: xmax에 락 트랜잭션 ID 설정 (락된 버전)
-- **새 튜플 버전**: xmin에 락 트랜잭션 ID, xmax에 0 (현재 버전)
-- **호환 락**: 같은 원본 튜플에 여러 락 가능
-
-### 튜플 버전과 락의 관계
-
-```sql
--- 튜플 버전 히스토리 확인
-WITH tuple_versions AS (
-    SELECT 
-        ctid,
-        xmin,
-        xmax,
-        CASE 
-            WHEN xmax = 0 THEN '현재 버전'
-            WHEN xmax > 0 AND xmax < txid_current() THEN '삭제됨'
-            WHEN xmax > 0 AND xmax >= txid_current() THEN '락됨'
-        END as version_status
-    FROM users 
-    WHERE id = 1
-)
-SELECT * FROM tuple_versions;
-```
-
-**튜플 버전 관리:**
-
-- **새로운 락**: 원본 튜플의 xmax에 트랜잭션 ID 설정 → 새로운 튜플 버전 생성
-- **락 해제**: 락을 가진 튜플 버전의 xmax를 0으로 설정
-- **동시 락**: 같은 원본 튜플에 여러 락 가능 (호환되는 경우)
-- **버전 체인**: 원본 튜플 → 락된 버전 → 현재 버전으로 연결
-
-### 메모리 vs 페이지 저장의 장점
-
-**페이지 내부 저장의 장점:**
-
-1. **영속성**: 락 정보가 디스크에 저장되어 재시작 후에도 유지
-2. **효율성**: 메모리 사용량 최소화
-3. **일관성**: MVCC와 통합된 락 관리
-4. **복구**: 시스템 장애 시 락 상태 복구 가능
-
-### 동시 락 시 튜플 버전 생성 예제
-
-```sql
--- 1. 초기 상태
-INSERT INTO users (id, name) VALUES (1, 'Alice');
--- 튜플 A: xmin: 100, xmax: 0 (현재 버전)
-
--- 2. 세션 1: FOR UPDATE 락
-BEGIN;
-SELECT * FROM users WHERE id = 1 FOR UPDATE;
--- 튜플 A: xmin: 100, xmax: 101 (락된 버전)
--- 튜플 B: xmin: 101, xmax: 0 (새로운 현재 버전)
-
--- 3. 세션 2: FOR SHARE 락 (호환됨)
-BEGIN;
-SELECT * FROM users WHERE id = 1 FOR SHARE;
--- 튜플 A: xmin: 100, xmax: 101 (락된 버전) - 그대로 유지
--- 튜플 B: xmin: 101, xmax: 102 (락된 버전)
--- 튜플 C: xmin: 102, xmax: 0 (새로운 현재 버전)
-
--- 4. 세션 1 커밋
-COMMIT;
--- 튜플 A: xmin: 100, xmax: 101 (락된 버전)
--- 튜플 B: xmin: 101, xmax: 102 (락된 버전)
--- 튜플 C: xmin: 102, xmax: 0 (현재 버전)
-
--- 5. 세션 2 커밋
-COMMIT;
--- 튜플 A: xmin: 100, xmax: 101 (락된 버전)
--- 튜플 B: xmin: 101, xmax: 0 (락 해제됨)
--- 튜플 C: xmin: 102, xmax: 0 (현재 버전)
-```
-
-**핵심 포인트:**
-- **xmax 설정 = 새로운 튜플 버전 생성**: MVCC의 핵심 원리
-- **버전 체인**: 원본 → 락된 버전 → 현재 버전으로 연결
-- **호환 락**: 같은 원본 튜플에 여러 락 가능
-- **락 해제**: 해당 락 버전의 xmax를 0으로 설정
-
-```sql
--- 락 정보가 저장된 페이지 확인
-SELECT 
-    l.pid,
-    l.mode,
-    l.granted,
-    l.page,           -- 페이지 번호
-    l.tuple,          -- 튜플 번호
-    t.xmin,
-    t.xmax
-FROM pg_locks l
-JOIN users t ON l.page = (t.ctid::text::point)[0]::integer
-WHERE l.relation::regclass::text = 'users';
-```
 
 ### 다중 트랜잭션과 호환가능한 락
 
@@ -392,16 +288,6 @@ LWLocks는 **메모리 내 공유 데이터 구조**를 보호하는 경량 락�
 - **통계 정보**: 데이터베이스 통계 및 카운터
 - **백그라운드 프로세스 상태**: autovacuum, checkpoint 등
 
-```sql
--- LWLocks 상태 확인
-SELECT 
-    name,
-    vpid,
-    pid,
-    mode,
-    granted
-FROM pg_stat_database_conflicts;
-```
 
 ### Spinlocks
 
@@ -414,10 +300,6 @@ Spinlocks는 **CPU 레벨의 최저 수준 동기화**를 위한 락입니다. C
 - **해시 테이블**: 내부 해시 구조체
 - **세마포어**: 프로세스 간 신호 전달
 
-```sql
--- Spinlock 통계 확인 (PostgreSQL 내부)
-SELECT * FROM pg_stat_bgwriter;
-```
 
 ### Buffer Pin Lock
 
@@ -575,20 +457,6 @@ JOIN lock_chains l2 ON l1.relation = l2.relation
 WHERE l1.rn = 1 AND l2.rn = 2;  -- 첫 번째와 두 번째 대기 세션만 조합
 ```
 
-### 락 타임아웃 설정 및 모니터링
-
-```sql
--- 세션별 락 타임아웃 설정
-SET lock_timeout = '30s';
-
--- 락 타임아웃 발생 횟수 확인
-SELECT 
-    datname,
-    deadlocks,
-    blk_read_time,
-    blk_write_time
-FROM pg_stat_database;
-```
 
 ### 실용적인 락 모니터링 스크립트
 
@@ -638,33 +506,6 @@ CREATE INDEX idx_users_email ON users(email);
 UPDATE users SET name = 'John' WHERE email = 'john@example.com';
 ```
 
-### 3. 배치 처리 시 주의사항
-
-```sql
--- ❌ 나쁜 예: 한 번에 모든 행 락
-UPDATE users SET status = 'inactive' WHERE last_login < '2024-01-01';
-
--- ✅ 좋은 예: 배치 단위로 처리
-DO $$
-DECLARE
-    batch_size INTEGER := 1000;
-    affected INTEGER;
-BEGIN
-    LOOP
-        UPDATE users 
-        SET status = 'inactive' 
-        WHERE last_login < '2024-01-01' 
-        AND status != 'inactive'
-        LIMIT batch_size;
-        
-        GET DIAGNOSTICS affected = ROW_COUNT;
-        EXIT WHEN affected = 0;
-        
-        COMMIT;
-        PERFORM pg_sleep(0.1); -- 잠시 대기
-    END LOOP;
-END $$;
-```
 
 ## 실무 설정 가이드
 
@@ -726,7 +567,12 @@ deadlock_timeout = '5s';
 deadlock_timeout = '10s';
 ```
 
-### 3. 최대 락 수 설정
+### 3. 최대 락 수 (max_locks_per_transaction)
+
+- 하나의 트랜잭션이 동시에 락을 보유할 수 있는 객체 수를 설정합니다. 
+- 테이블, 인덱스 등 락이 필요한 객체마다 슬롯을 소비하며, shared_buffers와 함께 관리됩니다.
+
+
 
 #### 기본 설정 (postgresql.conf)
 ```sql
@@ -761,26 +607,32 @@ log_min_duration_statement = 1000  -- 1초 이상 쿼리 로그
 ```
 
 #### 모니터링 쿼리
+
+- pg_stat_database의 deadlocks 컬럼은 해당 DB 전체 누적 데드락 횟수이며, 정기 모니터링 시에는 delta 증가 값 추적 필요
+- 설정 단위는 '5s', '30min', '1h' 등 공식 문서 기준 단위로 통일 권장
+
 ```sql
--- 현재 락 대기 상황
+-- 현재 락 대기 중인 세션만 필터링
 SELECT 
     pid,
     usename,
     application_name,
     client_addr,
     state,
+    wait_event_type,
+    wait_event,
     query_start,
     query
 FROM pg_stat_activity 
-WHERE state = 'active' 
-AND wait_event_type = 'Lock';
+WHERE wait_event_type = 'Lock'
+ORDER BY query_start;
 
--- 락 타임아웃 발생 횟수
+-- 데드락 발생 횟수 및 블록 I/O 대기 시간 (누적 기준)
 SELECT 
     datname,
-    deadlocks,
-    blk_read_time,
-    blk_write_time
+    deadlocks,           -- 누적된 데드락 발생 횟수
+    blk_read_time,       -- 디스크에서 읽기 대기로 소비된 시간(ms)
+    blk_write_time       -- 디스크로 쓰기 대기로 소비된 시간(ms)
 FROM pg_stat_database;
 ```
 
@@ -857,3 +709,18 @@ WHERE name IN ('lock_timeout', 'deadlock_timeout', 'max_locks_per_transaction');
 ---
 
 [목록으로](https://shiwoo-park.github.io/blog)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
