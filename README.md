@@ -9,6 +9,8 @@
 
 ### 2025.08
 
+- [Postgre SQL - 초당 1000번 업데이트 발생 + 유니크 필드에 대한 정렬 전략](dev/storage/postgres_example2.md)
+- [Postgre SQL - 테이블 설계 Tip: 업데이트가 잦은 필드 + 그 필드로 정렬 + 유니크 보장까지 해야 하는 경우](dev/storage/postgres_example1.md)
 - [Postgres SQL - 실무에서 쓰기 좋은 실행계획 분석 및 활용법 + CBO](dev/storage/postgres_explain.md)
 
 ### 2025.07
