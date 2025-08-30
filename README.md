@@ -1,6 +1,6 @@
 # 실바의 블로그에 오신것을 환영합니다
 
-[블로그](https://shiwoo-park.github.io/blog/) | [Git-Repo](https://github.com/Shiwoo-Park/blog) | [즐겨찾기](favorite.md) | [Code Snippets](https://github.com/Shiwoo-Park/blog/tree/master/snippets)
+[블로그](https://shiwoo-park.github.io/blog/) | [Git-Repo](https://github.com/Shiwoo-Park/blog) | [즐겨찾기](favorite.md) | [Code Snippets](https://github.com/Shiwoo-Park/blog/tree/master/snippets) | [Seminar](etc/jaram_20250830.md)
 
 ### 준비중
 
