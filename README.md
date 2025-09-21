@@ -1,11 +1,15 @@
 # 실바의 블로그에 오신것을 환영합니다
 
-[블로그](https://shiwoo-park.github.io/blog/) | [Git-Repo](https://github.com/Shiwoo-Park/blog) | [즐겨찾기](favorite.md) | [Code Snippets](https://github.com/Shiwoo-Park/blog/tree/master/snippets) | [Seminar](etc/jaram_20250830.md)
+[블로그](https://shiwoo-park.github.io/blog/) | [Git-Repo](https://github.com/Shiwoo-Park/blog) | [즐겨찾기](favorite.md) | [Code Snippets](https://github.com/Shiwoo-Park/blog/tree/master/snippets)
 
-### 준비중
+<!-- ### 준비중 -->
 
-- [ECS-EC2 에서 도커 stop 시, 그 안에 celery warm shutdown 처리](dev/devops/ecs_celery_warm_exit.md)
-- FastAPI 에서 APScheduler 로 Batch 작업 처리하기 (+ Redis Lock 기반 동시성 제어)
+<!-- - [ECS-EC2 에서 도커 stop 시, 그 안에 celery warm shutdown 처리](dev/devops/ecs_celery_warm_exit.md) -->
+<!-- - [FastAPI 에서 APScheduler 로 Batch 작업 처리하기 (+ Redis Lock 기반 동시성 제어)]() -->
+
+<!-- ### 2025.09 -->
+
+<!-- - [대용량 트래픽 환경에서의 백엔드 대응 전략]() -->
 
 ### 2025.08
 
