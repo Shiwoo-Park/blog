@@ -10,8 +10,10 @@
 <!-- ### 2025.09 -->
 
 <!-- - [대용량 트래픽 환경에서의 백엔드 대응 전략]() -->
+
 ### 2025.11
 
+- [개발자에게 유용한 AI 프롬프트](dev/ai/useful_prompts.md)
 - [Python + Django + DRF 레거시 거대 프로젝트에 Cursor 를 최대한 잘 활용하는 방법](dev/ai/cursor_tips_drf.md)
 
 ### 2025.08
