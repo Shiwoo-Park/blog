@@ -13,6 +13,7 @@
 
 ### 2025.11
 
+- [Git Worktree: 여러 브랜치를 동시에 작업하는 방법](dev/ai/git_worktree.md)
 - [개발자에게 유용한 AI 프롬프트](dev/ai/useful_prompts.md)
 - [Python + Django + DRF 레거시 거대 프로젝트에 Cursor 를 최대한 잘 활용하는 방법](dev/ai/cursor_tips_drf.md)
 
