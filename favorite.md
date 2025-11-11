@@ -6,9 +6,8 @@
 
 ## Recent
 
+- [개발자에게 유용한 AI 프롬프트](dev/ai/useful_prompts.md)
 - [Postgres SQL - 실무에서 쓰기 좋은 실행계획 분석 및 활용법 + CBO](dev/storage/postgres_explain.md)
-- [서버 디스크 정리](dev/devops/server_disk_clean.md)
-- [파이썬 - Dataclass](dev/python/dataclass.md)
 
 ## SQLAlchemy 2
 
@@ -32,10 +31,12 @@
 ## DevOps
 
 - [Docker - 명령어 모음](dev/devops/docker_cmds.md)
+- [서버 디스크 정리](dev/devops/server_disk_clean.md)
 - [Linux 의 데몬관리 시스템: systemd 와 systemctl 간단 사용법](dev/devops/systemd_ctl_basic.md)
 
 ## Python
 
+- [파이썬 - Dataclass](dev/python/dataclass.md)
 - [Django ORM Tips](dev/python/django_orm_tips.md)
 - [DRF 활용, 최적화 Tip 모음](dev/python/drf_tips.md)
 - [pytest Django 예제 모음](dev/python/pytest_3_django_examples.md)
