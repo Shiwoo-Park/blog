@@ -1,0 +1,59 @@
+# Site settings
+title: 실바의 블로그
+description: 개발 블로그
+url: https://shiwoo-park.github.io
+baseurl: /blog
+
+# Author
+author:
+  name: 실바
+  email: your-email@example.com
+
+# Google Analytics (나중에 발급받은 ID로 교체)
+# google_analytics: G-XXXXXXXXXX
+
+# Google AdSense (나중에 발급받은 ID로 교체)
+# google_adsense: ca-pub-XXXXXXXXXX
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: /:categories/:title/
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Exclude from processing
+exclude:
+  - README.md
+  - readme.md
+  - scripts/
+  - .gitignore
+  - archive/
+  - docs/
+  - code_snippets/
+  - job_specs/
+  - node_modules
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /:collection/:path/
+    folder: blog_posts
+
+# Defaults
+defaults:
+  - scope:
+      path: "blog_posts"
+      type: "posts"
+    values:
+      layout: "post"
+      author: "실바"
+
