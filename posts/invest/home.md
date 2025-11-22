@@ -6,8 +6,8 @@ title: 실바의 투자 블로그
 
 ## 2025.11
 
-- [특정 ETF 의 투자관련 정보를 얻기위한 AI 프롬프트](/blog/posts/invest/etf_check/)
-- [AI 에게 투자 가이드 질문 방법](/blog/posts/invest/ai_ask_guide/)
+- [특정 ETF 의 투자관련 정보를 얻기위한 AI 프롬프트](/blog/posts/invest/etf-check/)
+- [AI 에게 투자 가이드 질문 방법](/blog/posts/invest/ask-guide/)
 
 <!-- ## 2024
 
