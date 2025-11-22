@@ -1,10 +1,17 @@
-# js 프로젝트에서 Enum 관리를 위한 모듈
+---
+layout: post
+title: "JavaScript 프로젝트에서 Enum 관리 모듈"
+date: 2024-01-01
+categories: [javascript, typescript, enum]
+---
 
-- 타입스크립트 기반일경우 타입까지 정의한 버전
+JavaScript/TypeScript 프로젝트에서 Enum 형태의 필드들을 관리하기 위한 유틸리티 모듈입니다. TypeScript 기반일 경우 타입까지 정의한 버전입니다.
 
-## enums/base.tsx
+---
 
-- 공통 코드 모듈 파일
+## 1. enums/base.tsx
+
+프로젝트의 Enum 형태 필드들을 관리하기 위한 유틸 함수들 모음입니다.
 
 ```js
 /**

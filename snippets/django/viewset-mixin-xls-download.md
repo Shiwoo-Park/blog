@@ -1,6 +1,17 @@
-# 액셀 다운로드 기능을 자동 제공해주는 ExcelDownloadMixin
+---
+layout: post
+title: "Excel 다운로드 기능을 제공하는 ExcelDownloadMixin"
+date: 2024-01-01
+categories: [django, drf, excel, download]
+---
 
-- ModelViewSet 에 추가하여 자동으로 액셀 다운로드용 endpoint 를 제공
+ModelViewSet에 추가하여 자동으로 엑셀 다운로드용 endpoint를 제공하는 Mixin입니다. openpyxl을 사용하여 엑셀 파일을 생성하고 다운로드합니다.
+
+---
+
+## 1. ExcelDownloadMixin 클래스
+
+엑셀 다운로드 기능을 제공하는 Mixin 클래스입니다.
 
 ```python
 from io import BytesIO
@@ -160,12 +171,17 @@ class ExcelDownloadMixin:
 
     def set_column_bg_color(self, column_index, color):
         self.excel_download_column_bg_colors[column_index] = color
-
 ```
 
-## Baekend: View Code
+---
 
-### 2가지 타입의 파일을 하나의 endpoint 로 서비스
+## 2. Backend: View Code
+
+ExcelDownloadMixin을 사용하는 ViewSet 예제입니다.
+
+### 2-1. 2가지 타입의 파일을 하나의 endpoint로 서비스
+
+조건에 따라 다른 엑셀 형식을 제공하는 예제입니다.
 
 ```python
 class InventoryViewSet(ExcelDownloadMixin, ModelViewSet):
@@ -193,7 +209,9 @@ class InventoryViewSet(ExcelDownloadMixin, ModelViewSet):
             raise ValidationError(f"주문방식이 {order_type_enum.text} 인 그룹은 다운로드가 불가합니다.")
 ```
 
-### 서로다른 파일을 여러개 endpoint 로 서비스
+### 2-2. 서로 다른 파일을 여러 개의 endpoint로 서비스
+
+여러 개의 엑셀 다운로드 endpoint를 제공하는 예제입니다.
 
 ```python
 class CmsDodoOrderViewSet(ExcelDownloadMixin, ModelViewSet):
@@ -240,8 +258,11 @@ class CmsDodoOrderViewSet(ExcelDownloadMixin, ModelViewSet):
         return self.excel_download(request, **{"queryset": queryset})
 ```
 
+---
 
-## Front-end Code
+## 3. Front-end Code
+
+엑셀 파일을 다운로드하는 프론트엔드 코드 예제입니다.
 
 ```js
 export default {

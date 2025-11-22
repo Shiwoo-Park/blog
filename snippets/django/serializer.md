@@ -1,4 +1,17 @@
-# Django DRF - serializer
+---
+layout: post
+title: "Django DRF Serializer"
+date: 2024-01-01
+categories: [django, drf, serializer]
+---
+
+Django REST Framework의 Serializer를 활용한 예제입니다. Mixin을 사용하여 관련 데이터를 포함하고, 동적 필드 처리를 구현합니다.
+
+---
+
+## 1. Serializer 구현
+
+관련 모델 데이터를 포함하는 Serializer 예제입니다.
 
 ```python
 from typing import Dict

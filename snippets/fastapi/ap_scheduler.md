@@ -1,6 +1,17 @@
-# APScheduler 를 이용하여 API 서버에서 배치돌리기
+---
+layout: post
+title: "APScheduler를 이용한 API 서버 배치 작업"
+date: 2024-01-01
+categories: [fastapi, python, scheduler, batch]
+---
 
-## main.py
+APScheduler를 이용하여 FastAPI 서버에서 배치 작업을 실행하는 방법입니다. 분산 환경에서 중복 실행을 방지하기 위한 분산 락 기능도 포함되어 있습니다.
+
+---
+
+## 1. main.py
+
+FastAPI 앱의 lifespan 이벤트에서 APScheduler를 시작하고 종료하는 설정입니다.
 
 ```py
 @asynccontextmanager
@@ -67,7 +78,11 @@ app = FastAPI(
 )
 ```
 
-## batch_util.py
+---
+
+## 2. batch_util.py
+
+배치 작업을 위한 유틸리티 함수들입니다. 분산 락을 사용하여 중복 실행을 방지합니다.
 
 ```py
 import logging
@@ -190,7 +205,11 @@ def batch_schedule(
     return decorator
 ```
 
-## scheduler.py
+---
+
+## 3. scheduler.py
+
+APScheduler를 기반으로 간단한 batch 작업을 세팅할 수 있도록 하는 모듈입니다.
 
 ```py
 """

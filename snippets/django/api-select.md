@@ -1,12 +1,19 @@
-# ApiSelect 용 Django DRF 베이스 코드
+---
+layout: post
+title: "ApiSelect용 Django DRF 베이스 코드"
+date: 2024-01-01
+categories: [django, drf, api]
+---
 
-- `snippets/js/api-select.md` 와 같이 사용가능
-- select 형식의 UI 를 서포트 하는 Backend endpoint 생성 기반코드
+ApiSelect 컴포넌트를 사용하기 위한 Django REST Framework 백엔드 엔드포인트 생성 기반 코드입니다. `snippets/js/api-select.md`와 함께 사용할 수 있으며, select 형식의 UI를 지원하는 Backend endpoint를 생성할 수 있습니다.
 
+---
 
-## Base Code
+## 1. Base Code
 
-```py
+ApiSelect 컴포넌트를 위한 기본 Serializer와 APIView 클래스입니다.
+
+```python
 from collections import OrderedDict
 from typing import Tuple
 
@@ -218,9 +225,13 @@ class BaseApiSelectAPIView(ListAPIView):
             )
 ```
 
-## ApiView 생성 Code
+---
 
-```py
+## 2. ApiView 생성 예제
+
+실제 사용 예제입니다. BaseApiSelectAPIView를 상속받아 커스텀 Serializer와 함께 사용합니다.
+
+```python
 class CMSInventoryAPISelectSerializer(BaseApiSelectSerializer):
     def get_label(self, obj: Inventory) -> str:
         wholesaler_info = f"[{obj.whole_saler.account_type_display} | {obj.whole_saler.type_display}] {obj.whole_saler.name}"

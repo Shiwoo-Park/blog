@@ -1,15 +1,17 @@
 ---
-layout: null
+layout: post
+title: "JWT 기반 인증을 사용하는 API 호출용 모듈들"
+date: 2024-01-01
+categories: [javascript, jwt, auth, axios]
 ---
 
-# JWT 기반 인증을 사용하는 API 호출용 모듈들
+JWT 기반 인증을 사용하는 API 호출용 모듈들입니다. axios를 사용하며, 인증이 필요한 API와 인증이 필요 없는 API를 구분하여 사용할 수 있습니다.
 
-- axios 사용
+---
 
-## 비인증 API 호출용 모듈
+## 1. 비인증 API 호출용 모듈
 
-- axios 기반
-- 인증이 필요없는 API를 호출할때 사용되는 기본 http client object
+인증이 필요 없는 API를 호출할 때 사용되는 기본 http client object입니다. axios 기반입니다.
 
 ```js
 import axios from 'axios'
@@ -22,7 +24,11 @@ const PureApiController = axios.create({
 export default PureApiController
 ```
 
-## 인증 API 호출용 모듈
+---
+
+## 2. 인증 API 호출용 모듈
+
+인증이 필요한 대부분의 API-v2 API 호출 시 사용되는 기본 http client object입니다.
 
 ```js
 /**
@@ -99,7 +105,11 @@ ApiController.interceptors.response.use(
 export default ApiController
 ```
 
-## JWT 인증의 토큰발급 및 만료 전 재발급 처리용 모듈
+---
+
+## 3. JWT 인증의 토큰 발급 및 만료 전 재발급 처리용 모듈
+
+JWT 토큰의 발급 및 만료 전 재발급을 처리하는 모듈입니다.
 
 ```js
 import dayjs from 'dayjs'
@@ -339,7 +349,11 @@ const authWrapper = async (app) => {
 export { AuthProvider, useSession, authWrapper, getTokenInfo, checkAuthTokens }
 ```
 
-## 프론트 로그인 API: login.js
+---
+
+## 4. 프론트 로그인 API: login.js
+
+프론트엔드에서 로그인을 처리하는 API 엔드포인트입니다.
 
 ```js
 import AuthService from 'services/AuthService'
@@ -375,8 +389,11 @@ export default async (req, res) => {
 }
 ```
 
+---
 
-## Service: API Controller 를 사용하여 직접 endpoint 호출
+## 5. Service: API Controller를 사용하여 직접 endpoint 호출
+
+API Controller를 사용하여 직접 endpoint를 호출하는 Service 모듈 예제입니다.
 
 ```js
 import ApiController from 'libraries/ApiController'

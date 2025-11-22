@@ -1,9 +1,17 @@
-# django - APIView mixins
+---
+layout: post
+title: "Django APIView Mixins"
+date: 2024-01-01
+categories: [django, drf, mixin]
+---
 
-## 효율적인 쿼리를 날리는데 도움을 주는 EagerLoadingMixin
+Django REST Framework에서 사용할 수 있는 유용한 Mixin 클래스들입니다. N+1 쿼리 문제를 해결하는 EagerLoadingMixin과 한글화된 에러 메시지를 제공하는 ModelSerializerMessageMixin을 포함합니다.
 
-- 장고의 고질적인 N+1 쿼리 현상을 미연에 방지하고자 View 레벨에서부터 관리할 수 있음
-- `get_queryset(), serializer_class` 를 지정하는 APIView 클래스에 적합
+---
+
+## 1. EagerLoadingMixin
+
+효율적인 쿼리를 날리는데 도움을 주는 Mixin입니다. Django의 N+1 쿼리 현상을 미연에 방지하고자 View 레벨에서부터 관리할 수 있습니다. `get_queryset()`, `serializer_class`를 지정하는 APIView 클래스에 적합합니다.
 
 ```python
 class EagerLoadingMixin:
@@ -37,7 +45,7 @@ class EagerLoadingMixin:
             queryset = queryset.select_related(*self.queryset_select_related_list)
 
         if self.queryset_prefetch_related_list:
-            queryset = queryset.prefetch_related(*self.queryset_select_related_list)
+            queryset = queryset.prefetch_related(*self.queryset_prefetch_related_list)
 
         return queryset
 
@@ -46,8 +54,11 @@ class EagerLoadingMixin:
         return self.setup_eager_loading(queryset)
 ```
 
+---
 
-## DRF ValidationError 응답(=400)으로 한글화된 메시지를 줄 수 있는 ModelSerializerMessageMixin
+## 2. ModelSerializerMessageMixin
+
+DRF ValidationError 응답(=400)으로 한글화된 메시지를 제공할 수 있는 Mixin입니다. Model의 모든 필드에 `verbose_name`이 세팅되어 있어야 하며, ValidationError의 경우에만 해당됩니다.
 
 ```python
 class ModelSerializerMessageMixin:

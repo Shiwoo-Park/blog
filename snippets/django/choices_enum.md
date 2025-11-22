@@ -1,12 +1,17 @@
-# ChoicesEnum : Enum 을 쉽고 편리하게 관리
+---
+layout: post
+title: "ChoicesEnum: Enum을 쉽고 편리하게 관리"
+date: 2024-01-01
+categories: [django, python, enum]
+---
 
+ChoicesEnum은 Python에서 Enum 데이터를 쉽고 편리하게 관리할 수 있도록 도와주는 유틸리티 클래스입니다. 기본적으로 변수명(enum name), 값(code), 설명(text)을 지정하며, `__init__()` 함수 override를 통해 확장도 가능합니다. 매우 다양한 유틸함수를 제공하며 기본적으로 `members()` 함수를 기반으로 동작하기 때문에 `include, exclude, text_contains` 파라미터 사용이 가능합니다.
 
-## ChoicesEnum class
+---
 
-- Enum 데이터를 python code 에 정의할 수 있도록 도와준다.
-- 기본적으로 변수명(enum name), 값(code), 설명(text) 을 지정하며 
-- `__init__()` 함수 override 를 통해 확장도 가능
-- 매우 다양한 유틸함수를 제공하며 기본적으로 `members()` 함수를 기반으로 동작하기 때문에 `include, exclude, text_contains` 파라미터 사용이 가능하다.
+## 1. ChoicesEnum 클래스
+
+ChoicesEnum의 기본 구현 코드입니다.
 
 ```python
 import logging
@@ -153,7 +158,11 @@ class ChoicesEnum(Enum):
         return f"{self.text}({self.code})"
 ```
 
-## 용법1: Django Model 에서 사용하기
+---
+
+## 2. Django Model에서 사용하기
+
+Django Model의 필드에서 ChoicesEnum을 사용하는 예제입니다.
 
 ```python
 class PaymentTransaction(models.Model):
@@ -177,7 +186,11 @@ print(PaymentTransaction.transaction_type.PAYMENT.code)  # TT_01
 print(PaymentTransaction.transaction_type.PAYMENT.text)  # 결제완료
 ```
 
-## 용법2: 단독으로 사용하기
+---
+
+## 3. 단독으로 사용하기
+
+Django Model과 독립적으로 ChoicesEnum을 사용하는 예제입니다.
 
 ```python
 class PaymentResponseCode(ChoicesEnum):
@@ -194,7 +207,11 @@ print(PaymentResponseCode.NOT_FOUND.code)  # 400
 print(PaymentResponseCode.NOT_FOUND.text)  # 결제번호가 없습니다.
 ```
 
-## 용법3: 확장된 사용법
+---
+
+## 4. 확장된 사용법
+
+`__init__()` 메서드를 override하여 추가 속성을 가진 Enum을 만드는 예제입니다.
 
 ```python
 class SearchAdvertisement(models.Model):

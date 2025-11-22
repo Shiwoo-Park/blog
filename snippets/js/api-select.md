@@ -1,12 +1,17 @@
-# ApiSelect - React 컴포넌트
+---
+layout: post
+title: "ApiSelect - React 컴포넌트"
+date: 2024-01-01
+categories: [react, javascript, frontend]
+---
 
-- Select 방식의 UI 를 제공하지만 이를 백엔드 endpoint 와 연결하여 사용이 가능하도록한 컴포넌트
-- 다양한 유틸 기능을 탑재하였음.
-- Django DRF 의 특정 View 와 호환시켜야만 사용이 가능하다.
-- `snippets/django/api-select.md` 와 같이 사용가능
+Select 방식의 UI를 제공하지만 이를 백엔드 endpoint와 연결하여 사용할 수 있도록 한 컴포넌트입니다. 다양한 유틸 기능을 탑재하였으며, Django DRF의 특정 View와 호환시켜야만 사용이 가능합니다. `snippets/django/api-select.md`와 함께 사용할 수 있습니다.
 
+---
 
-## ApiSelect
+## 1. ApiSelect 컴포넌트
+
+ForeignKey 데이터 입력용 컴포넌트입니다. 백엔드 API와 쉽게 연동 가능한 select box UI Component입니다.
 ```js
 /**
 ForeignKey 데이터 입력용 컴포넌트
@@ -210,7 +215,11 @@ const ApiSelect = ({
 export default ApiSelect
 ```
 
-## ApiMultiSelect
+---
+
+## 2. ApiMultiSelect 컴포넌트
+
+여러 개의 값을 선택할 수 있는 멀티 셀렉트 컴포넌트입니다.
 
 ```js
 import ApiController from 'libraries/ApiController'

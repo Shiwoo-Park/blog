@@ -1,13 +1,17 @@
 ---
-layout: null
+layout: post
+title: "Axios를 활용한 API 호출용 서비스 모듈"
+date: 2024-01-01
+categories: [javascript, axios, api]
 ---
 
-# Axios 를 활용한 API 호출용 서비스 모듈
+Axios를 활용하여 API를 호출하는 서비스 모듈입니다. 인증이 필요한 API와 인증이 필요 없는 API를 구분하여 사용할 수 있습니다.
 
+---
 
-## ApiController
+## 1. ApiController
 
-- axios 사용
+인증이 필요한 대부분의 API-v2 API 호출 시 사용되는 기본 http client object입니다. axios를 사용합니다.
 
 ```js
 /**
@@ -142,11 +146,11 @@ ApiController.interceptors.response.use(
 export default ApiController
 ```
 
+---
 
-## Django ViewSet 기반 API 서비스 모듈 템플릿
+## 2. Django ViewSet 기반 API 서비스 모듈 템플릿
 
-- axios 기반
-- 인증이 필요없는 API를 호출할때 사용되는 기본 http client object
+Django ViewSet 기반 API를 호출하기 위한 서비스 모듈 템플릿입니다. axios 기반이며, 인증이 필요 없는 API를 호출할 때 사용되는 기본 http client object입니다.
 
 ```js
 /**

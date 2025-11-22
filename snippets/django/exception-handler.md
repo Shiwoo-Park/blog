@@ -1,4 +1,17 @@
-# django DRF - exception handler
+---
+layout: post
+title: "Django DRF Exception Handler"
+date: 2024-01-01
+categories: [django, drf, exception]
+---
+
+Django REST Framework의 커스텀 Exception Handler 구현 예제입니다. 한글화된 에러 메시지와 Slack 알림 기능을 포함합니다.
+
+---
+
+## 1. Exception Handler 구현
+
+커스텀 Exception Handler 클래스와 서비스입니다.
 
 ```python
 import copy

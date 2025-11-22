@@ -1,14 +1,19 @@
+---
+layout: post
+title: "Python: Slack 메시지 유틸리티"
+date: 2024-01-01
+categories: [python, slack, django]
+---
 
-# Python: Slack 메시지 유틸리티
+Slack 메시지를 보낼 때 사용하는 유틸리티 모듈입니다. SlackMessageUtil을 사용하여 메시지를 보내고, 채널 목록은 SlackChannel로 관리합니다. Slack Bot이 메시지를 남겨줍니다.
+
+---
+
+## 1. SlackChannel 클래스
+
+메시지를 보낼 슬랙 채널들을 관리하는 클래스입니다. 테스트 환경과 운영 환경을 구분하여 정의합니다.
 
 ```python
-"""
-Slack Message 를 보낼때 사용하는 유틸모듈
-- SlackMessageUtil 을 사용하여 메세지를 보내고
-- 채널 목록은 SlackChannel 으로 관리
-- Slack Bot 이 메세지를 남겨준다
-"""
-
 import logging
 import traceback
 from concurrent.futures._base import TimeoutError as ConcurrentTimeoutError
@@ -47,6 +52,31 @@ class SlackChannel(ChoicesEnum):
         self.at_real_env = args[2]
 
 
+class SlackMessageUtil:
+    client_args = {
+        "token": settings.SLACK_TOKEN,
+        "timeout": DEFAULT_REQUEST_TIMEOUT,
+    }
+    client = WebClient(**client_args)
+
+    @classmethod
+    def get_client(cls):
+        return cls.client
+
+    @classmethod
+    def get_channel(cls, channel_enum: SlackChannel):
+        if settings.ENV in ["prod"]:
+            return channel_enum.at_real_env
+        return channel_enum.at_test_env
+```
+
+---
+
+## 2. SlackMessageUtil 클래스
+
+Slack 메시지를 보내는 유틸리티 클래스입니다.
+
+```python
 class SlackMessageUtil:
     client_args = {
         "token": settings.SLACK_TOKEN,
@@ -153,3 +183,15 @@ class SlackMessageUtil:
             is_channel_notice=is_channel_notice,
         )
 ```
+
+### 2-1. send 메서드
+
+가장 기본적인 슬랙 메시징 기능을 제공하는 함수입니다. 운영환경이 아닐 경우 자동으로 @channel을 제거합니다.
+
+### 2-2. send_formatted 메서드
+
+제목과 내용으로 이루어진 특정 양식의 슬랙 알림 메시지를 보냅니다. 서버 환경과 타임스탬프를 기본적으로 자동 추가합니다.
+
+### 2-3. send_formatted_auto 메서드
+
+서버 환경에 따라 자동으로 전송 채널을 지정해줍니다. 나머지는 `send_formatted()`와 동일합니다.

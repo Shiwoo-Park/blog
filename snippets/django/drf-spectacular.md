@@ -1,8 +1,17 @@
-# drf-spectacular
+---
+layout: post
+title: "DRF Spectacular (OpenAPI)"
+date: 2024-01-01
+categories: [django, drf, openapi, swagger]
+---
 
-API-Spec 관리를 위한 패키지
+DRF Spectacular를 사용하여 API Spec을 관리하는 방법입니다. OpenAPI 3.0 스펙을 지원하며, Swagger UI를 통해 API 문서를 제공합니다.
 
-## setting
+---
+
+## 1. Settings
+
+DRF Spectacular 설정 예제입니다.
 
 ```py
 # API Spec 관련 설정 (drf-spectacular 패키지)
@@ -116,9 +125,13 @@ SPECTACULAR_SETTINGS = {
 
 ```
 
-## hook
+---
 
-```py
+## 2. Hook
+
+스키마를 생성하기 전후에 실행되는 Hook 함수들입니다.
+
+```python
 import logging
 import re
 
@@ -177,9 +190,13 @@ def postprocess_schema(result, generator, request, public):
         raise e
 ```
 
-## util
+---
 
-```py
+## 3. Util
+
+DRF Spectacular에서 사용할 수 있는 유틸리티 함수입니다.
+
+```python
 from typing import Type
 
 from drf_spectacular.utils import OpenApiExample
@@ -200,9 +217,13 @@ class DRFSpectacularUtil:
         ]
 ```
 
-## ViewSet 의 스키마
+---
 
-```py
+## 4. ViewSet의 스키마
+
+ViewSet에 스키마를 적용하는 예제입니다.
+
+```python
 from django.conf import settings
 from drf_spectacular.utils import (
     extend_schema,

@@ -1,6 +1,17 @@
-# django - 목록 조회 API 와 FilterSet 활용
+---
+layout: post
+title: "Django 목록 조회 API와 FilterSet 활용"
+date: 2024-01-01
+categories: [django, drf, filter]
+---
 
-## List API View
+Django REST Framework에서 목록 조회 API를 구현하고 FilterSet을 활용하여 필터링 기능을 추가하는 방법입니다.
+
+---
+
+## 1. List API View
+
+목록 조회를 위한 ViewSet 설정 예제입니다.
 
 ```python
 from rest_framework.viewsets import ModelViewSet
@@ -16,8 +27,11 @@ class InventoryViewSet(ModelViewSet):
     ordering = ["-id"]
 ```
 
+---
 
-## FilterSet
+## 2. FilterSet
+
+필터링을 위한 FilterSet 클래스 예제입니다.
 
 ```python
 import django_filters

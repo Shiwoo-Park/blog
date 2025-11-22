@@ -1,6 +1,15 @@
-# JavaScript: 파일 업로드/다운로드
+---
+layout: post
+title: "JavaScript: 파일 업로드/다운로드"
+date: 2024-01-01
+categories: [javascript, file, upload, download]
+---
 
-## 업로드
+JavaScript를 사용하여 파일을 업로드하고 다운로드하는 방법입니다. AWS presigned URL을 사용한 업로드와 Blob을 사용한 다운로드를 포함합니다.
+
+---
+
+## 1. 파일 업로드
 
 AWS presigned URL을 발급받아 파일을 업로드하는 예제입니다.
 
@@ -29,7 +38,9 @@ async function fileUpload(file, path) {
 }
 ```
 
-## 다운로드
+---
+
+## 2. 파일 다운로드
 
 Blob 응답을 받아 파일을 다운로드하는 예제입니다.
 

@@ -1,4 +1,17 @@
-# django - model viewset
+---
+layout: post
+title: "Django Model ViewSet"
+date: 2024-01-01
+categories: [django, drf, viewset]
+---
+
+Django REST Framework의 ModelViewSet을 활용한 예제입니다. EagerLoadingMixin과 ExcelDownloadMixin을 사용하여 효율적인 쿼리와 엑셀 다운로드 기능을 구현합니다.
+
+---
+
+## 1. ViewSet 구현
+
+ModelViewSet을 상속받아 구현한 예제입니다.
 
 ```python
 import logging
