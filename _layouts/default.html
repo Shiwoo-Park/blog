@@ -209,10 +209,8 @@
   </style>
   
   <!-- Google AdSense -->
-  {% if site.google_adsense %}
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ site.google_adsense }}"
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2246604857860574"
      crossorigin="anonymous"></script>
-  {% endif %}
   
   {% seo %}
 </head>
@@ -227,11 +225,10 @@
       <h1><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
       <nav>
         <a href="{{ '/' | relative_url }}">홈</a>
-        <a href="{{ '/blog_posts/favorite' | relative_url }}">즐겨찾기</a>
-        <a href="{{ '/blog_posts/dev/readme' | relative_url }}">기술 블로그</a>
-        <a href="{{ '/blog_posts/invest/readme' | relative_url }}">투자 블로그</a>
-        <a href="{{ '/code_snippets/readme' | relative_url }}">코드 스니펫</a>
-        <a href="https://github.com/Shiwoo-Park/blog">GitHub</a>
+        <a href="{{ '/posts/favorite' | relative_url }}">즐겨찾기</a>
+        <a href="{{ '/posts/dev/home' | relative_url }}">기술 블로그</a>
+        <a href="{{ '/posts/invest/home' | relative_url }}">투자 블로그</a>
+        <a href="{{ '/snippets/home' | relative_url }}">코드 스니펫</a>
       </nav>
     </header>
     

@@ -2,7 +2,7 @@
 title: 실바의 블로그
 description: 개발 블로그
 url: https://shiwoo-park.github.io
-baseurl: /blog
+baseurl: "/blog"
 
 # Author
 author:
@@ -34,7 +34,6 @@ exclude:
   - .gitignore
   - archive/
   - docs/
-  - code_snippets/
   - job_specs/
   - node_modules
   - Gemfile
@@ -42,17 +41,28 @@ exclude:
   - vendor
 
 # Collections
+# Jekyll collections는 기본적으로 _posts 폴더를 사용합니다
+# posts를 사용하려면 _posts로 심볼릭 링크를 만들거나
+# 또는 collections 설정을 다르게 구성해야 합니다
 collections:
   posts:
     output: true
     permalink: /:collection/:path/
-    folder: blog_posts
+  snippets:
+    output: true
+    permalink: /:collection/:path/
 
 # Defaults
 defaults:
   - scope:
-      path: "blog_posts"
+      path: "posts"
       type: "posts"
+    values:
+      layout: "post"
+      author: "실바"
+  - scope:
+      path: "snippets"
+      type: "snippets"
     values:
       layout: "post"
       author: "실바"

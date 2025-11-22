@@ -1,21 +1,21 @@
 # 실바의 블로그
 
 ## 블로그 바로가기기
-- [기술 블로그](blog_posts/dev/readme.md)
-- [기술 블로그-즐겨찾기](blog_posts/dev/favorite.md)
-- [투자 블로그](blog_posts/invest/readme.md)
-- [나의 코드 스니펫](code_snippets/README.md)
+- [기술 블로그](posts/dev/readme.md)
+- [기술 블로그-즐겨찾기](posts/dev/favorite.md)
+- [투자 블로그](posts/invest/readme.md)
+- [나의 코드 스니펫](snippets/readme.md)
 
 ## 프로젝트 구조
 
 ```
 blog/
-├── blog_posts/          # 블로그 포스트
+├── posts/          # 블로그 포스트
 │   ├── dev/            # 기술 블로그 (AI, AWS, Python, DevOps 등)
 │   ├── invest/         # 투자 관련 블로그
 │   ├── travel/         # 여행 관련 블로그
 │   └── etc/            # 기타 블로그
-├── code_snippets/      # 코드 스니펫 모음
+├── snippets/      # 코드 스니펫 모음
 │   ├── bash/          # Bash 스크립트
 │   ├── django/        # Django 코드
 │   ├── fastapi/       # FastAPI 코드

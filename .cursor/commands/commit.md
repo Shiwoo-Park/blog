@@ -10,9 +10,10 @@
 2. **변경사항 분석 및 커밋 메시지 생성**
 
    - 변경된 파일들의 경로와 내용을 분석
+   - 커밋메시지는 영어로 작성
    - 파일 경로, 변경 유형(추가/수정/삭제), 주요 변경 내용을 종합하여 의미있는 커밋 메시지 생성
    - 커밋 메시지 형식: 간결하고 명확하게, 변경사항을 잘 설명하는 형식
-   - 예시: "docs: git worktree 실무 활용 가이드 추가", "feat: commit.sh에 커밋 메시지 인자 지원 추가"
+   - 예시: "docs: added git worktree guide", "feat: modified commit.sh can get arguments"
 
 3. **커밋 및 푸시 실행**
 

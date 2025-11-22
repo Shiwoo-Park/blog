@@ -10,7 +10,7 @@ from pathlib import Path
 from datetime import datetime
 
 # 제외할 디렉토리
-EXCLUDE_DIRS = {'archive', 'node_modules', '.git', 'resources', 'code_snippets', 'docs', 'job_specs'}
+EXCLUDE_DIRS = {'archive', 'node_modules', '.git', 'resources', 'snippets', 'docs', 'job_specs'}
 
 # 제외할 파일
 EXCLUDE_FILES = {
@@ -25,26 +25,26 @@ EXCLUDE_FILES = {
 
 # 카테고리 매핑 (경로 -> 카테고리)
 CATEGORY_MAP = {
-    'blog_posts/dev/ai': ['dev', 'ai'],
-    'blog_posts/dev/aws': ['dev', 'aws'],
-    'blog_posts/dev/backend': ['dev', 'backend'],
-    'blog_posts/dev/devops': ['dev', 'devops'],
-    'blog_posts/dev/etc': ['dev', 'etc'],
-    'blog_posts/dev/frontend': ['dev', 'frontend'],
-    'blog_posts/dev/git': ['dev', 'git'],
-    'blog_posts/dev/history': ['dev', 'history'],
-    'blog_posts/dev/python': ['dev', 'python'],
-    'blog_posts/dev/python/django': ['dev', 'python', 'django'],
-    'blog_posts/dev/python/pydantic': ['dev', 'python', 'pydantic'],
-    'blog_posts/dev/python/sqlalchemy': ['dev', 'python', 'sqlalchemy'],
-    'blog_posts/dev/python/unittest': ['dev', 'python', 'unittest'],
-    'blog_posts/dev/python/mywork': ['dev', 'python', 'mywork'],
-    'blog_posts/dev/storage': ['dev', 'storage'],
-    'blog_posts/invest': ['invest'],
-    'blog_posts/travel': ['travel'],
-    'blog_posts/travel/thai': ['travel', 'thai'],
-    'blog_posts/travel/vietnam': ['travel', 'vietnam'],
-    'blog_posts/etc': ['etc'],
+    'posts/dev/ai': ['dev', 'ai'],
+    'posts/dev/aws': ['dev', 'aws'],
+    'posts/dev/backend': ['dev', 'backend'],
+    'posts/dev/devops': ['dev', 'devops'],
+    'posts/dev/etc': ['dev', 'etc'],
+    'posts/dev/frontend': ['dev', 'frontend'],
+    'posts/dev/git': ['dev', 'git'],
+    'posts/dev/history': ['dev', 'history'],
+    'posts/dev/python': ['dev', 'python'],
+    'posts/dev/python/django': ['dev', 'python', 'django'],
+    'posts/dev/python/pydantic': ['dev', 'python', 'pydantic'],
+    'posts/dev/python/sqlalchemy': ['dev', 'python', 'sqlalchemy'],
+    'posts/dev/python/unittest': ['dev', 'python', 'unittest'],
+    'posts/dev/python/mywork': ['dev', 'python', 'mywork'],
+    'posts/dev/storage': ['dev', 'storage'],
+    'posts/invest': ['invest'],
+    'posts/travel': ['travel'],
+    'posts/travel/thai': ['travel', 'thai'],
+    'posts/travel/vietnam': ['travel', 'vietnam'],
+    'posts/etc': ['etc'],
 }
 
 
@@ -73,7 +73,7 @@ def get_categories_from_path(file_path):
             return categories
     
     # 부분 매칭
-    if 'blog_posts/dev/python' in path_str:
+    if 'posts/dev/python' in path_str:
         if 'django' in path_str:
             return ['dev', 'python', 'django']
         elif 'pydantic' in path_str:
@@ -82,13 +82,13 @@ def get_categories_from_path(file_path):
             return ['dev', 'python', 'sqlalchemy']
         else:
             return ['dev', 'python']
-    elif 'blog_posts/dev' in path_str:
+    elif 'posts/dev' in path_str:
         return ['dev']
-    elif 'blog_posts/invest' in path_str:
+    elif 'posts/invest' in path_str:
         return ['invest']
-    elif 'blog_posts/travel' in path_str:
+    elif 'posts/travel' in path_str:
         return ['travel']
-    elif 'blog_posts/etc' in path_str:
+    elif 'posts/etc' in path_str:
         return ['etc']
     else:
         return []

@@ -27,7 +27,7 @@ categories: [dev, python]
 ```
 
 **예시:**
-- `blog_posts/dev/python/logging.md` 파일을 열어서
+- `posts/dev/python/logging.md` 파일을 열어서
 - 첫 줄에 `---` 추가
 - Front Matter 작성
 - 다시 `---` 추가
@@ -130,7 +130,7 @@ categories: {categories}
     print(f"처리 완료: {file_path}")
 
 # 모든 .md 파일에 적용
-exclude_dirs = {'archive', 'node_modules', '.git', 'resources', 'code_snippets', 'docs', 'job_specs'}
+exclude_dirs = {'archive', 'node_modules', '.git', 'resources', 'snippets', 'docs', 'job_specs'}
 exclude_files = {'README.md', 'readme.md', 'favorite.md', 'blog_migration_guide.md', 'jekyll_setup_guide.md', '_post_template.md'}
 
 for root, dirs, files in os.walk('.'):

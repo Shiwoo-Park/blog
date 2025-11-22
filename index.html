@@ -3,29 +3,10 @@ layout: default
 title: 홈
 ---
 
-<div>안녕하세요. 실바의 블로그에 오신것을 환영합니다.</div>
+<div>
+  <h2>안녕하세요.</h2>
 
-<hr style="margin: 40px 0; border: none; border-top: 2px solid #eee;">
-
-<h2>최근 포스트</h2>
-
-<ul class="post-list">
-  {% for post in site.posts limit: 20 %}
-  <li>
-    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-    <div class="date">{{ post.date | date: "%Y년 %m월 %d일" }}</div>
-    {% if post.categories %}
-    <div style="margin-top: 5px;">
-      {% for category in post.categories %}
-      <span style="background: #f0f0f0; padding: 2px 8px; border-radius: 3px; font-size: 0.85em; margin-right: 5px;">{{ category }}</span>
-      {% endfor %}
-    </div>
-    {% endif %}
-  </li>
-  {% endfor %}
-</ul>
-
-<p style="margin-top: 40px; text-align: center;">
-  <a href="https://github.com/Shiwoo-Park/blog">더 많은 포스트 보기 →</a>
-</p>
-
+  실바의 블로그에 오신것을 환영합니다.
+  <br/><br/>
+  상단 메뉴를 눌러 원하는 포스팅을 찾아보세요
+</div>

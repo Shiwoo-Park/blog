@@ -1,21 +1,68 @@
 ---
 layout: default
 ---
+<style>
+  article header {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  article header h2 {
+    margin-bottom: 0;
+  }
+  
+  article header .post-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  article header time {
+    color: #666;
+    font-size: 0.9em;
+    text-align: right;
+    flex-shrink: 0;
+  }
+  
+  article header .categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  article header .category {
+    display: inline-block;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    padding: 4px 12px;
+    border-radius: 16px;
+    font-size: 0.85em;
+    font-weight: 500;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  </style>
+
 <article>
   <header>
     <h2>{{ page.title }}</h2>
-    {% if page.date %}
-    <time datetime="{{ page.date | date: '%Y-%m-%d' }}">
-      {{ page.date | date: "%Y년 %m월 %d일" }}
-    </time>
-    {% endif %}
-    {% if page.categories %}
-    <div class="categories">
-      {% for category in page.categories %}
-      <span class="category">{{ category }}</span>
-      {% endfor %}
+    <div class="post-meta">
+      {% if page.categories %}
+      <div class="categories">
+        {% for category in page.categories %}
+        <span class="category">{{ category }}</span>
+        {% endfor %}
+      </div>
+      {% endif %}
+      {% if page.date %}
+      <time datetime="{{ page.date | date: '%Y-%m-%d' }}">
+        {{ page.date | date: "%Y년 %m월 %d일" }}
+      </time>
+      {% endif %}
     </div>
-    {% endif %}
   </header>
   
   <div class="content">

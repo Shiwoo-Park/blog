@@ -7,8 +7,8 @@
 - `archive/index.html`에서 클라이언트 사이드로 marked.js를 사용해 렌더링
 - GitHub Pages로 서비스 중 (`https://shiwoo-park.github.io/blog/`)
 - 간단한 배포 프로세스 (`scripts/commit.sh`)
-- 블로그 포스트는 `blog_posts/` 디렉토리에 구조화되어 있음
-- 코드 스니펫은 `code_snippets/` 디렉토리에 있음
+- 블로그 포스트는 `posts/` 디렉토리에 구조화되어 있음
+- 코드 스니펫은 `snippets/` 디렉토리에 있음
 
 ## 추천 솔루션 비교
 
@@ -126,7 +126,7 @@ exclude:
   - archive/
   - docs/
   - job_specs/
-  - code_snippets/
+  - snippets/
 ```
 
 2. **`Gemfile` 생성** (선택사항, 로컬 테스트용)
@@ -283,8 +283,8 @@ date: 2025-01-15
     with open(file_path, 'w', encoding='utf-8') as f:
         f.write(frontmatter + content)
 
-# 모든 .md 파일에 적용 (README.md, docs/, code_snippets/ 제외)
-exclude_dirs = {'archive', 'node_modules', '.git', 'resources', 'code_snippets', 'docs', 'job_specs'}
+# 모든 .md 파일에 적용 (README.md, docs/, snippets/ 제외)
+exclude_dirs = {'archive', 'node_modules', '.git', 'resources', 'snippets', 'docs', 'job_specs'}
 exclude_files = {'README.md', 'readme.md', 'favorite.md', '_post_template.md'}
 
 for root, dirs, files in os.walk('.'):
