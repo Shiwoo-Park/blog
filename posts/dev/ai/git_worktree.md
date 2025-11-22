@@ -4,6 +4,7 @@ title: "Git Worktree: 여러 브랜치를 동시에 작업하는 방법"
 date: 2025-11-11
 categories: [git, productivity]
 ---
+
 ## 💡 개념
 
 `git worktree`는 **하나의 Git 저장소에서 여러 작업 디렉터리를 동시에 관리**할 수 있게 하는 기능입니다. 즉, 하나의 리포지토리에서 서로 다른 브랜치를 동시에 checkout할 수 있게 해줍니다.

@@ -1,13 +1,32 @@
-# 제목
+---
+layout: post
+title: "제목"
+date: 2025-11-22
+categories: [tag1, tag2]
+---
 
-> 날짜: 2025-07-15
+## 1. 주제1
 
-[목록으로](https://shiwoo-park.github.io/blog)
+내용1
+
+### 1-1. 주제1 의 소주제1
+
+내용 1-1
+
+### 1-2. 주제1 의 소주제2
+
+내용 1-2
 
 ---
 
-내용이 여기에 옵니다
+## 2. 제목2
 
----
+내용2
 
-[목록으로](https://shiwoo-park.github.io/blog)
+## 3. 파이썬 예제
+
+파이썬 예제 설명
+
+```python
+print("Sample python")
+```

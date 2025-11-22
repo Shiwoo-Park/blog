@@ -24,7 +24,7 @@ export default PureApiController
 
 ## 인증 API 호출용 모듈
 
-```python
+```js
 /**
  * 인증이 필요한 대부분의 API-v2 API 호출할때 사용되는 기본 http client object 를 설정
  * 통지 서비스용 NotificationApiController 는 별도로 관리
