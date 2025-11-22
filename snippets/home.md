@@ -35,16 +35,16 @@ title: 실바의 Code snippets
 
 ## Bash / Shell Scripts
 
-- [복잡한 Celery 서버 배포 스크립트](/blog/snippets/bash/complex_celery_deploy.sh)
-- [디스크 정리 스크립트](/blog/snippets/bash/disk_cleanup.sh)
-- [GitLab 백업 스크립트](/blog/snippets/bash/gitlab_backup.sh)
-- [GitLab 복원 스크립트](/blog/snippets/bash/gitlab_restore.sh)
-- [SCP 파일 전송 스크립트](/blog/snippets/bash/scp_transfer_file.sh)
+- [복잡한 Celery 서버 배포 스크립트](/blog/snippets/bash/complex_celery_deploy/)
+- [디스크 정리 스크립트](/blog/snippets/bash/disk_cleanup/)
+- [GitLab 백업 스크립트](/blog/snippets/bash/gitlab_backup/)
+- [GitLab 복원 스크립트](/blog/snippets/bash/gitlab_restore/)
+- [SCP 파일 전송 스크립트](/blog/snippets/bash/scp_transfer_file/)
 
 ## Docker
 
-- [Django Dockerfile](/blog/snippets/dockerfile/django/Dockerfile)
-- [Django Gunicorn 설정](/blog/snippets/dockerfile/django/gunicorn_config.py)
-- [Django Celery Dockerfile](/blog/snippets/dockerfile/django_celery/Dockerfile)
-- [Django Celery Entrypoint](/blog/snippets/dockerfile/django_celery/entrypoint.sh)
-- [Django Celery Flower 설정](/blog/snippets/dockerfile/django_celery/flower_config.py)
+- [Django Dockerfile](/blog/snippets/dockerfile/django/Dockerfile/)
+- [Django Gunicorn 설정](/blog/snippets/dockerfile/django/gunicorn_config/)
+- [Django Celery Dockerfile](/blog/snippets/dockerfile/django_celery/Dockerfile/)
+- [Django Celery Entrypoint](/blog/snippets/dockerfile/django_celery/entrypoint/)
+- [Django Celery Flower 설정](/blog/snippets/dockerfile/django_celery/flower_config/)
