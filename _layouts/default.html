@@ -11,12 +11,17 @@
   <link rel="shortcut icon" type="image/png" href="{{ '/resources/onion_icon.png' | relative_url }}">
   <link rel="apple-touch-icon" href="{{ '/resources/onion_icon.png' | relative_url }}">
   
+  <!-- RSS Feed -->
+  <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}">
+  
   <!-- Google Tag Manager -->
+  {% if site.google_tag_manager %}
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-TZJ28MRB');</script>
+  })(window,document,'script','dataLayer','{{ site.google_tag_manager }}');</script>
+  {% endif %}
   <!-- End Google Tag Manager -->
   
   <style>
@@ -214,15 +219,19 @@
   </style>
   
   <!-- Google AdSense -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2246604857860574"
+  {% if site.google_adsense %}
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ site.google_adsense }}"
      crossorigin="anonymous"></script>
+  {% endif %}
   
   {% seo %}
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TZJ28MRB"
+  {% if site.google_tag_manager %}
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ site.google_tag_manager }}"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  {% endif %}
   <!-- End Google Tag Manager (noscript) -->
   
   <div class="container">

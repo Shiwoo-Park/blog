@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://shiwoo-park.github.io/blog/sitemap.xml
+

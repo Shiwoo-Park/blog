@@ -1,19 +1,20 @@
 # Site settings
-title: 실바의 블로그
-description: 개발 블로그
+title: 양파개발자 실바의 블로그
+description: 개발, 투자, 여행 등 개인 경험을 공유하는 블로그
 url: https://shiwoo-park.github.io
 baseurl: "/blog"
+lang: ko_KR
 
 # Author
 author:
   name: 실바
-  email: your-email@example.com
+  email: woozin23@gmail.com
 
-# Google Analytics (나중에 발급받은 ID로 교체)
-# google_analytics: G-XXXXXXXXXX
+# Google Analytics
+google_tag_manager: GTM-TZJ28MRB
 
-# Google AdSense (나중에 발급받은 ID로 교체)
-# google_adsense: ca-pub-XXXXXXXXXX
+# Google AdSense
+google_adsense: ca-pub-2246604857860574
 
 # Build settings
 markdown: kramdown
