@@ -6,6 +6,11 @@
   <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
   <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
   
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="{{ '/resources/onion_icon.png' | relative_url }}">
+  <link rel="shortcut icon" type="image/png" href="{{ '/resources/onion_icon.png' | relative_url }}">
+  <link rel="apple-touch-icon" href="{{ '/resources/onion_icon.png' | relative_url }}">
+  
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
