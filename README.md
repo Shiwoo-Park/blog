@@ -1,10 +1,12 @@
 # 실바의 블로그
 
-## 블로그 바로가기기
-- [기술 블로그](posts/dev/readme.md)
-- [기술 블로그-즐겨찾기](posts/dev/favorite.md)
-- [투자 블로그](posts/invest/readme.md)
-- [나의 코드 스니펫](snippets/readme.md)
+## 블로그 바로가기
+
+- [즐겨찾기](posts/favorite.md)
+- [기술 블로그](posts/dev/home.md)
+- [투자 블로그](posts/invest/home.md)
+- [여행 블로그](posts/travel/home.md)
+- [코드 스니펫](snippets/home.md)
 
 ## 프로젝트 구조
 
@@ -14,7 +16,7 @@ blog/
 │   ├── dev/            # 기술 블로그 (AI, AWS, Python, DevOps 등)
 │   ├── invest/         # 투자 관련 블로그
 │   ├── travel/         # 여행 관련 블로그
-│   └── etc/            # 기타 블로그
+│   └── etc/            # 기타 포스팅
 ├── snippets/      # 코드 스니펫 모음
 │   ├── bash/          # Bash 스크립트
 │   ├── django/        # Django 코드
