@@ -3,7 +3,7 @@
 ## 블로그 바로가기
 
 - [즐겨찾기](posts/favorite.md)
-- [기술 블로그](posts/dev/home.md)
+- [개발 블로그](posts/dev/home.md)
 - [투자 블로그](posts/invest/home.md)
 - [여행 블로그](posts/travel/home.md)
 - [코드 스니펫](snippets/home.md)
@@ -13,7 +13,7 @@
 ```
 blog/
 ├── posts/          # 블로그 포스트
-│   ├── dev/            # 기술 블로그 (AI, AWS, Python, DevOps 등)
+│   ├── dev/            # 개발 블로그 (AI, AWS, Python, DevOps 등)
 │   ├── invest/         # 투자 관련 블로그
 │   ├── travel/         # 여행 관련 블로그
 │   └── etc/            # 기타 포스팅
