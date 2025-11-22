@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 실바의 Code snippets
+title: 🧩코드 스니펫
 ---
 
 실무에서 바로 사용할 수 있는 코드 스니펫 모음입니다.

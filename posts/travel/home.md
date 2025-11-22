@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 실바의 여행 블로그
+title: ✈️여행
 ---
 
 ## 2025년
