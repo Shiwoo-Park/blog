@@ -202,7 +202,7 @@ const ApiSelect = ({
         {helpText && helpTextContainsHTML ? (
           <div
             className={helpTextDivClassName}
-            dangerouslySetInnerHTML={{ __html: helpText }}
+            dangerouslySetInnerHTML={ { __html: helpText } }
           />
         ) : (
           <div className={helpTextDivClassName}>{helpText}</div>
@@ -379,7 +379,7 @@ const ApiMultiSelect = ({
         {helpText && helpTextContainsHTML ? (
           <div
             className={helpTextDivClassName}
-            dangerouslySetInnerHTML={{ __html: helpText }}
+            dangerouslySetInnerHTML={ { __html: helpText } }
           />
         ) : (
           <div className={helpTextDivClassName}>{helpText}</div>

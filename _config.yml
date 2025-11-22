@@ -44,6 +44,9 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - vendor
+  - "snippets/**/*.sh"
+  - "snippets/**/Dockerfile"
+  - "snippets/**/*.py"
 
 # Collections
 # Jekyll collections는 기본적으로 _posts 폴더를 사용합니다
