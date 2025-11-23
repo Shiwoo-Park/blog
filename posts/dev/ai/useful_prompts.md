@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "개발자에게 유용한 AI 프롬프트"
+title: "개발자에게 유용한 AI 프롬프트 모음"
 date: 2025-11-10
 categories: [ai, productivity]
 ---

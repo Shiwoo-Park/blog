@@ -14,6 +14,7 @@ title: 💻개발
 
 ### 2025.11
 
+- [개발자용 AI 프롬프트: 작업 계획서 생성](/blog/posts/dev/ai/create_job_spec/)
 - [개발자에게 유용한 AI 프롬프트](/blog/posts/dev/ai/useful_prompts/)
 - [PostgreSQL 트러블슈팅 실전 가이드](/blog/posts/dev/storage/postgres_troubleshoot/)
 - [Git Worktree: 여러 브랜치를 동시에 작업하는 방법](/blog/posts/dev/ai/git_worktree/)

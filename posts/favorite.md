@@ -7,29 +7,16 @@ title: ⭐즐겨찾기
 
 ## Recent
 
-- [PostgreSQL 트러블슈팅 실전 가이드](/blog/posts/dev/storage/postgres_troubleshoot/)
-- [개발자에게 유용한 AI 프롬프트](/blog/posts/dev/ai/useful_prompts/)
-- [Postgres SQL 실행계획 분석 - 1부: 기본기](/blog/posts/dev/storage/postgres_explain_basics/)
-- [Postgres SQL 실행계획 분석 - 2부: 실전 최적화](/blog/posts/dev/storage/postgres_explain_optimization/)
-- [Postgres SQL 실행계획 분석 - 3부: 고급 주제](/blog/posts/dev/storage/postgres_explain_advanced/)
-
-## SQLAlchemy 2
-
-- [Django ORM VS SQLAlchemy 무엇이 다를까?](/blog/posts/dev/python/sqlalchemy/sqlalchemy_vs_django_orm/)
-- [SQLAlchemy 2.x + sqlmodel 기반 모델 및 CRUD 쿼리 작성 가이드](/blog/posts/dev/python/sqlalchemy/sqlalchemy_basic/)
-- [SQLAlchemy 2.x 의 쿼리결과(Result) 객체 파헤치기](/blog/posts/dev/python/sqlalchemy/sqlalchemy_result/)
-- [SQLAlchemy 2.x 의 쿼리(Select) 객체 알아보기](/blog/posts/dev/python/sqlalchemy/sqlalchemy_query/)
-
-## Pydantic 2
-
-- [Pydantic 2 의 BaseModel 파헤치기](/blog/posts/dev/python/pydantic/pydantic_model_basic/)
-- [Pydantic 2 모델 필드: 유효성 검사 + 전처리 + 후처리](/blog/posts/dev/python/pydantic/pydantic_model_advanced/)
-- [Pydantic 2 기반 풀스펙 모델 코드 (FastAPI + SQLModel + SQLAlchemy 2)](/blog/posts/dev/python/pydantic/pydantic_model_full_spec/)
+- [개발자용 AI 프롬프트: 작업 계획서 생성](/blog/posts/dev/ai/create_job_spec/)
+- [개발자에게 유용한 AI 프롬프트 모음](/blog/posts/dev/ai/useful_prompts/)
 
 ## Storage
 
+- [PostgreSQL 트러블슈팅 실전 가이드](/blog/posts/dev/storage/postgres_troubleshoot/)
+- [Postgres SQL 실행계획 분석 - 1부: 기본기](/blog/posts/dev/storage/postgres_explain_basics/)
+- [Postgres SQL 실행계획 분석 - 2부: 실전 최적화](/blog/posts/dev/storage/postgres_explain_optimization/)
+- [Postgres SQL 실행계획 분석 - 3부: 고급 주제](/blog/posts/dev/storage/postgres_explain_advanced/)
 - [PostgreSQL 사용 Tips](/blog/posts/dev/storage/postgres_tips/)
-- [MySQL Tips](/blog/posts/dev/storage/mysql_tips/)
 - [Redis tip 모음](/blog/posts/dev/storage/redis_tips/)
 
 ## DevOps
@@ -46,6 +33,19 @@ title: ⭐즐겨찾기
 - [pytest Django 예제 모음](/blog/posts/dev/python/unittest/pytest_3_django_examples/)
 - [Celery 운용 Tips](/blog/posts/dev/python/celery_tips/)
 
+## SQLAlchemy 2
+
+- [Django ORM VS SQLAlchemy 무엇이 다를까?](/blog/posts/dev/python/sqlalchemy/sqlalchemy_vs_django_orm/)
+- [SQLAlchemy 2.x + sqlmodel 기반 모델 및 CRUD 쿼리 작성 가이드](/blog/posts/dev/python/sqlalchemy/sqlalchemy_basic/)
+- [SQLAlchemy 2.x 의 쿼리결과(Result) 객체 파헤치기](/blog/posts/dev/python/sqlalchemy/sqlalchemy_result/)
+- [SQLAlchemy 2.x 의 쿼리(Select) 객체 알아보기](/blog/posts/dev/python/sqlalchemy/sqlalchemy_query/)
+
+## Pydantic 2
+
+- [Pydantic 2 의 BaseModel 파헤치기](/blog/posts/dev/python/pydantic/pydantic_model_basic/)
+- [Pydantic 2 모델 필드: 유효성 검사 + 전처리 + 후처리](/blog/posts/dev/python/pydantic/pydantic_model_advanced/)
+- [Pydantic 2 기반 풀스펙 모델 코드 (FastAPI + SQLModel + SQLAlchemy 2)](/blog/posts/dev/python/pydantic/pydantic_model_full_spec/)
+
 ## ETC
 
 - [Git - 명령어 모음](/blog/posts/dev/git/git_cmds/)
@@ -53,3 +53,4 @@ title: ⭐즐겨찾기
 - [쉘 스크립트 - 기본 문법](/blog/posts/dev/devops/shell_script_1/)
 - [쉘 스크립트 - 꿀팁 모음](/blog/posts/dev/devops/shell_script_2/)
 - [쉘 스크립트 - 명령어 모음](/blog/posts/dev/devops/useful_bash_cmds/)
+
