@@ -1,17 +1,18 @@
 ---
 layout: default
 ---
+
 <style>
   article header {
     display: flex;
     flex-direction: column;
     gap: 12px;
   }
-  
+
   article header h2 {
     margin-bottom: 0;
   }
-  
+
   article header .post-meta {
     display: flex;
     justify-content: space-between;
@@ -19,20 +20,20 @@ layout: default
     flex-wrap: wrap;
     gap: 10px;
   }
-  
+
   article header time {
     color: #666;
     font-size: 0.9em;
     text-align: right;
     flex-shrink: 0;
   }
-  
+
   article header .categories {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
   }
-  
+
   article header .category {
     display: inline-block;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -44,7 +45,7 @@ layout: default
     text-decoration: none;
     transition: transform 0.2s, box-shadow 0.2s;
   }
-  </style>
+</style>
 
 <article>
   <header>
@@ -56,51 +57,55 @@ layout: default
         <span class="category">{{ category }}</span>
         {% endfor %}
       </div>
-      {% endif %}
-      {% if page.date %}
+      {% endif %} {% if page.date %}
       <time datetime="{{ page.date | date: '%Y-%m-%d' }}">
         {{ page.date | date: "%Y년 %m월 %d일" }}
       </time>
       {% endif %}
     </div>
   </header>
-  
-  <!-- AdSense 인피드 광고 (컨텐츠 최상단) -->
-  {% if site.google_adsense and site.google_adsense_infeed_slot %}
-  <div class="adsense-container" style="margin: 20px 0;">
-    <ins class="adsbygoogle"
-         style="display:block; text-align:center;"
-         data-ad-layout="in-article"
-         data-ad-format="fluid"
-         data-ad-client="{{ site.google_adsense }}"
-         data-ad-slot="{{ site.google_adsense_infeed_slot }}"></ins>
-    <script>
-         (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-  </div>
-  {% endif %}
-  
-  <div class="content">
-    {{ content }}
-  </div>
-  
-  <!-- AdSense 수평형 광고 (컨텐츠 하단) -->
-  {% if site.google_adsense and site.google_adsense_horizontal_slot %}
-  <div class="adsense-container" style="margin: 30px 0; text-align: center;">
-    <ins class="adsbygoogle"
-         style="display:inline-block;width:740px;height:90px"
-         data-ad-client="{{ site.google_adsense }}"
-         data-ad-slot="{{ site.google_adsense_horizontal_slot }}"></ins>
-    <script>
-         (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-  </div>
-  {% endif %}
-  
+
+  <!-- AdSense 수평형 디스플레이 광고 (컨텐츠 최상단) -->
+  <script
+    async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2246604857860574"
+    crossorigin="anonymous"
+  ></script>
+  <!-- horizontal_long -->
+  <ins
+    class="adsbygoogle"
+    style="display: block"
+    data-ad-client="ca-pub-2246604857860574"
+    data-ad-slot="8196864247"
+    data-ad-format="auto"
+    data-full-width-responsive="true"
+  ></ins>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+
+  <div class="content">{{ content }}</div>
+
+  <!-- AdSense 멀티플렉스 광고 (컨텐츠 하단) -->
+  <script
+    async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2246604857860574"
+    crossorigin="anonymous"
+  ></script>
+  <ins
+    class="adsbygoogle"
+    style="display: block"
+    data-ad-format="autorelaxed"
+    data-ad-client="ca-pub-2246604857860574"
+    data-ad-slot="1269216180"
+  ></ins>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+
   <!--  Footer 영역
   <div style="margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee;">
     <a href="{{ '/' | relative_url }}">← 목록으로</a>
   </div>
   -->
 </article>
-
