@@ -1,12 +1,17 @@
 ---
 layout: post
-title: 실바의 즐겨찾기
+title: ⭐즐겨찾기
 ---
+
+내가 자주찾는 포스팅 모음
 
 ## Recent
 
+- [PostgreSQL 트러블슈팅 실전 가이드](/blog/posts/dev/storage/postgres_troubleshoot/)
 - [개발자에게 유용한 AI 프롬프트](/blog/posts/dev/ai/useful_prompts/)
-- [Postgres SQL - 실무에서 쓰기 좋은 실행계획 분석 및 활용법 + CBO](/blog/posts/dev/storage/postgres_explain/)
+- [Postgres SQL 실행계획 분석 - 1부: 기본기](/blog/posts/dev/storage/postgres_explain_basics/)
+- [Postgres SQL 실행계획 분석 - 2부: 실전 최적화](/blog/posts/dev/storage/postgres_explain_optimization/)
+- [Postgres SQL 실행계획 분석 - 3부: 고급 주제](/blog/posts/dev/storage/postgres_explain_advanced/)
 
 ## SQLAlchemy 2
 

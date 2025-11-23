@@ -14,15 +14,18 @@ title: 💻개발
 
 ### 2025.11
 
-- [Git Worktree: 여러 브랜치를 동시에 작업하는 방법](/blog/posts/dev/ai/git_worktree/)
 - [개발자에게 유용한 AI 프롬프트](/blog/posts/dev/ai/useful_prompts/)
+- [PostgreSQL 트러블슈팅 실전 가이드](/blog/posts/dev/storage/postgres_troubleshoot/)
+- [Git Worktree: 여러 브랜치를 동시에 작업하는 방법](/blog/posts/dev/ai/git_worktree/)
 - [Python + Django + DRF 레거시 거대 프로젝트에 Cursor 를 최대한 잘 활용하는 방법](/blog/posts/dev/ai/cursor_tips_drf/)
 
 ### 2025.08
 
 - [Postgre SQL - 초당 1000번 업데이트 발생 + 유니크 필드에 대한 정렬 전략](/blog/posts/dev/storage/postgres_example2/)
 - [Postgre SQL - 테이블 설계 Tip: 업데이트가 잦은 필드 + 그 필드로 정렬 + 유니크 보장까지 해야 하는 경우](/blog/posts/dev/storage/postgres_example1/)
-- [Postgres SQL - 실무에서 쓰기 좋은 실행계획 분석 및 활용법 + CBO](/blog/posts/dev/storage/postgres_explain/)
+- [Postgres SQL 실행계획 분석 - 1부: 기본기](/blog/posts/dev/storage/postgres_explain_basics/)
+- [Postgres SQL 실행계획 분석 - 2부: 실전 최적화](/blog/posts/dev/storage/postgres_explain_optimization/)
+- [Postgres SQL 실행계획 분석 - 3부: 고급 주제](/blog/posts/dev/storage/postgres_explain_advanced/)
 
 ### 2025.07
 
