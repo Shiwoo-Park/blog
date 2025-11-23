@@ -14,6 +14,11 @@ author:
 google_tag_manager: GTM-TZJ28MRB
 google_analytics: G-TQH21TL0TZ
 
+# Google AdSense
+google_adsense: ca-pub-2246604857860574
+google_adsense_horizontal_slot: "8196864247"
+google_adsense_multiplex_slot: "1269216180"
+
 # Build settings
 markdown: kramdown
 highlighter: rouge

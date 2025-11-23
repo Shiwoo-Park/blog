@@ -66,42 +66,33 @@ layout: default
   </header>
 
   <!-- AdSense 수평형 디스플레이 광고 (컨텐츠 최상단) -->
-  <script
-    async
-    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2246604857860574"
-    crossorigin="anonymous"
-  ></script>
-  <!-- horizontal_long -->
-  <ins
-    class="adsbygoogle"
-    style="display: block"
-    data-ad-client="ca-pub-2246604857860574"
-    data-ad-slot="8196864247"
-    data-ad-format="auto"
-    data-full-width-responsive="true"
-  ></ins>
-  <script>
-    (adsbygoogle = window.adsbygoogle || []).push({});
-  </script>
+  {% if site.google_adsense and site.google_adsense_horizontal_slot %}
+  <div class="adsense-container" style="margin: 20px 0; text-align: center;">
+    <ins class="adsbygoogle"
+         style="display:inline-block;width:740px;height:90px"
+         data-ad-client="{{ site.google_adsense }}"
+         data-ad-slot="{{ site.google_adsense_horizontal_slot }}"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
+  {% endif %}
 
   <div class="content">{{ content }}</div>
 
   <!-- AdSense 멀티플렉스 광고 (컨텐츠 하단) -->
-  <script
-    async
-    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2246604857860574"
-    crossorigin="anonymous"
-  ></script>
-  <ins
-    class="adsbygoogle"
-    style="display: block"
-    data-ad-format="autorelaxed"
-    data-ad-client="ca-pub-2246604857860574"
-    data-ad-slot="1269216180"
-  ></ins>
-  <script>
-    (adsbygoogle = window.adsbygoogle || []).push({});
-  </script>
+  {% if site.google_adsense and site.google_adsense_multiplex_slot %}
+  <div class="adsense-container" style="margin: 30px 0; text-align: center;">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-format="autorelaxed"
+         data-ad-client="{{ site.google_adsense }}"
+         data-ad-slot="{{ site.google_adsense_multiplex_slot }}"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
+  {% endif %}
 
   <!--  Footer 영역
   <div style="margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee;">
