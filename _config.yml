@@ -16,6 +16,8 @@ google_analytics: G-TQH21TL0TZ
 
 # Google AdSense
 google_adsense: ca-pub-2246604857860574
+google_adsense_infeed_slot: "8080191459"
+google_adsense_horizontal_slot: "8196864247"
 
 # Build settings
 markdown: kramdown
