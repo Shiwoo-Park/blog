@@ -240,6 +240,18 @@
       font-size: 0.9em;
     }
   </style>
+
+  <!-- Google Analytics tag (gtag.js) -->
+  {% if site.google_analytics %}
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', '{{ site.google_analytics }}');
+  </script>
+  {% endif %}
   
   <!-- Google AdSense -->
   {% if site.google_adsense %}
