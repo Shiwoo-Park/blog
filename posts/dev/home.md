@@ -14,6 +14,7 @@ title: 💻개발
 
 ### 2025.11
 
+- [캐시 사용중 발생할 수 있는 문제와 해결전략](/blog/posts/dev/backend/cache_problem/)
 - [개발자용 AI 프롬프트: 작업 계획서 생성](/blog/posts/dev/ai/create_job_spec/)
 - [개발자에게 유용한 AI 프롬프트](/blog/posts/dev/ai/useful_prompts/)
 - [PostgreSQL 트러블슈팅 실전 가이드](/blog/posts/dev/storage/postgres_troubleshoot/)
