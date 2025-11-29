@@ -124,7 +124,7 @@ categories: [travel, thailand]
 - 삼성화재 다이렉트
 
 ### 기타 스케줄
-- 코끼리 샤워, 먹이주기 체험: [예약 링크](https://www.click2gothailand.com/bookings/a80410bb7d59fe6383a8b1feE156115)
+- 코끼리 샤워, 먹이주기 체험: [예약 링크](https://www.click2gothailand.com/)
 
 ### 하루 비용
 - 약 21만원 → 5,000 바트
