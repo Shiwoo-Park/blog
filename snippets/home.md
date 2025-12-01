@@ -31,6 +31,7 @@ title: 🧩코드 스니펫
 
 ## Python
 
+- [캐시 서비스 - Circuit Breaker 패턴 구현](/blog/snippets/py/cache_service/)
 - [Slack 유틸리티](/blog/snippets/py/slack_util/)
 
 ## Bash / Shell Scripts
