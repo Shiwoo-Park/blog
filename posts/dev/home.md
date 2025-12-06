@@ -14,7 +14,8 @@ title: 💻개발
 
 ### 2025.12
 
-- [DRF APIView 클래스 선택 가이드](blog/posts/dev/python/django/drf_api_views/)
+- [Cursor IDE 토큰 사용량 절약 가이드](/blog/posts/dev/ai/cursor_save_token/)
+- [DRF APIView 클래스 선택 가이드](/blog/posts/dev/python/django/drf_api_views/)
 
 ### 2025.11
 
