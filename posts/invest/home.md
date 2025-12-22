@@ -4,6 +4,11 @@ title: 📈투자
 ---
 
 
+## 2025.12
+
+- [거시경제를 읽기 위한 주식 지표들](/blog/posts/invest/basic/macro_indicators/)
+- [금리에 대하여](/blog/posts/invest/basic/interest_rate/)
+
 ## 2025.11
 
 - [특정 ETF 의 투자관련 정보를 얻기위한 AI 프롬프트](/blog/posts/invest/etf-check/)
