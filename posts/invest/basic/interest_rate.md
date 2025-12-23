@@ -3,6 +3,9 @@ layout: post
 title: "금리에 대하여"
 date: 2025-12-22
 categories: [invest, basic]
+description: "금리의 개념부터 기준금리, 채권금리, 예금금리, 대출금리 등 다양한 금리 종류와 경제에 미치는 영향을 쉽게 이해할 수 있는 완벽 가이드"
+keywords: "금리, 기준금리, 채권금리, 예금금리, 대출금리, 인플레이션, 경제지표, 한국은행, 연준"
+image: "/resources/og-invest.png"
 ---
 
 ## 1. 금리란 무엇인가?

@@ -3,6 +3,9 @@ layout: post
 title: "거시경제를 읽기 위한 주식 지표들"
 date: 2025-12-23
 categories: [invest, basic]
+description: "CPI, M2, VIX, S&P500, NASDAQ, DOW, Dollar Index 등 거시경제와 주식 시장을 이해하기 위한 핵심 지표들의 개념과 상승/하락 시 시장 영향 완벽 가이드"
+keywords: "거시경제, CPI, M2, VIX, S&P500, NASDAQ, DOW, Dollar Index, 경제지표, 주식지표"
+image: "/resources/og-invest.png"
 ---
 
 ## 1. 거시경제 지표란 무엇인가?

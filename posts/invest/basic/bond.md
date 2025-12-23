@@ -3,6 +3,9 @@ layout: post
 title: "채권금리의 비밀"
 date: 2025-12-23
 categories: [invest, basic]
+description: "채권 투자의 핵심 원리, 금리와 채권 가격의 관계, 매수 타이밍 판단 지표, 금리 변화에 따른 4가지 투자 전략과 좋은 채권을 고르는 방법까지 완벽 정리"
+keywords: "채권, 채권투자, 채권금리, 국채, 채권ETF, 금리, 투자전략, 수익률곡선"
+image: "/resources/og-invest.png"
 ---
 
 ## 1. 채권의 핵심 원리

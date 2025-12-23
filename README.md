@@ -9,11 +9,14 @@
 
 ## 블로그 바로가기
 
-- [즐겨찾기](posts/favorite.md)
-- [개발](posts/dev/home.md)
-- [투자](posts/invest/home.md)
-- [여행](posts/travel/home.md)
-- [코드](snippets/home.md)
+- [홈](https://shiwoo-park.github.io/blog/)
+- [즐겨찾기](https://shiwoo-park.github.io/blog/posts/favorite/)
+- [개발](https://shiwoo-park.github.io/blog/posts/dev/home/)
+- [투자](https://shiwoo-park.github.io/blog/posts/invest/home/)
+- [여행](https://shiwoo-park.github.io/blog/posts/travel/home/)
+- [코드](https://shiwoo-park.github.io/blog/snippets/home/)
+- [RSS Feed](https://shiwoo-park.github.io/blog/feed.xml)
+- [사이트맵](https://shiwoo-park.github.io/blog/sitemap.xml)
 
 ## 프로젝트 구조
 

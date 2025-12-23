@@ -260,6 +260,50 @@
   {% endif %}
   
   {% seo %}
+  
+  <!-- Structured Data (JSON-LD) for Blog Posts -->
+  {% if page.layout == 'post' %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "{{ page.title | escape }}",
+    "description": "{% if page.description %}{{ page.description | escape }}{% else %}{{ site.description | escape }}{% endif %}",
+    "author": {
+      "@type": "Person",
+      "name": "{{ site.author.name }}",
+      "email": "{{ site.author.email }}"
+    },
+    "datePublished": "{{ page.date | date: '%Y-%m-%d' }}",
+    "dateModified": "{% if page.last_modified_at %}{{ page.last_modified_at | date: '%Y-%m-%d' }}{% else %}{{ page.date | date: '%Y-%m-%d' }}{% endif %}",
+    "publisher": {
+      "@type": "Organization",
+      "name": "{{ site.title }}",
+      "url": "{{ site.url }}{{ site.baseurl }}"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "{{ site.url }}{{ site.baseurl }}{{ page.url }}"
+    },
+    "keywords": "{% if page.keywords %}{{ page.keywords }}{% elsif page.categories %}{{ page.categories | join: ', ' }}{% endif %}"
+  }
+  </script>
+  {% endif %}
+  
+  <!-- Structured Data (JSON-LD) for Website -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "{{ site.title }}",
+    "url": "{{ site.url }}{{ site.baseurl }}",
+    "description": "{{ site.description }}",
+    "author": {
+      "@type": "Person",
+      "name": "{{ site.author.name }}"
+    }
+  }
+  </script>
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->

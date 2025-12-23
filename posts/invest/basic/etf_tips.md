@@ -3,6 +3,9 @@ layout: post
 title: "ETF 투자 가이드"
 date: 2025-12-23
 categories: [invest, basic]
+description: "ETF 투자 시 알아야 할 시가총액, 분배금, 총보수, 거래량, 추종지수, 괴리율 등 13가지 핵심 지표와 좋은 ETF를 선택하는 방법을 알기 쉽게 정리한 가이드"
+keywords: "ETF, ETF투자, ETF선택, 시가총액, 분배금, 총보수, 추종지수, 괴리율, 투자가이드"
+image: "/resources/og-invest.png"
 ---
 
 ## 1. ETF 투자 시 알아야 할 기본 지식
