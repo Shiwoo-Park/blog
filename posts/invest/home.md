@@ -6,6 +6,7 @@ title: 📈투자
 
 ## 2025.12
 
+- [2026년 환율 방어를 위한 양도소득세 세액면제 혜택](/blog/posts/invest/news/2025-12/ant-comeback/)
 - [투자 자산의 종류와 특징](/blog/posts/invest/basic/invest_assets/)
 - [다소 어려운 경제 용어들 이해하기](/blog/posts/invest/basic/difficult_terms/)
 - [미국 주식시장 이해하기](/blog/posts/invest/stock/american_market/)

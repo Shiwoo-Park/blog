@@ -66,6 +66,7 @@ layout: default
   </header>
 
   <!-- AdSense 수평형 디스플레이 광고 (컨텐츠 최상단) -->
+  {% comment %} 
   {% if site.google_adsense and site.google_adsense_horizontal_slot %}
   <div class="adsense-container" style="margin: 20px 0; text-align: center;">
     <ins class="adsbygoogle"
@@ -76,11 +77,12 @@ layout: default
          (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
   </div>
-  {% endif %}
+  {% endif %} {% endcomment %}
 
   <div class="content">{{ content }}</div>
 
   <!-- AdSense 멀티플렉스 광고 (컨텐츠 하단) -->
+  {% comment %} 
   {% if site.google_adsense and site.google_adsense_multiplex_slot %}
   <div class="adsense-container" style="margin: 30px 0; text-align: center;">
     <ins class="adsbygoogle"
@@ -93,8 +95,9 @@ layout: default
     </script>
   </div>
   {% endif %}
+ {% endcomment %}
 
-  <!--  Footer 영역
+ <!--  Footer 영역
   <div style="margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee;">
     <a href="{{ '/' | relative_url }}">← 목록으로</a>
   </div>
