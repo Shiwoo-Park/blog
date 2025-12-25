@@ -6,6 +6,7 @@ title: 📈투자
 
 ## 2025.12
 
+- [투자 자산의 종류와 특징](/blog/posts/invest/basic/invest_assets/)
 - [다소 어려운 경제 용어들 이해하기](/blog/posts/invest/basic/difficult_terms/)
 - [미국 주식시장 이해하기](/blog/posts/invest/stock/american_market/)
 - [채권 금리의 비밀](/blog/posts/invest/basic/bond/)
