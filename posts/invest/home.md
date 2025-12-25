@@ -6,6 +6,7 @@ title: 📈투자
 
 ## 2025.12
 
+- [다소 어려운 경제 용어들 이해하기](/blog/posts/invest/basic/difficult_terms/)
 - [미국 주식시장 이해하기](/blog/posts/invest/stock/american_market/)
 - [채권 금리의 비밀](/blog/posts/invest/basic/bond/)
 - [ETF 투자 가이드](/blog/posts/invest/basic/etf_tips/)
