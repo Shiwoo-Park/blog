@@ -1,5 +1,5 @@
 ---
-layout: ad-free-post
+layout: ad_free_post
 title: 📈투자
 ---
 
