@@ -12,6 +12,10 @@ title: 💻개발
 
 <!-- - [대용량 트래픽 환경에서의 백엔드 대응 전략]() -->
 
+### 2026.01
+
+- [운영환경에서 Python Celery 설정 가이드](/blog/posts/dev/python/celery/production-setting-tips/)
+
 ### 2025.12
 
 - [Cursor IDE 토큰 사용량 절약 가이드](/blog/posts/dev/ai/cursor_save_token/)
@@ -94,8 +98,7 @@ title: 💻개발
 - [파이썬 - Property](/blog/posts/dev/python/property/)
 - [파이썬 - 클래스 속성 vs 인스턴스 속성](/blog/posts/dev/python/class_instance_attr/)
 - [파이썬 - Descriptor 알아보기](/blog/posts/dev/python/descriptor/)
-- [Celery 워커 구동 명령어 옵션 살펴보기](/blog/posts/dev/python/celery_commands/)
-- [Celery 운용 Tips](/blog/posts/dev/python/celery_tips/)
+- [Celery 워커 구동 명령어 옵션 살펴보기](/blog/posts/dev/python/celery/commands/)
 
 ### 2024.10
 

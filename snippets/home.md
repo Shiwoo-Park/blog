@@ -36,6 +36,7 @@ title: 🧩코드 스니펫
 
 ## Bash / Shell Scripts
 
+- [AWS CodeDeploy 배포 기록 정기 클린업 스크립트](/blog/snippets/bash/code_deploy_root_cleanup/)
 - [복잡한 Celery 서버 배포 스크립트](/blog/snippets/bash/complex_celery_deploy/)
 - [디스크 정리 스크립트](/blog/snippets/bash/disk_cleanup/)
 - [GitLab 백업 스크립트](/blog/snippets/bash/gitlab_backup/)

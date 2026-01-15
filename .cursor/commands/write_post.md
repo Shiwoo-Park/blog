@@ -20,6 +20,7 @@
   - 투자 블로그: `posts/invest/home.md`
   - 여행 블로그: `posts/travel/home.md`
   - (ex) `posts/dev/*/my_post.md` 일 경우 `posts/dev/home.md` 에 추가
+  - 코드 스니펫의 경우: `snippets/home.md`
 
 ## 포스팅 작성 방식
 
