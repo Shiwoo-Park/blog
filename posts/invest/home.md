@@ -11,8 +11,8 @@ title: 📈투자
 
 ## 2025.12
 
-- [주식 투자 시 알아야 할 절세 방안](/blog/posts/invest/basic/stock-tax2/)
-- [주식 투자 시 알아야 할 세금의 종류](/blog/posts/invest/basic/stock-tax/)
+- [주식 투자 시 알아야 할 절세 방안](/blog/posts/invest/stock/stock-tax2/)
+- [주식 투자 시 알아야 할 세금의 종류](/blog/posts/invest/stock/stock-tax/)
 - [2026년 환율 방어를 위한 양도소득세 세액면제 혜택](/blog/posts/invest/news/2025-12/ant-comeback/)
 - [투자 자산의 종류와 특징](/blog/posts/invest/basic/invest-assets/)
 - [다소 어려운 경제 용어들 이해하기](/blog/posts/invest/basic/difficult-terms/)
