@@ -14,6 +14,7 @@ title: 💻개발
 
 ### 2026.01
 
+- [AI 에이전트를 위한 스마트 스펙 작성법](/blog/posts/dev/ai/smart_spec/)
 - [운영환경에서 Python Celery 설정 가이드](/blog/posts/dev/python/celery/production-setting-tips/)
 
 ### 2025.12
