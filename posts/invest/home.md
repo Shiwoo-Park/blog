@@ -6,7 +6,8 @@ title: 📈투자
 
 ## 2026.01
 
-- [해외 로봇·AI ETF 비교: AIQ, BOTZ, ROBO, ARKQ 한눈에 정리](/blog/posts/invest/stock/us-robot-etfs/)
+- [미국을 제외한 전 세계 주식시장에 투자하는 대표 ETF 6종(VXUS, VEU, VEA, VWO, IEFA, SCHY)의 특징과 차이점 비교](/blog/posts/invest/etfs/us-ex-us/)
+- [해외 로봇·AI ETF 비교: AIQ, BOTZ, ROBO, ARKQ 한눈에 정리](/blog/posts/invest/etfs/us-robot/)
 - [주식 매수 전략 가이드: 초보자를 위한 분할 매수 실전법](/blog/posts/invest/stock/buy-strategy/)
 - [2026년 기준 연말정산 1200만원 세액공제 완벽 전략](/blog/posts/invest/stock/tax-credit/)
 - [한국 주식시장 이해하기](/blog/posts/invest/stock/korean-market/)
