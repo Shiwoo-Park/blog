@@ -14,6 +14,7 @@ title: 💻개발
 
 ### 2026.02
 
+- [AWS RDS 성능 개선 도우미(Performance Insights) 활용 방법](/blog/posts/dev/aws/rds_performance_insight/)
 - [PostgreSQL 쿼리 튜닝 실전: 실행계획과 pg_stat_user_indexes로 병목 잡기](/blog/posts/dev/storage/query_tuning_1/)
 
 ### 2026.01
