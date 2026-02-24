@@ -14,6 +14,8 @@ title: 📈투자
 
 ## 2026.02
 
+- [미국 주식: 지정학·전쟁 리스크 대비 항공·우주·방산 ETF 비교](/blog/posts/invest/etfs/us-aerospace-defense/)
+- [미국 주식: 기후·식량부족 대비 식량·농업(Food & Agriculture) ETF 비교](/blog/posts/invest/etfs/us-food/)
 - [미국 주식: 기후·물부족 대비 물(Water) ETF 비교](/blog/posts/invest/etfs/us-water/)
 
 ## 2026.01
