@@ -3,7 +3,7 @@ layout: ad_free_post
 title: 📈투자
 ---
 
-<!-- 
+<!--
 ## 앞으로 작성해야할 글들
 
 - 부동산 경매란 무엇인가?
@@ -14,13 +14,11 @@ title: 📈투자
 
 ## 2026.02
 
-- [국내 주식: 주요 성장주 ETF 비교](/blog/posts/invest/etfs/kr-growth/)
 - [미국 주식: 지정학·전쟁 리스크 대비 항공·우주·방산 ETF 비교](/blog/posts/invest/etfs/us-aerospace-defense/)
 - [미국 주식: 기후·식량부족 대비 식량·농업(Food & Agriculture) ETF 비교](/blog/posts/invest/etfs/us-food/)
 - [미국 주식: 기후·물부족 대비 물(Water) ETF 비교](/blog/posts/invest/etfs/us-water/)
 
 ## 2026.01
-
 
 - [2026년 주택청약 1순위 조건 완벽 가이드: 당첨의 첫걸음](/blog/posts/invest/real-estate/subsciption-2/)
 - [2026년 부동산 청약 가이드: 기본지식 및 사전 준비](/blog/posts/invest/real-estate/subscription-1/)
@@ -46,7 +44,7 @@ title: 📈투자
 - [거시경제를 읽기 위한 주요 지표들](/blog/posts/invest/basic/macro-indicators/)
 - [금리에 대하여](/blog/posts/invest/basic/interest-rate/)
 
-<!-- 
+<!--
 ## 추후 써야할 글들
 
 - 주식 투자정보 링크 모음
