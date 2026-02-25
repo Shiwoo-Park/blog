@@ -6,7 +6,6 @@ title: 📈투자
 <!--
 ## 앞으로 작성해야할 글들
 
-- 부동산 경매란 무엇인가?
 - 부동산 경매로 주택 매입 시 고려사항 및 사전준비
 - 부동산 경매 주택 매입 절차 및 과정
 - 주택청약 신청 부터 입주까지 핵심 과정 한방 정리
@@ -14,6 +13,7 @@ title: 📈투자
 
 ## 2026.02
 
+- [부동산 경매란 무엇인가?](/blog/posts/invest/real-estate/action-1/)
 - [미국 주식: 지정학·전쟁 리스크 대비 항공·우주·방산 ETF 비교](/blog/posts/invest/etfs/us-aerospace-defense/)
 - [미국 주식: 기후·식량부족 대비 식량·농업(Food & Agriculture) ETF 비교](/blog/posts/invest/etfs/us-food/)
 - [미국 주식: 기후·물부족 대비 물(Water) ETF 비교](/blog/posts/invest/etfs/us-water/)
