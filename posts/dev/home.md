@@ -12,6 +12,10 @@ title: 💻개발
 
 <!-- - [대용량 트래픽 환경에서의 백엔드 대응 전략]() -->
 
+### 2026.07
+
+- [개발-기획 협업을 위한 Vercel Setup 방법](/blog/posts/dev/etc/vercel_for_ui_review/)
+
 ### 2026.02
 
 - [Postgres의 unnest로 일괄 업데이트 하기](/blog/posts/dev/storage/postgres_unnest/)
