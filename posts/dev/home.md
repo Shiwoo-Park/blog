@@ -12,6 +12,10 @@ title: 💻개발
 
 <!-- - [대용량 트래픽 환경에서의 백엔드 대응 전략]() -->
 
+### 2026.08
+
+- [AWS RDS 확장 시나리오: 다운타임 기준으로 고르는 스케일업·스케일아웃·DB 분리](/blog/posts/dev/aws/rds_expand_scenario/)
+
 ### 2026.07
 
 - [개발-기획 협업을 위한 Vercel Setup 방법](/blog/posts/dev/etc/vercel_for_ui_review/)
