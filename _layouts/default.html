@@ -178,6 +178,31 @@
       padding: 0;
     }
     
+    article .content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+      font-size: 0.95em;
+      display: block;
+      overflow-x: auto;
+    }
+
+    article .content table th,
+    article .content table td {
+      border: 1px solid #ddd;
+      padding: 8px 12px;
+      text-align: left;
+    }
+
+    article .content table th {
+      background-color: #f6f8fa;
+      font-weight: 600;
+    }
+
+    article .content table tr:nth-child(even) td {
+      background-color: #fafafa;
+    }
+
     article .content blockquote {
       border-left: 4px solid #0066cc;
       padding-left: 20px;
