@@ -14,6 +14,12 @@ title: 💻개발
 
 ### 2026.08
 
+- [하네스 엔지니어링 (3) 역할별 레시피와 안티패턴: 바로 쓰는 에이전트 정의 5종](/blog/posts/dev/ai/good_harness_tips_3/)
+- [하네스 엔지니어링 (2) 데이터 거버넌스와 피드백 루프: 무엇을 보여주고, 실패를 어떻게 자산으로 만들까](/blog/posts/dev/ai/good_harness_tips_2/)
+- [하네스 엔지니어링 (1) 개념과 가드레일: 지시가 아니라 구조로 통제하기](/blog/posts/dev/ai/good_harness_tips_1/)
+- [레거시 프로젝트에 에이전트 팀 투입하기: 파악 → 테스트 → 재작성 → 검증 4단계 전략](/blog/posts/dev/ai/agent_team_for_legacy/)
+- [Claude Code 에이전트 팀 입문: 여러 AI가 한 팀으로 일하게 만들기](/blog/posts/dev/ai/claude_agent_team/)
+- [VSCode Claude Code 확장의 권한 모드 4가지 제대로 쓰는 법](/blog/posts/dev/ai/vscode_llm_mode/)
 - [AWS RDS 확장 시나리오: 다운타임 기준으로 고르는 스케일업·스케일아웃·DB 분리](/blog/posts/dev/aws/rds_expand_scenario/)
 
 ### 2026.07

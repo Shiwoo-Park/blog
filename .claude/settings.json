@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:docs.claude.com)",
+      "WebFetch(domain:www.anthropic.com)",
+      "Bash(grep -n 'frontmatter\\\\|^| `\\\\|isolation\\\\|disable-model-invocation\\\\|^### ' /Users/shiwoo/.claude/projects/-Users-shiwoo-git-my-blog/3e01b3d5-1293-4307-b22d-79de87a72e86/tool-results/toolu_bdrk_014AW6RuJF6JaUWU7iXaqhr1.txt)",
+      "Bash(git -C /Users/shiwoo/git-my/blog diff --stat posts/dev/home.md)",
+      "Bash(grep -n 'progressive\\\\|loaded into context\\\\|name and description\\\\|startup\\\\|token\\\\|frontmatter fields\\\\|^| `' /Users/shiwoo/.claude/projects/-Users-shiwoo-git-my-blog/bc821e71-464e-4f1a-bf1e-5f80de52481d/tool-results/toolu_bdrk_01DKLwba2J44Hx5vEp4NuykG.txt)"
+    ]
+  }
+}
