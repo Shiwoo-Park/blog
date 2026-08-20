@@ -14,6 +14,8 @@ title: 💻개발
 
 ### 2026.08
 
+- [스킬 엔지니어링: 좋은 스킬 만들기부터 팀 전체 배포까지](/blog/posts/dev/ai/claude_skill_manage/)
+- [팔란티어 온톨로지로 보는 AI 환각 방지 3원칙](/blog/posts/dev/ai/palantir_ontology/)
 - [Redis Streams 제대로 알기: 기본 개념부터 운영 노하우까지](/blog/posts/dev/backend/redis_stream/)
 - [TimescaleDB 실전 활용 가이드: 개념부터 압축·보존 정책까지](/blog/posts/dev/storage/postgres_timescaledb/)
 - [Redis Pub/Sub 제대로 알기: 기본 개념부터 운영 노하우까지](/blog/posts/dev/backend/redis_pubsub/)
